@@ -1,350 +1,350 @@
-IBDEI01E ; ; 20-FEB-2013
- ;;3.0;IB ENCOUNTER FORM IMP/EXP;;FEB 20, 2013
+IBDEI01E ; ; 13-FEB-2014
+ ;;3.0;IB ENCOUNTER FORM IMP/EXP;;FEB 13, 2014
  Q:'DIFQR(358.3)  F I=1:2 S X=$T(Q+I) Q:X=""  S Y=$E($T(Q+I+1),4,999),X=$E(X,4,999) S:$A(Y)=126 I=I+1,Y=$E(Y,2,999)_$E($T(Q+I+1),5,99) S:$A(Y)=61 Y=$E(Y,2,999) X NO E  S @X=Y
 Q Q
+ ;;^UTILITY(U,$J,358.3,1218,0)
+ ;;=93561^^12^94^7^^^^1
+ ;;^UTILITY(U,$J,358.3,1218,1,0)
+ ;;=^358.31IA^3^2
+ ;;^UTILITY(U,$J,358.3,1218,1,2,0)
+ ;;=2^93561
+ ;;^UTILITY(U,$J,358.3,1218,1,3,0)
+ ;;=3^Indicator Dilution Study-Arterial/Ven
+ ;;^UTILITY(U,$J,358.3,1219,0)
+ ;;=93562^^12^94^17^^^^1
+ ;;^UTILITY(U,$J,358.3,1219,1,0)
+ ;;=^358.31IA^3^2
+ ;;^UTILITY(U,$J,358.3,1219,1,2,0)
+ ;;=2^93562
+ ;;^UTILITY(U,$J,358.3,1219,1,3,0)
+ ;;=3^Subsq Measure of Cardiac Output
+ ;;^UTILITY(U,$J,358.3,1220,0)
+ ;;=93463^^12^94^11^^^^1
+ ;;^UTILITY(U,$J,358.3,1220,1,0)
+ ;;=^358.31IA^3^2
+ ;;^UTILITY(U,$J,358.3,1220,1,2,0)
+ ;;=2^93463
+ ;;^UTILITY(U,$J,358.3,1220,1,3,0)
+ ;;=3^Pharm agent admin, when performed
+ ;;^UTILITY(U,$J,358.3,1221,0)
+ ;;=93505^^12^94^6^^^^1
+ ;;^UTILITY(U,$J,358.3,1221,1,0)
+ ;;=^358.31IA^3^2
+ ;;^UTILITY(U,$J,358.3,1221,1,2,0)
+ ;;=2^93505
+ ;;^UTILITY(U,$J,358.3,1221,1,3,0)
+ ;;=3^Endomyocardial Biopsy
+ ;;^UTILITY(U,$J,358.3,1222,0)
+ ;;=93464^^12^94^12^^^^1
+ ;;^UTILITY(U,$J,358.3,1222,1,0)
+ ;;=^358.31IA^3^2
+ ;;^UTILITY(U,$J,358.3,1222,1,2,0)
+ ;;=2^93464
+ ;;^UTILITY(U,$J,358.3,1222,1,3,0)
+ ;;=3^Phys Exercise Tst w/Hemodynamic Meas
+ ;;^UTILITY(U,$J,358.3,1223,0)
+ ;;=36100^^12^95^10^^^^1
+ ;;^UTILITY(U,$J,358.3,1223,1,0)
+ ;;=^358.31IA^3^2
+ ;;^UTILITY(U,$J,358.3,1223,1,2,0)
+ ;;=2^36100
+ ;;^UTILITY(U,$J,358.3,1223,1,3,0)
+ ;;=3^Intro Needle Or Cath Carotid Or Vert. Artery
+ ;;^UTILITY(U,$J,358.3,1224,0)
+ ;;=36120^^12^95^9^^^^1
+ ;;^UTILITY(U,$J,358.3,1224,1,0)
+ ;;=^358.31IA^3^2
+ ;;^UTILITY(U,$J,358.3,1224,1,2,0)
+ ;;=2^36120
+ ;;^UTILITY(U,$J,358.3,1224,1,3,0)
+ ;;=3^Intro Needle Or Cath Brachial Artery
+ ;;^UTILITY(U,$J,358.3,1225,0)
+ ;;=36140^^12^95^11^^^^1
+ ;;^UTILITY(U,$J,358.3,1225,1,0)
+ ;;=^358.31IA^3^2
+ ;;^UTILITY(U,$J,358.3,1225,1,2,0)
+ ;;=2^36140
+ ;;^UTILITY(U,$J,358.3,1225,1,3,0)
+ ;;=3^Intro Needle Or Cath Ext Artery
+ ;;^UTILITY(U,$J,358.3,1226,0)
+ ;;=36215^^12^95^34^^^^1
+ ;;^UTILITY(U,$J,358.3,1226,1,0)
+ ;;=^358.31IA^3^2
+ ;;^UTILITY(U,$J,358.3,1226,1,2,0)
+ ;;=2^36215
+ ;;^UTILITY(U,$J,358.3,1226,1,3,0)
+ ;;=3^Select Cath Arterial 1st Order Thor/Brachiocephalic
+ ;;^UTILITY(U,$J,358.3,1227,0)
+ ;;=36011^^12^95^35^^^^1
+ ;;^UTILITY(U,$J,358.3,1227,1,0)
+ ;;=^358.31IA^3^2
+ ;;^UTILITY(U,$J,358.3,1227,1,2,0)
+ ;;=2^36011
+ ;;^UTILITY(U,$J,358.3,1227,1,3,0)
+ ;;=3^Select Cath Venous 1st Order (Renal Jug)
+ ;;^UTILITY(U,$J,358.3,1228,0)
+ ;;=36245^^12^95^29^^^^1
+ ;;^UTILITY(U,$J,358.3,1228,1,0)
+ ;;=^358.31IA^3^2
+ ;;^UTILITY(U,$J,358.3,1228,1,2,0)
+ ;;=2^36245
+ ;;^UTILITY(U,$J,358.3,1228,1,3,0)
+ ;;=3^Select Cath 1st Order Abd/Pelvic/Le Artery
+ ;;^UTILITY(U,$J,358.3,1229,0)
+ ;;=36246^^12^95^30^^^^1
+ ;;^UTILITY(U,$J,358.3,1229,1,0)
+ ;;=^358.31IA^3^2
+ ;;^UTILITY(U,$J,358.3,1229,1,2,0)
+ ;;=2^36246
+ ;;^UTILITY(U,$J,358.3,1229,1,3,0)
+ ;;=3^Select Cath 2nd Order Abd/Pelvic/Le Artery
+ ;;^UTILITY(U,$J,358.3,1230,0)
+ ;;=36247^^12^95^32^^^^1
+ ;;^UTILITY(U,$J,358.3,1230,1,0)
+ ;;=^358.31IA^3^2
+ ;;^UTILITY(U,$J,358.3,1230,1,2,0)
+ ;;=2^36247
+ ;;^UTILITY(U,$J,358.3,1230,1,3,0)
+ ;;=3^Select Cath 3rd Order Abd/Pelvic/Le Artery
+ ;;^UTILITY(U,$J,358.3,1231,0)
+ ;;=36216^^12^95^31^^^^1
+ ;;^UTILITY(U,$J,358.3,1231,1,0)
+ ;;=^358.31IA^3^2
+ ;;^UTILITY(U,$J,358.3,1231,1,2,0)
+ ;;=2^36216
+ ;;^UTILITY(U,$J,358.3,1231,1,3,0)
+ ;;=3^Select Cath 2nd Order Thor/Ue/Head
+ ;;^UTILITY(U,$J,358.3,1232,0)
+ ;;=36217^^12^95^33^^^^1
+ ;;^UTILITY(U,$J,358.3,1232,1,0)
+ ;;=^358.31IA^3^2
+ ;;^UTILITY(U,$J,358.3,1232,1,2,0)
+ ;;=2^36217
+ ;;^UTILITY(U,$J,358.3,1232,1,3,0)
+ ;;=3^Select Cath 3rd Order Thor/Ue/Head
+ ;;^UTILITY(U,$J,358.3,1233,0)
+ ;;=36218^^12^95^4^^^^1
+ ;;^UTILITY(U,$J,358.3,1233,1,0)
+ ;;=^358.31IA^3^2
+ ;;^UTILITY(U,$J,358.3,1233,1,2,0)
+ ;;=2^36218
+ ;;^UTILITY(U,$J,358.3,1233,1,3,0)
+ ;;=3^Each Addl 2nd/3rd Order Thor/Ue/Head
+ ;;^UTILITY(U,$J,358.3,1234,0)
+ ;;=36248^^12^95^3^^^^1
+ ;;^UTILITY(U,$J,358.3,1234,1,0)
+ ;;=^358.31IA^3^2
+ ;;^UTILITY(U,$J,358.3,1234,1,2,0)
+ ;;=2^36248
+ ;;^UTILITY(U,$J,358.3,1234,1,3,0)
+ ;;=3^Each Addl 2nd/3rd Order Pelvic/Le
+ ;;^UTILITY(U,$J,358.3,1235,0)
+ ;;=36200^^12^95^12^^^^1
+ ;;^UTILITY(U,$J,358.3,1235,1,0)
+ ;;=^358.31IA^3^2
+ ;;^UTILITY(U,$J,358.3,1235,1,2,0)
+ ;;=2^36200
+ ;;^UTILITY(U,$J,358.3,1235,1,3,0)
+ ;;=3^Non-Select Cath, Aorta
+ ;;^UTILITY(U,$J,358.3,1236,0)
+ ;;=33010^^12^95^39^^^^1
+ ;;^UTILITY(U,$J,358.3,1236,1,0)
+ ;;=^358.31IA^3^2
+ ;;^UTILITY(U,$J,358.3,1236,1,2,0)
+ ;;=2^33010
+ ;;^UTILITY(U,$J,358.3,1236,1,3,0)
+ ;;=3^Visceral Selective
+ ;;^UTILITY(U,$J,358.3,1237,0)
+ ;;=35471^^12^95^26^^^^1
+ ;;^UTILITY(U,$J,358.3,1237,1,0)
+ ;;=^358.31IA^3^2
+ ;;^UTILITY(U,$J,358.3,1237,1,2,0)
+ ;;=2^35471
+ ;;^UTILITY(U,$J,358.3,1237,1,3,0)
+ ;;=3^Repair Arterial Blockage
+ ;;^UTILITY(U,$J,358.3,1238,0)
+ ;;=35475^^12^95^14^^^^1
+ ;;^UTILITY(U,$J,358.3,1238,1,0)
+ ;;=^358.31IA^3^2
+ ;;^UTILITY(U,$J,358.3,1238,1,2,0)
+ ;;=2^35475
+ ;;^UTILITY(U,$J,358.3,1238,1,3,0)
+ ;;=3^Pelvic Selective
+ ;;^UTILITY(U,$J,358.3,1239,0)
+ ;;=36005^^12^95^5^^^^1
+ ;;^UTILITY(U,$J,358.3,1239,1,0)
+ ;;=^358.31IA^3^2
+ ;;^UTILITY(U,$J,358.3,1239,1,2,0)
+ ;;=2^36005
+ ;;^UTILITY(U,$J,358.3,1239,1,3,0)
+ ;;=3^Injection Ext Venography
+ ;;^UTILITY(U,$J,358.3,1240,0)
+ ;;=36147^^12^95^1^^^^1
+ ;;^UTILITY(U,$J,358.3,1240,1,0)
+ ;;=^358.31IA^3^2
+ ;;^UTILITY(U,$J,358.3,1240,1,2,0)
+ ;;=2^36147
+ ;;^UTILITY(U,$J,358.3,1240,1,3,0)
+ ;;=3^Access AV Dial Grft for Eval
+ ;;^UTILITY(U,$J,358.3,1241,0)
+ ;;=36148^^12^95^2^^^^1
+ ;;^UTILITY(U,$J,358.3,1241,1,0)
+ ;;=^358.31IA^3^2
+ ;;^UTILITY(U,$J,358.3,1241,1,2,0)
+ ;;=2^36148
+ ;;^UTILITY(U,$J,358.3,1241,1,3,0)
+ ;;=3^Access AV Dial Grft for Eval,Ea Addl
+ ;;^UTILITY(U,$J,358.3,1242,0)
+ ;;=36251^^12^95^27^^^^1
+ ;;^UTILITY(U,$J,358.3,1242,1,0)
+ ;;=^358.31IA^3^2
+ ;;^UTILITY(U,$J,358.3,1242,1,2,0)
+ ;;=2^36251
+ ;;^UTILITY(U,$J,358.3,1242,1,3,0)
+ ;;=3^Select Cath 1st Main Ren&Acc Art
+ ;;^UTILITY(U,$J,358.3,1243,0)
+ ;;=36252^^12^95^28^^^^1
+ ;;^UTILITY(U,$J,358.3,1243,1,0)
+ ;;=^358.31IA^3^2
+ ;;^UTILITY(U,$J,358.3,1243,1,2,0)
+ ;;=2^36252
+ ;;^UTILITY(U,$J,358.3,1243,1,3,0)
+ ;;=3^Select Cath 1st Main Ren&Acc Art Bilat
+ ;;^UTILITY(U,$J,358.3,1244,0)
+ ;;=36254^^12^95^6^^^^1
+ ;;^UTILITY(U,$J,358.3,1244,1,0)
+ ;;=^358.31IA^3^2
+ ;;^UTILITY(U,$J,358.3,1244,1,2,0)
+ ;;=2^36254
+ ;;^UTILITY(U,$J,358.3,1244,1,3,0)
+ ;;=3^Ins Cath Ren Art 2nd+ Bilat
+ ;;^UTILITY(U,$J,358.3,1245,0)
+ ;;=36253^^12^95^7^^^^1
+ ;;^UTILITY(U,$J,358.3,1245,1,0)
+ ;;=^358.31IA^3^2
+ ;;^UTILITY(U,$J,358.3,1245,1,2,0)
+ ;;=2^36253
+ ;;^UTILITY(U,$J,358.3,1245,1,3,0)
+ ;;=3^Ins Cath Ren Art 2nd+ Unilat
+ ;;^UTILITY(U,$J,358.3,1246,0)
+ ;;=37191^^12^95^8^^^^1
+ ;;^UTILITY(U,$J,358.3,1246,1,0)
+ ;;=^358.31IA^3^2
+ ;;^UTILITY(U,$J,358.3,1246,1,2,0)
+ ;;=2^37191
+ ;;^UTILITY(U,$J,358.3,1246,1,3,0)
+ ;;=3^Ins Intravas Vena Cava Filter,Endovas
+ ;;^UTILITY(U,$J,358.3,1247,0)
+ ;;=36222^^12^95^17^^^^1
+ ;;^UTILITY(U,$J,358.3,1247,1,0)
+ ;;=^358.31IA^3^2
+ ;;^UTILITY(U,$J,358.3,1247,1,2,0)
+ ;;=2^36222
+ ;;^UTILITY(U,$J,358.3,1247,1,3,0)
+ ;;=3^Place Cath Carotid/Inom Art
+ ;;^UTILITY(U,$J,358.3,1248,0)
+ ;;=36223^^12^95^16^^^^1
+ ;;^UTILITY(U,$J,358.3,1248,1,0)
+ ;;=^358.31IA^3^2
+ ;;^UTILITY(U,$J,358.3,1248,1,2,0)
+ ;;=2^36223
+ ;;^UTILITY(U,$J,358.3,1248,1,3,0)
+ ;;=3^Place Cath Carotid Inc Extracranial
+ ;;^UTILITY(U,$J,358.3,1249,0)
+ ;;=36224^^12^95^15^^^^1
+ ;;^UTILITY(U,$J,358.3,1249,1,0)
+ ;;=^358.31IA^3^2
+ ;;^UTILITY(U,$J,358.3,1249,1,2,0)
+ ;;=2^36224
  ;;^UTILITY(U,$J,358.3,1249,1,3,0)
- ;;=3^Select Cath 2Nd Order Abd/Pelv/Le Artery
+ ;;=3^Place Cath Carotid Art
  ;;^UTILITY(U,$J,358.3,1250,0)
- ;;=36247^^17^92^7^^^^1
+ ;;=36225^^12^95^19^^^^1
  ;;^UTILITY(U,$J,358.3,1250,1,0)
  ;;=^358.31IA^3^2
  ;;^UTILITY(U,$J,358.3,1250,1,2,0)
- ;;=2^36247
+ ;;=2^36225
  ;;^UTILITY(U,$J,358.3,1250,1,3,0)
- ;;=3^Select Cath 3Rd Order Abd/Pelv/Le Artery
+ ;;=3^Place Cath Subclavian Art
  ;;^UTILITY(U,$J,358.3,1251,0)
- ;;=37205^^17^92^12^^^^1
+ ;;=36226^^12^95^21^^^^1
  ;;^UTILITY(U,$J,358.3,1251,1,0)
  ;;=^358.31IA^3^2
  ;;^UTILITY(U,$J,358.3,1251,1,2,0)
- ;;=2^37205
+ ;;=2^36226
  ;;^UTILITY(U,$J,358.3,1251,1,3,0)
- ;;=3^Stent Place, Non/Coronary,Percutaneous,Each Vess
+ ;;=3^Place Cath Vertebral Art
  ;;^UTILITY(U,$J,358.3,1252,0)
- ;;=37206^^17^92^13^^^^1
+ ;;=36227^^12^95^22^^^^1
  ;;^UTILITY(U,$J,358.3,1252,1,0)
  ;;=^358.31IA^3^2
  ;;^UTILITY(U,$J,358.3,1252,1,2,0)
- ;;=2^37206
+ ;;=2^36227
  ;;^UTILITY(U,$J,358.3,1252,1,3,0)
- ;;=3^     Each Add Artery (W/37205)
+ ;;=3^Place Cath Xtrnl Carotid
  ;;^UTILITY(U,$J,358.3,1253,0)
- ;;=75960^^17^92^59^^^^1
+ ;;=36228^^12^95^18^^^^1
  ;;^UTILITY(U,$J,358.3,1253,1,0)
  ;;=^358.31IA^3^2
  ;;^UTILITY(U,$J,358.3,1253,1,2,0)
- ;;=2^75960
+ ;;=2^36228
  ;;^UTILITY(U,$J,358.3,1253,1,3,0)
- ;;=3^Transcath Intro/Stens(S) Rad S&I Each Vessel
+ ;;=3^Place Cath Intracranial Art
  ;;^UTILITY(U,$J,358.3,1254,0)
- ;;=75962^^17^92^60^^^^1
+ ;;=36221^^12^95^20^^^^1
  ;;^UTILITY(U,$J,358.3,1254,1,0)
  ;;=^358.31IA^3^2
  ;;^UTILITY(U,$J,358.3,1254,1,2,0)
- ;;=2^75962
+ ;;=2^36221
  ;;^UTILITY(U,$J,358.3,1254,1,3,0)
- ;;=3^Translum Ball Angioplasty,Peripheral Artery, Rad S&I
+ ;;=3^Place Cath Thoracic Aorta
  ;;^UTILITY(U,$J,358.3,1255,0)
- ;;=75964^^17^92^61^^^^1
+ ;;=37197^^12^95^25^^^^1
  ;;^UTILITY(U,$J,358.3,1255,1,0)
  ;;=^358.31IA^3^2
  ;;^UTILITY(U,$J,358.3,1255,1,2,0)
- ;;=2^75964
+ ;;=2^37197
  ;;^UTILITY(U,$J,358.3,1255,1,3,0)
- ;;=3^     Each Add Artery (W/75962)
+ ;;=3^Remove Intrvas Foreign Body,Broken Cath
  ;;^UTILITY(U,$J,358.3,1256,0)
- ;;=75791^^17^92^58^^^^1
+ ;;=36000^^12^95^24^^^^1
  ;;^UTILITY(U,$J,358.3,1256,1,0)
  ;;=^358.31IA^3^2
  ;;^UTILITY(U,$J,358.3,1256,1,2,0)
- ;;=2^75791
+ ;;=2^36000
  ;;^UTILITY(U,$J,358.3,1256,1,3,0)
- ;;=3^Arteriovenous Shunt
+ ;;=3^Placement of Needle in Vein
  ;;^UTILITY(U,$J,358.3,1257,0)
- ;;=37220^^17^92^14^^^^1
+ ;;=36010^^12^95^23^^^^1
  ;;^UTILITY(U,$J,358.3,1257,1,0)
  ;;=^358.31IA^3^2
  ;;^UTILITY(U,$J,358.3,1257,1,2,0)
- ;;=2^37220
+ ;;=2^36010
  ;;^UTILITY(U,$J,358.3,1257,1,3,0)
- ;;=3^Iliac Revasc,Unilat,1st Vessel
+ ;;=3^Placement of Cath in Vein
  ;;^UTILITY(U,$J,358.3,1258,0)
- ;;=37221^^17^92^15^^^^1
+ ;;=37187^^12^95^13^^^^1
  ;;^UTILITY(U,$J,358.3,1258,1,0)
  ;;=^358.31IA^3^2
  ;;^UTILITY(U,$J,358.3,1258,1,2,0)
- ;;=2^37221
+ ;;=2^37187
  ;;^UTILITY(U,$J,358.3,1258,1,3,0)
- ;;=3^Iliac Revasc w/Stent
+ ;;=3^PTCA Thrombectomy,Vein(s)
  ;;^UTILITY(U,$J,358.3,1259,0)
- ;;=37222^^17^92^16^^^^1
+ ;;=37236^^12^95^36^^^^1
  ;;^UTILITY(U,$J,358.3,1259,1,0)
  ;;=^358.31IA^3^2
  ;;^UTILITY(U,$J,358.3,1259,1,2,0)
- ;;=2^37222
+ ;;=2^37236
  ;;^UTILITY(U,$J,358.3,1259,1,3,0)
- ;;=3^Iliac Revasc,ea add Vessel
+ ;;=3^Transcath Plcmt of Intravas Stent,Init Art
  ;;^UTILITY(U,$J,358.3,1260,0)
- ;;=37223^^17^92^17^^^^1
+ ;;=37237^^12^95^37^^^^1
  ;;^UTILITY(U,$J,358.3,1260,1,0)
  ;;=^358.31IA^3^2
  ;;^UTILITY(U,$J,358.3,1260,1,2,0)
- ;;=2^37223
+ ;;=2^37237
  ;;^UTILITY(U,$J,358.3,1260,1,3,0)
- ;;=3^Iliac Revasc w/Stent,Add-on
+ ;;=3^Transcath Plcmt Intravas Stnt,Ea Addl Art
  ;;^UTILITY(U,$J,358.3,1261,0)
- ;;=37224^^17^92^18^^^^1
- ;;^UTILITY(U,$J,358.3,1261,1,0)
- ;;=^358.31IA^3^2
- ;;^UTILITY(U,$J,358.3,1261,1,2,0)
- ;;=2^37224
- ;;^UTILITY(U,$J,358.3,1261,1,3,0)
- ;;=3^Fem/Popl Revas w/TLA 1st Vessel
- ;;^UTILITY(U,$J,358.3,1262,0)
- ;;=37225^^17^92^19^^^^1
- ;;^UTILITY(U,$J,358.3,1262,1,0)
- ;;=^358.31IA^3^2
- ;;^UTILITY(U,$J,358.3,1262,1,2,0)
- ;;=2^37225
- ;;^UTILITY(U,$J,358.3,1262,1,3,0)
- ;;=3^Fem/Popl Revas w/Ather
- ;;^UTILITY(U,$J,358.3,1263,0)
- ;;=37226^^17^92^20^^^^1
- ;;^UTILITY(U,$J,358.3,1263,1,0)
- ;;=^358.31IA^3^2
- ;;^UTILITY(U,$J,358.3,1263,1,2,0)
- ;;=2^37226
- ;;^UTILITY(U,$J,358.3,1263,1,3,0)
- ;;=3^Fem/Popl Revasc w/Stent
- ;;^UTILITY(U,$J,358.3,1264,0)
- ;;=37227^^17^92^21^^^^1
- ;;^UTILITY(U,$J,358.3,1264,1,0)
- ;;=^358.31IA^3^2
- ;;^UTILITY(U,$J,358.3,1264,1,2,0)
- ;;=2^37227
- ;;^UTILITY(U,$J,358.3,1264,1,3,0)
- ;;=3^Fem/Popl Revasc w/Stent & Ather
- ;;^UTILITY(U,$J,358.3,1265,0)
- ;;=37228^^17^92^22^^^^1
- ;;^UTILITY(U,$J,358.3,1265,1,0)
- ;;=^358.31IA^3^2
- ;;^UTILITY(U,$J,358.3,1265,1,2,0)
- ;;=2^37228
- ;;^UTILITY(U,$J,358.3,1265,1,3,0)
- ;;=3^TIB/Per Revasc w/TLA,1st Vessel
- ;;^UTILITY(U,$J,358.3,1266,0)
- ;;=37229^^17^92^23^^^^1
- ;;^UTILITY(U,$J,358.3,1266,1,0)
- ;;=^358.31IA^3^2
- ;;^UTILITY(U,$J,358.3,1266,1,2,0)
- ;;=2^37229
- ;;^UTILITY(U,$J,358.3,1266,1,3,0)
- ;;=3^TIB/Per Revasc w/Ather
- ;;^UTILITY(U,$J,358.3,1267,0)
- ;;=37230^^17^92^24^^^^1
- ;;^UTILITY(U,$J,358.3,1267,1,0)
- ;;=^358.31IA^3^2
- ;;^UTILITY(U,$J,358.3,1267,1,2,0)
- ;;=2^37230
- ;;^UTILITY(U,$J,358.3,1267,1,3,0)
- ;;=3^TIB/Per Revasc w/Stent
- ;;^UTILITY(U,$J,358.3,1268,0)
- ;;=37231^^17^92^25^^^^1
- ;;^UTILITY(U,$J,358.3,1268,1,0)
- ;;=^358.31IA^3^2
- ;;^UTILITY(U,$J,358.3,1268,1,2,0)
- ;;=2^37231
- ;;^UTILITY(U,$J,358.3,1268,1,3,0)
- ;;=3^TIB/Per Revasc Stent & Ather
- ;;^UTILITY(U,$J,358.3,1269,0)
- ;;=37232^^17^92^26^^^^1
- ;;^UTILITY(U,$J,358.3,1269,1,0)
- ;;=^358.31IA^3^2
- ;;^UTILITY(U,$J,358.3,1269,1,2,0)
- ;;=2^37232
- ;;^UTILITY(U,$J,358.3,1269,1,3,0)
- ;;=3^TIB/Per Revasc,ea addl Vessel
- ;;^UTILITY(U,$J,358.3,1270,0)
- ;;=37233^^17^92^27^^^^1
- ;;^UTILITY(U,$J,358.3,1270,1,0)
- ;;=^358.31IA^3^2
- ;;^UTILITY(U,$J,358.3,1270,1,2,0)
- ;;=2^37233
- ;;^UTILITY(U,$J,358.3,1270,1,3,0)
- ;;=3^TIB/Per Revasc w/Ather,ea addl Vessel
- ;;^UTILITY(U,$J,358.3,1271,0)
- ;;=37234^^17^92^28^^^^1
- ;;^UTILITY(U,$J,358.3,1271,1,0)
- ;;=^358.31IA^3^2
- ;;^UTILITY(U,$J,358.3,1271,1,2,0)
- ;;=2^37234
- ;;^UTILITY(U,$J,358.3,1271,1,3,0)
- ;;=3^TIB/Per Revasc w/Stent,ea addl Vessel
- ;;^UTILITY(U,$J,358.3,1272,0)
- ;;=37235^^17^92^29^^^^1
- ;;^UTILITY(U,$J,358.3,1272,1,0)
- ;;=^358.31IA^3^2
- ;;^UTILITY(U,$J,358.3,1272,1,2,0)
- ;;=2^37235
- ;;^UTILITY(U,$J,358.3,1272,1,3,0)
- ;;=3^TIB/Per Revasc w/Stnt&Ather,addl Vessel
- ;;^UTILITY(U,$J,358.3,1273,0)
- ;;=36251^^17^92^8^^^^1
- ;;^UTILITY(U,$J,358.3,1273,1,0)
- ;;=^358.31IA^3^2
- ;;^UTILITY(U,$J,358.3,1273,1,2,0)
- ;;=2^36251
- ;;^UTILITY(U,$J,358.3,1273,1,3,0)
- ;;=3^Select Cath 1st Main Ren&Access Art
- ;;^UTILITY(U,$J,358.3,1274,0)
- ;;=36252^^17^92^9^^^^1
- ;;^UTILITY(U,$J,358.3,1274,1,0)
- ;;=^358.31IA^3^2
- ;;^UTILITY(U,$J,358.3,1274,1,2,0)
- ;;=2^36252
- ;;^UTILITY(U,$J,358.3,1274,1,3,0)
- ;;=3^Select Cath 1st Main Ren&Acc Art,Bilat
- ;;^UTILITY(U,$J,358.3,1275,0)
- ;;=36254^^17^92^10^^^^1
- ;;^UTILITY(U,$J,358.3,1275,1,0)
- ;;=^358.31IA^3^2
- ;;^UTILITY(U,$J,358.3,1275,1,2,0)
- ;;=2^36254
- ;;^UTILITY(U,$J,358.3,1275,1,3,0)
- ;;=3^Superselect Cath Ren Art&Access Art
- ;;^UTILITY(U,$J,358.3,1276,0)
- ;;=37191^^17^92^11^^^^1
- ;;^UTILITY(U,$J,358.3,1276,1,0)
- ;;=^358.31IA^3^2
- ;;^UTILITY(U,$J,358.3,1276,1,2,0)
- ;;=2^37191
- ;;^UTILITY(U,$J,358.3,1276,1,3,0)
- ;;=3^Insert Intravas Vena Cava Filter,Endovas
- ;;^UTILITY(U,$J,358.3,1277,0)
- ;;=37619^^17^92^31^^^^1
- ;;^UTILITY(U,$J,358.3,1277,1,0)
- ;;=^358.31IA^3^2
- ;;^UTILITY(U,$J,358.3,1277,1,2,0)
- ;;=2^37619
- ;;^UTILITY(U,$J,358.3,1277,1,3,0)
- ;;=3^Open Inferior Vena Cava Filter Placement
- ;;^UTILITY(U,$J,358.3,1278,0)
- ;;=75635^^17^92^35^^^^1
- ;;^UTILITY(U,$J,358.3,1278,1,0)
- ;;=^358.31IA^3^2
- ;;^UTILITY(U,$J,358.3,1278,1,2,0)
- ;;=2^75635
- ;;^UTILITY(U,$J,358.3,1278,1,3,0)
- ;;=3^CT Angio Abd Art w/Contrast
- ;;^UTILITY(U,$J,358.3,1279,0)
- ;;=75658^^17^92^38^^^^1
- ;;^UTILITY(U,$J,358.3,1279,1,0)
- ;;=^358.31IA^3^2
- ;;^UTILITY(U,$J,358.3,1279,1,2,0)
- ;;=2^75658
- ;;^UTILITY(U,$J,358.3,1279,1,3,0)
- ;;=3^Angiography,Brachial,Retrograd,Rad S&I
- ;;^UTILITY(U,$J,358.3,1280,0)
- ;;=76506^^17^92^62^^^^1
- ;;^UTILITY(U,$J,358.3,1280,1,0)
- ;;=^358.31IA^3^2
- ;;^UTILITY(U,$J,358.3,1280,1,2,0)
- ;;=2^76506
- ;;^UTILITY(U,$J,358.3,1280,1,3,0)
- ;;=3^Echoencephalography,Real Time w/Image Doc
- ;;^UTILITY(U,$J,358.3,1281,0)
- ;;=36005^^17^93^1^^^^1
- ;;^UTILITY(U,$J,358.3,1281,1,0)
- ;;=^358.31IA^3^2
- ;;^UTILITY(U,$J,358.3,1281,1,2,0)
- ;;=2^36005
- ;;^UTILITY(U,$J,358.3,1281,1,3,0)
- ;;=3^Contrast Venography
- ;;^UTILITY(U,$J,358.3,1282,0)
- ;;=92950^^17^94^2^^^^1
- ;;^UTILITY(U,$J,358.3,1282,1,0)
- ;;=^358.31IA^3^2
- ;;^UTILITY(U,$J,358.3,1282,1,2,0)
- ;;=2^92950
- ;;^UTILITY(U,$J,358.3,1282,1,3,0)
- ;;=3^CPR
- ;;^UTILITY(U,$J,358.3,1283,0)
- ;;=33010^^17^94^1^^^^1
- ;;^UTILITY(U,$J,358.3,1283,1,0)
- ;;=^358.31IA^3^2
- ;;^UTILITY(U,$J,358.3,1283,1,2,0)
- ;;=2^33010
- ;;^UTILITY(U,$J,358.3,1283,1,3,0)
- ;;=3^Pericardiocentesis
- ;;^UTILITY(U,$J,358.3,1284,0)
- ;;=93503^^17^95^14^^^^1
- ;;^UTILITY(U,$J,358.3,1284,1,0)
- ;;=^358.31IA^3^2
- ;;^UTILITY(U,$J,358.3,1284,1,2,0)
- ;;=2^93503
- ;;^UTILITY(U,$J,358.3,1284,1,3,0)
- ;;=3^Swan Ganz Placement
- ;;^UTILITY(U,$J,358.3,1285,0)
- ;;=93451^^17^95^1^^^^1
- ;;^UTILITY(U,$J,358.3,1285,1,0)
- ;;=^358.31IA^3^2
- ;;^UTILITY(U,$J,358.3,1285,1,2,0)
- ;;=2^93451
- ;;^UTILITY(U,$J,358.3,1285,1,3,0)
- ;;=3^Right Hrt Cath incl O2 & Cardiac Outpt
- ;;^UTILITY(U,$J,358.3,1286,0)
- ;;=93452^^17^95^2^^^^1
- ;;^UTILITY(U,$J,358.3,1286,1,0)
- ;;=^358.31IA^3^2
- ;;^UTILITY(U,$J,358.3,1286,1,2,0)
- ;;=2^93452
- ;;^UTILITY(U,$J,358.3,1286,1,3,0)
- ;;=3^LHC w/V-Gram, incl S&I
- ;;^UTILITY(U,$J,358.3,1287,0)
- ;;=93453^^17^95^3^^^^1
- ;;^UTILITY(U,$J,358.3,1287,1,0)
- ;;=^358.31IA^3^2
- ;;^UTILITY(U,$J,358.3,1287,1,2,0)
- ;;=2^93453
- ;;^UTILITY(U,$J,358.3,1287,1,3,0)
- ;;=3^R&L HC w/V-Gram, incl S&I
- ;;^UTILITY(U,$J,358.3,1288,0)
- ;;=93454^^17^95^4^^^^1
- ;;^UTILITY(U,$J,358.3,1288,1,0)
- ;;=^358.31IA^3^2
- ;;^UTILITY(U,$J,358.3,1288,1,2,0)
- ;;=2^93454
- ;;^UTILITY(U,$J,358.3,1288,1,3,0)
- ;;=3^Coronary Angiography, incl inj & S&I
- ;;^UTILITY(U,$J,358.3,1289,0)
- ;;=93455^^17^95^5^^^^1
- ;;^UTILITY(U,$J,358.3,1289,1,0)
- ;;=^358.31IA^3^2
- ;;^UTILITY(U,$J,358.3,1289,1,2,0)
- ;;=2^93455
- ;;^UTILITY(U,$J,358.3,1289,1,3,0)
- ;;=3^Cor Angio incl inj & S&I, and Bypass angio
- ;;^UTILITY(U,$J,358.3,1290,0)
- ;;=93456^^17^95^6^^^^1
- ;;^UTILITY(U,$J,358.3,1290,1,0)
- ;;=^358.31IA^3^2
- ;;^UTILITY(U,$J,358.3,1290,1,2,0)
- ;;=2^93456
- ;;^UTILITY(U,$J,358.3,1290,1,3,0)
- ;;=3^Cor Angio incl inj & S&I, and R Heart Cath
- ;;^UTILITY(U,$J,358.3,1291,0)
- ;;=93457^^17^95^7^^^^1
- ;;^UTILITY(U,$J,358.3,1291,1,0)
- ;;=^358.31IA^3^2
- ;;^UTILITY(U,$J,358.3,1291,1,2,0)
- ;;=2^93457
- ;;^UTILITY(U,$J,358.3,1291,1,3,0)
- ;;=3^Rt Hrt Angio,Bypass Grft,incl inj & S&I
- ;;^UTILITY(U,$J,358.3,1292,0)
- ;;=93458^^17^95^8^^^^1
- ;;^UTILITY(U,$J,358.3,1292,1,0)
- ;;=^358.31IA^3^2
- ;;^UTILITY(U,$J,358.3,1292,1,2,0)
- ;;=2^93458
- ;;^UTILITY(U,$J,358.3,1292,1,3,0)
- ;;=3^Cor Angio, LHC, V-Gram, incl inj & S&I
+ ;;=93561^^12^96^7^^^^1

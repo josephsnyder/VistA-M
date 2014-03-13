@@ -1,132 +1,364 @@
-IBDEI0IJ ; ; 20-FEB-2013
- ;;3.0;IB ENCOUNTER FORM IMP/EXP;;FEB 20, 2013
- Q:'DIFQ(358.6)  F I=1:2 S X=$T(Q+I) Q:X=""  S Y=$E($T(Q+I+1),4,999),X=$E(X,4,999) S:$A(Y)=126 I=I+1,Y=$E(Y,2,999)_$E($T(Q+I+1),5,99) S:$A(Y)=61 Y=$E(Y,2,999) X NO E  S @X=Y
+IBDEI0IJ ; ; 13-FEB-2014
+ ;;3.0;IB ENCOUNTER FORM IMP/EXP;;FEB 13, 2014
+ Q:'DIFQR(358.3)  F I=1:2 S X=$T(Q+I) Q:X=""  S Y=$E($T(Q+I+1),4,999),X=$E(X,4,999) S:$A(Y)=126 I=I+1,Y=$E(Y,2,999)_$E($T(Q+I+1),5,99) S:$A(Y)=61 Y=$E(Y,2,999) X NO E  S @X=Y
 Q Q
- ;;^DIC(358.6,0,"GL")
- ;;=^IBE(358.6,
- ;;^DIC("B","IMP/EXP PACKAGE INTERFACE",358.6)
- ;;=
- ;;^DIC(358.6,"%D",0)
- ;;=^^1^1^2950927^^^^
- ;;^DIC(358.6,"%D",1,0)
- ;;=This file is used as a workspace by the import/export utility.
- ;;^DIC(358.6,"%D",2,0)
- ;;=Import/Export Utility as a temporary staging area for data from that file
- ;;^DIC(358.6,"%D",3,0)
- ;;=that is being imported or exported.
- ;;^DIC(358.6,"%D",4,0)
- ;;= 
- ;;^DIC(358.6,"%D",5,0)
- ;;=This file contains a description of all of the interfaces with other packages.
- ;;^DIC(358.6,"%D",6,0)
- ;;=The form will invoke the proper interface routines by doing a lookup on
- ;;^DIC(358.6,"%D",7,0)
- ;;=this file and then invoking the routine by indirection. The INPUT VARIABLE
- ;;^DIC(358.6,"%D",8,0)
- ;;=fields are for documentation purposes and to verify that the proper
- ;;^DIC(358.6,"%D",9,0)
- ;;=variables are defined. Data will be exchanged between the encounter form
- ;;^DIC(358.6,"%D",10,0)
- ;;=utilities and other packages by putting the data in a predefined location.
- ;;^DIC(358.6,"%D",11,0)
- ;;=The first part of the subscript is always be ^TMP("IB",$J,"INTERFACES".
- ;;^DIC(358.6,"%D",12,0)
- ;;=For output routines, but not selection routines, the fourth subscript is
- ;;^DIC(358.6,"%D",13,0)
- ;;=be the patient DFN. The next subscript is the name of the Package
- ;;^DIC(358.6,"%D",14,0)
- ;;=Interface. For single valued data and record valued data there is no
- ;;^DIC(358.6,"%D",15,0)
- ;;=additional subscript. For interfaces returning a list there is one
- ;;^DIC(358.6,"%D",16,0)
- ;;=additional subscript level, the number of the item on the list. For
- ;;^DIC(358.6,"%D",17,0)
- ;;=word processing type data the data will be in FM word-processing format,
- ;;^DIC(358.6,"%D",18,0)
- ;;=i.e., the final subscripts will be ...1,0),...2,0),...3,0), etc.
- ;;^DIC(358.6,"%D",19,0)
- ;;=these items of data can have its own entry in the Package Interface file,
- ;;^DIC(358.6,"%D",20,0)
- ;;=but by using the same entry point there is a savings because all of the
- ;;^DIC(358.6,"%D",21,0)
- ;;=data on that node can be obtained at once. The routines that invoke the
- ;;^DIC(358.6,"%D",22,0)
- ;;=entry point keep track of the entry points already invoked so they are
- ;;^DIC(358.6,"%D",23,0)
- ;;=not repeated.
- ;;^DD(358.6,0)
- ;;=FIELD^^21^76
- ;;^DD(358.6,0,"DDA")
- ;;=N
- ;;^DD(358.6,0,"DT")
- ;;=3000124
- ;;^DD(358.6,0,"ID",.06)
- ;;=W ""
- ;;^DD(358.6,0,"ID","WRITE")
- ;;=N IBDWNAM S IBDWNAM=$E($P(^(0),U),1,40) D EN^DDIOL(IBDWNAM,"","!?0")
- ;;^DD(358.6,0,"ID","WRITE1")
- ;;=N IBDWTYPE S IBDWTYPE=$S($P(^(0),"^",6)=1:"INPUT",$P(^(0),"^",6)=2:"OUTPUT",$P(^(0),"^",6)=3:"SELECTION",1:"REPORT")_$S($P(^(0),U,6)=3&'$P(^(0),"^",13):"  ** NOT SCANNABLE **",1:"") D EN^DDIOL("TYPE="_IBDWTYPE,"","?45")
- ;;^DD(358.6,0,"IX","B",358.6,.01)
- ;;=
- ;;^DD(358.6,0,"IX","C",358.6,.04)
- ;;=
- ;;^DD(358.6,0,"IX","D",358.6,3)
- ;;=
- ;;^DD(358.6,0,"IX","E",358.6,.01)
- ;;=
- ;;^DD(358.6,0,"NM","IMP/EXP PACKAGE INTERFACE")
- ;;=
- ;;^DD(358.6,0,"PT",358.2,.11)
- ;;=
- ;;^DD(358.6,0,"PT",358.5,.03)
- ;;=
- ;;^DD(358.6,0,"PT",358.6,.13)
- ;;=
- ;;^DD(358.6,0,"PT",358.93,.06)
- ;;=
- ;;^DD(358.6,0,"VRPK")
- ;;=IBD
- ;;^DD(358.6,.01,0)
- ;;=NAME^RF^^0;1^K:X[""""!($A(X)=45) X I $D(X) K:$L(X)>40!($L(X)<3)!'(X'?1P.E) X
- ;;^DD(358.6,.01,1,0)
- ;;=^.1
- ;;^DD(358.6,.01,1,1,0)
- ;;=358.6^B
- ;;^DD(358.6,.01,1,1,1)
- ;;=S ^IBE(358.6,"B",$E(X,1,30),DA)=""
- ;;^DD(358.6,.01,1,1,2)
- ;;=K ^IBE(358.6,"B",$E(X,1,30),DA)
- ;;^DD(358.6,.01,1,2,0)
- ;;=358.6^E^MUMPS
- ;;^DD(358.6,.01,1,2,1)
- ;;=S ^IBE(358.6,"E",$E(X,$F(X," "),40),DA)=""
- ;;^DD(358.6,.01,1,2,2)
- ;;=K ^IBE(358.6,"E",$E(X,$F(X," "),40),DA)
- ;;^DD(358.6,.01,1,2,"%D",0)
- ;;=^^4^4^2940224^
- ;;^DD(358.6,.01,1,2,"%D",1,0)
- ;;= 
- ;;^DD(358.6,.01,1,2,"%D",2,0)
- ;;=For package interfaces that are output routines the name has the custodial
- ;;^DD(358.6,.01,1,2,"%D",3,0)
- ;;=package's name space as a prefix. This cross-reference removes that
- ;;^DD(358.6,.01,1,2,"%D",4,0)
- ;;=prefix. It is used to improve the display of output routines for the user.
- ;;^DD(358.6,.01,1,2,"DT")
- ;;=2930409
- ;;^DD(358.6,.01,3)
- ;;=Answer must be 3-40 characters in length. All entries with Action Type other than PRINT REPORT must be be prefixed with the namespace of the package that is responsible for the data.
- ;;^DD(358.6,.01,21,0)
- ;;=^^3^3^2950412^^^^
- ;;^DD(358.6,.01,21,1,0)
- ;;= 
- ;;^DD(358.6,.01,21,2,0)
- ;;=The name of the Package Interface. For interfaces returning data the name
- ;;^DD(358.6,.01,21,3,0)
- ;;=should be preceded with the namespace of the package.
- ;;^DD(358.6,.01,23,0)
- ;;=^^1^1^2950412^
- ;;^DD(358.6,.01,23,1,0)
- ;;= 
- ;;^DD(358.6,.01,"DT")
- ;;=2930409
+ ;;^UTILITY(U,$J,358.3,24994,1,5,0)
+ ;;=5^Bipolar Mixed, Moderate
+ ;;^UTILITY(U,$J,358.3,24994,2)
+ ;;=Bipolar Mixed, Moderate^303628
+ ;;^UTILITY(U,$J,358.3,24995,0)
+ ;;=296.63^^175^1548^24
+ ;;^UTILITY(U,$J,358.3,24995,1,0)
+ ;;=^358.31IA^5^2
+ ;;^UTILITY(U,$J,358.3,24995,1,4,0)
+ ;;=4^296.63
+ ;;^UTILITY(U,$J,358.3,24995,1,5,0)
+ ;;=5^Bipolar Mixed, Sev w/o Psychosis
+ ;;^UTILITY(U,$J,358.3,24995,2)
+ ;;=^303629
+ ;;^UTILITY(U,$J,358.3,24996,0)
+ ;;=296.64^^175^1548^23
+ ;;^UTILITY(U,$J,358.3,24996,1,0)
+ ;;=^358.31IA^5^2
+ ;;^UTILITY(U,$J,358.3,24996,1,4,0)
+ ;;=4^296.64
+ ;;^UTILITY(U,$J,358.3,24996,1,5,0)
+ ;;=5^Bipolar Mixed, Sev W/Psychosis
+ ;;^UTILITY(U,$J,358.3,24996,2)
+ ;;=^303630
+ ;;^UTILITY(U,$J,358.3,24997,0)
+ ;;=296.65^^175^1548^22
+ ;;^UTILITY(U,$J,358.3,24997,1,0)
+ ;;=^358.31IA^5^2
+ ;;^UTILITY(U,$J,358.3,24997,1,4,0)
+ ;;=4^296.65
+ ;;^UTILITY(U,$J,358.3,24997,1,5,0)
+ ;;=5^Bipolar Mixed, Part Remiss
+ ;;^UTILITY(U,$J,358.3,24997,2)
+ ;;=Bipolar Mixed, Part Remiss^303631
+ ;;^UTILITY(U,$J,358.3,24998,0)
+ ;;=296.66^^175^1548^18
+ ;;^UTILITY(U,$J,358.3,24998,1,0)
+ ;;=^358.31IA^5^2
+ ;;^UTILITY(U,$J,358.3,24998,1,4,0)
+ ;;=4^296.66
+ ;;^UTILITY(U,$J,358.3,24998,1,5,0)
+ ;;=5^Bipolar Mixed, Full Remiss
+ ;;^UTILITY(U,$J,358.3,24998,2)
+ ;;=^303632
+ ;;^UTILITY(U,$J,358.3,24999,0)
+ ;;=296.7^^175^1548^9
+ ;;^UTILITY(U,$J,358.3,24999,1,0)
+ ;;=^358.31IA^5^2
+ ;;^UTILITY(U,$J,358.3,24999,1,4,0)
+ ;;=4^296.7
+ ;;^UTILITY(U,$J,358.3,24999,1,5,0)
+ ;;=5^Bipolar I Disorder, NOS
+ ;;^UTILITY(U,$J,358.3,24999,2)
+ ;;=^303633
+ ;;^UTILITY(U,$J,358.3,25000,0)
+ ;;=296.80^^175^1548^8
+ ;;^UTILITY(U,$J,358.3,25000,1,0)
+ ;;=^358.31IA^5^2
+ ;;^UTILITY(U,$J,358.3,25000,1,4,0)
+ ;;=4^296.80
+ ;;^UTILITY(U,$J,358.3,25000,1,5,0)
+ ;;=5^Bipolar Disorder,NOS
+ ;;^UTILITY(U,$J,358.3,25000,2)
+ ;;=^331892
+ ;;^UTILITY(U,$J,358.3,25001,0)
+ ;;=296.89^^175^1548^10
+ ;;^UTILITY(U,$J,358.3,25001,1,0)
+ ;;=^358.31IA^5^2
+ ;;^UTILITY(U,$J,358.3,25001,1,4,0)
+ ;;=4^296.89
+ ;;^UTILITY(U,$J,358.3,25001,1,5,0)
+ ;;=5^Bipolar II Disorder,NOS
+ ;;^UTILITY(U,$J,358.3,25001,2)
+ ;;=^331893
+ ;;^UTILITY(U,$J,358.3,25002,0)
+ ;;=310.0^^175^1549^2
+ ;;^UTILITY(U,$J,358.3,25002,1,0)
+ ;;=^358.31IA^5^2
+ ;;^UTILITY(U,$J,358.3,25002,1,4,0)
+ ;;=4^310.0
+ ;;^UTILITY(U,$J,358.3,25002,1,5,0)
+ ;;=5^Frontal Lobe Syndrome
+ ;;^UTILITY(U,$J,358.3,25002,2)
+ ;;=^265201
+ ;;^UTILITY(U,$J,358.3,25003,0)
+ ;;=310.1^^175^1549^3
+ ;;^UTILITY(U,$J,358.3,25003,1,0)
+ ;;=^358.31IA^5^2
+ ;;^UTILITY(U,$J,358.3,25003,1,4,0)
+ ;;=4^310.1
+ ;;^UTILITY(U,$J,358.3,25003,1,5,0)
+ ;;=5^Personality Chg d/t TBI/Lesion
+ ;;^UTILITY(U,$J,358.3,25003,2)
+ ;;=^331953
+ ;;^UTILITY(U,$J,358.3,25004,0)
+ ;;=310.2^^175^1549^4
+ ;;^UTILITY(U,$J,358.3,25004,1,0)
+ ;;=^358.31IA^5^2
+ ;;^UTILITY(U,$J,358.3,25004,1,4,0)
+ ;;=4^310.2
+ ;;^UTILITY(U,$J,358.3,25004,1,5,0)
+ ;;=5^Postconcussion Syndrome
+ ;;^UTILITY(U,$J,358.3,25004,2)
+ ;;=^265160
+ ;;^UTILITY(U,$J,358.3,25005,0)
+ ;;=310.81^^175^1549^5
+ ;;^UTILITY(U,$J,358.3,25005,1,0)
+ ;;=^358.31IA^5^2
+ ;;^UTILITY(U,$J,358.3,25005,1,4,0)
+ ;;=4^310.81
+ ;;^UTILITY(U,$J,358.3,25005,1,5,0)
+ ;;=5^Pseudobulbar Affect
+ ;;^UTILITY(U,$J,358.3,25005,2)
+ ;;=^340506
+ ;;^UTILITY(U,$J,358.3,25006,0)
+ ;;=310.89^^175^1549^1
+ ;;^UTILITY(U,$J,358.3,25006,1,0)
+ ;;=^358.31IA^5^2
+ ;;^UTILITY(U,$J,358.3,25006,1,4,0)
+ ;;=4^310.89
+ ;;^UTILITY(U,$J,358.3,25006,1,5,0)
+ ;;=5^Brain Damage D/O,Oth Spec
+ ;;^UTILITY(U,$J,358.3,25006,2)
+ ;;=^268320
+ ;;^UTILITY(U,$J,358.3,25007,0)
+ ;;=293.0^^175^1550^1
+ ;;^UTILITY(U,$J,358.3,25007,1,0)
+ ;;=^358.31IA^5^2
+ ;;^UTILITY(U,$J,358.3,25007,1,4,0)
+ ;;=4^293.0
+ ;;^UTILITY(U,$J,358.3,25007,1,5,0)
+ ;;=5^Acute Delirium
+ ;;^UTILITY(U,$J,358.3,25007,2)
+ ;;=Acute Delirium^268035
+ ;;^UTILITY(U,$J,358.3,25008,0)
+ ;;=291.0^^175^1550^3
+ ;;^UTILITY(U,$J,358.3,25008,1,0)
+ ;;=^358.31IA^5^2
+ ;;^UTILITY(U,$J,358.3,25008,1,4,0)
+ ;;=4^291.0
+ ;;^UTILITY(U,$J,358.3,25008,1,5,0)
+ ;;=5^Withdrawal Delirium
+ ;;^UTILITY(U,$J,358.3,25008,2)
+ ;;=Withdrawal Delirium^4589
+ ;;^UTILITY(U,$J,358.3,25009,0)
+ ;;=292.81^^175^1550^2
+ ;;^UTILITY(U,$J,358.3,25009,1,0)
+ ;;=^358.31IA^5^2
+ ;;^UTILITY(U,$J,358.3,25009,1,4,0)
+ ;;=4^292.81
+ ;;^UTILITY(U,$J,358.3,25009,1,5,0)
+ ;;=5^Drug Induced Delirium
+ ;;^UTILITY(U,$J,358.3,25009,2)
+ ;;=Drug Induced Delirium^268022
+ ;;^UTILITY(U,$J,358.3,25010,0)
+ ;;=290.20^^175^1551^17
+ ;;^UTILITY(U,$J,358.3,25010,1,0)
+ ;;=^358.31IA^5^2
+ ;;^UTILITY(U,$J,358.3,25010,1,4,0)
+ ;;=4^290.20
+ ;;^UTILITY(U,$J,358.3,25010,1,5,0)
+ ;;=5^Dementia w/Delusion
+ ;;^UTILITY(U,$J,358.3,25010,2)
+ ;;=^303486
+ ;;^UTILITY(U,$J,358.3,25011,0)
+ ;;=290.40^^175^1551^20
+ ;;^UTILITY(U,$J,358.3,25011,1,0)
+ ;;=^358.31IA^5^2
+ ;;^UTILITY(U,$J,358.3,25011,1,4,0)
+ ;;=4^290.40
+ ;;^UTILITY(U,$J,358.3,25011,1,5,0)
+ ;;=5^Vascular Dementia
+ ;;^UTILITY(U,$J,358.3,25011,2)
+ ;;=^303487
+ ;;^UTILITY(U,$J,358.3,25012,0)
+ ;;=291.2^^175^1551^1
+ ;;^UTILITY(U,$J,358.3,25012,1,0)
+ ;;=^358.31IA^5^2
+ ;;^UTILITY(U,$J,358.3,25012,1,4,0)
+ ;;=4^291.2
+ ;;^UTILITY(U,$J,358.3,25012,1,5,0)
+ ;;=5^Alcoholic Dementia
+ ;;^UTILITY(U,$J,358.3,25012,2)
+ ;;=Alcoholic Dementia^268015
+ ;;^UTILITY(U,$J,358.3,25013,0)
+ ;;=290.0^^175^1551^19
+ ;;^UTILITY(U,$J,358.3,25013,1,0)
+ ;;=^358.31IA^5^2
+ ;;^UTILITY(U,$J,358.3,25013,1,4,0)
+ ;;=4^290.0
+ ;;^UTILITY(U,$J,358.3,25013,1,5,0)
+ ;;=5^Senile Dementia, Uncomplicated
+ ;;^UTILITY(U,$J,358.3,25013,2)
+ ;;=^31700
+ ;;^UTILITY(U,$J,358.3,25014,0)
+ ;;=290.3^^175^1551^16
+ ;;^UTILITY(U,$J,358.3,25014,1,0)
+ ;;=^358.31IA^5^2
+ ;;^UTILITY(U,$J,358.3,25014,1,4,0)
+ ;;=4^290.3
+ ;;^UTILITY(U,$J,358.3,25014,1,5,0)
+ ;;=5^Dementia w/Delirium
+ ;;^UTILITY(U,$J,358.3,25014,2)
+ ;;=^268009
+ ;;^UTILITY(U,$J,358.3,25015,0)
+ ;;=294.8^^175^1551^6
+ ;;^UTILITY(U,$J,358.3,25015,1,0)
+ ;;=^358.31IA^5^2
+ ;;^UTILITY(U,$J,358.3,25015,1,4,0)
+ ;;=4^294.8
+ ;;^UTILITY(U,$J,358.3,25015,1,5,0)
+ ;;=5^Dementia NOS
+ ;;^UTILITY(U,$J,358.3,25015,2)
+ ;;=^331843
+ ;;^UTILITY(U,$J,358.3,25016,0)
+ ;;=294.11^^175^1551^10
+ ;;^UTILITY(U,$J,358.3,25016,1,0)
+ ;;=^358.31IA^5^2
+ ;;^UTILITY(U,$J,358.3,25016,1,4,0)
+ ;;=4^294.11
+ ;;^UTILITY(U,$J,358.3,25016,1,5,0)
+ ;;=5^Dementia d/t HIV w/ Behav Disturb
+ ;;^UTILITY(U,$J,358.3,25016,2)
+ ;;=^321982^042.
+ ;;^UTILITY(U,$J,358.3,25017,0)
+ ;;=294.20^^175^1551^8
+ ;;^UTILITY(U,$J,358.3,25017,1,0)
+ ;;=^358.31IA^5^2
+ ;;^UTILITY(U,$J,358.3,25017,1,4,0)
+ ;;=4^294.20
+ ;;^UTILITY(U,$J,358.3,25017,1,5,0)
+ ;;=5^Dementia NOS w/o Behv Dstrb
+ ;;^UTILITY(U,$J,358.3,25017,2)
+ ;;=^340607
+ ;;^UTILITY(U,$J,358.3,25018,0)
+ ;;=294.21^^175^1551^7
+ ;;^UTILITY(U,$J,358.3,25018,1,0)
+ ;;=^358.31IA^5^2
+ ;;^UTILITY(U,$J,358.3,25018,1,4,0)
+ ;;=4^294.21
+ ;;^UTILITY(U,$J,358.3,25018,1,5,0)
+ ;;=5^Dementia NOS w/Behav Distrb
+ ;;^UTILITY(U,$J,358.3,25018,2)
+ ;;=^340505
+ ;;^UTILITY(U,$J,358.3,25019,0)
+ ;;=331.83^^175^1551^18
+ ;;^UTILITY(U,$J,358.3,25019,1,0)
+ ;;=^358.31IA^5^2
+ ;;^UTILITY(U,$J,358.3,25019,1,4,0)
+ ;;=4^331.83
+ ;;^UTILITY(U,$J,358.3,25019,1,5,0)
+ ;;=5^Mild Cognitive Impairment
+ ;;^UTILITY(U,$J,358.3,25019,2)
+ ;;=^334065
+ ;;^UTILITY(U,$J,358.3,25020,0)
+ ;;=294.8^^175^1551^9
+ ;;^UTILITY(U,$J,358.3,25020,1,0)
+ ;;=^358.31IA^5^2
+ ;;^UTILITY(U,$J,358.3,25020,1,4,0)
+ ;;=4^294.8
+ ;;^UTILITY(U,$J,358.3,25020,1,5,0)
+ ;;=5^Dementia d/t Brain Tumor
+ ;;^UTILITY(U,$J,358.3,25020,2)
+ ;;=^331843
+ ;;^UTILITY(U,$J,358.3,25021,0)
+ ;;=294.10^^175^1551^11
+ ;;^UTILITY(U,$J,358.3,25021,1,0)
+ ;;=^358.31IA^5^2
+ ;;^UTILITY(U,$J,358.3,25021,1,4,0)
+ ;;=4^294.10
+ ;;^UTILITY(U,$J,358.3,25021,1,5,0)
+ ;;=5^Dementia d/t HIV w/o Behav Disturb
+ ;;^UTILITY(U,$J,358.3,25021,2)
+ ;;=^321980^042.
+ ;;^UTILITY(U,$J,358.3,25022,0)
+ ;;=294.11^^175^1551^3
+ ;;^UTILITY(U,$J,358.3,25022,1,0)
+ ;;=^358.31IA^5^2
+ ;;^UTILITY(U,$J,358.3,25022,1,4,0)
+ ;;=4^294.11
+ ;;^UTILITY(U,$J,358.3,25022,1,5,0)
+ ;;=5^Alzheimers Dementia w/ Behav Disturb
+ ;;^UTILITY(U,$J,358.3,25022,2)
+ ;;=^321982^331.0
+ ;;^UTILITY(U,$J,358.3,25023,0)
+ ;;=294.10^^175^1551^5
+ ;;^UTILITY(U,$J,358.3,25023,1,0)
+ ;;=^358.31IA^5^2
+ ;;^UTILITY(U,$J,358.3,25023,1,4,0)
+ ;;=4^294.10
+ ;;^UTILITY(U,$J,358.3,25023,1,5,0)
+ ;;=5^Alzheimers Dementia w/o Behav Disturb
+ ;;^UTILITY(U,$J,358.3,25023,2)
+ ;;=^321980^331.0
+ ;;^UTILITY(U,$J,358.3,25024,0)
+ ;;=294.10^^175^1551^15
+ ;;^UTILITY(U,$J,358.3,25024,1,0)
+ ;;=^358.31IA^5^2
+ ;;^UTILITY(U,$J,358.3,25024,1,4,0)
+ ;;=4^294.10
+ ;;^UTILITY(U,$J,358.3,25024,1,5,0)
+ ;;=5^Dementia d/t Parkinson w/o Behav Disturb
+ ;;^UTILITY(U,$J,358.3,25024,2)
+ ;;=^321980^332.0
+ ;;^UTILITY(U,$J,358.3,25025,0)
+ ;;=294.11^^175^1551^14
+ ;;^UTILITY(U,$J,358.3,25025,1,0)
+ ;;=^358.31IA^5^2
+ ;;^UTILITY(U,$J,358.3,25025,1,4,0)
+ ;;=4^294.11
+ ;;^UTILITY(U,$J,358.3,25025,1,5,0)
+ ;;=5^Dementia d/t Parkinson w/ Behav Disturb
+ ;;^UTILITY(U,$J,358.3,25025,2)
+ ;;=^321982^332.0
+ ;;^UTILITY(U,$J,358.3,25026,0)
+ ;;=294.11^^175^1551^12
+ ;;^UTILITY(U,$J,358.3,25026,1,0)
+ ;;=^358.31IA^5^2
+ ;;^UTILITY(U,$J,358.3,25026,1,4,0)
+ ;;=4^294.11
+ ;;^UTILITY(U,$J,358.3,25026,1,5,0)
+ ;;=5^Dementia d/t MS w/ Behav Disturb
+ ;;^UTILITY(U,$J,358.3,25026,2)
+ ;;=^321982^340.
+ ;;^UTILITY(U,$J,358.3,25027,0)
+ ;;=294.10^^175^1551^13
+ ;;^UTILITY(U,$J,358.3,25027,1,0)
+ ;;=^358.31IA^5^2
+ ;;^UTILITY(U,$J,358.3,25027,1,4,0)
+ ;;=4^294.10
+ ;;^UTILITY(U,$J,358.3,25027,1,5,0)
+ ;;=5^Dementia d/t MS w/o Behav Disturb
+ ;;^UTILITY(U,$J,358.3,25027,2)
+ ;;=^321980^340.
+ ;;^UTILITY(U,$J,358.3,25028,0)
+ ;;=296.20^^175^1552^14
+ ;;^UTILITY(U,$J,358.3,25028,1,0)
+ ;;=^358.31IA^5^2
+ ;;^UTILITY(U,$J,358.3,25028,1,4,0)
+ ;;=4^296.20
+ ;;^UTILITY(U,$J,358.3,25028,1,5,0)
+ ;;=5^MDD, Single, NOS
+ ;;^UTILITY(U,$J,358.3,25028,2)
+ ;;=^73311
+ ;;^UTILITY(U,$J,358.3,25029,0)
+ ;;=296.21^^175^1552^12
+ ;;^UTILITY(U,$J,358.3,25029,1,0)
+ ;;=^358.31IA^5^2
+ ;;^UTILITY(U,$J,358.3,25029,1,4,0)
+ ;;=4^296.21
+ ;;^UTILITY(U,$J,358.3,25029,1,5,0)
+ ;;=5^MDD, Single, Mild
+ ;;^UTILITY(U,$J,358.3,25029,2)
+ ;;=^268110
+ ;;^UTILITY(U,$J,358.3,25030,0)
+ ;;=296.22^^175^1552^13
+ ;;^UTILITY(U,$J,358.3,25030,1,0)
+ ;;=^358.31IA^5^2
+ ;;^UTILITY(U,$J,358.3,25030,1,4,0)
+ ;;=4^296.22

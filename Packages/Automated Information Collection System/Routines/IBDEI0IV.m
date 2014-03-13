@@ -1,26 +1,360 @@
-IBDEI0IV ; ; 20-FEB-2013
- ;;3.0;IB ENCOUNTER FORM IMP/EXP;;FEB 20, 2013
- Q:'DIFQR(358.98)  F I=1:2 S X=$T(Q+I) Q:X=""  S Y=$E($T(Q+I+1),4,999),X=$E(X,4,999) S:$A(Y)=126 I=I+1,Y=$E(Y,2,999)_$E($T(Q+I+1),5,99) S:$A(Y)=61 Y=$E(Y,2,999) X NO E  S @X=Y
+IBDEI0IV ; ; 13-FEB-2014
+ ;;3.0;IB ENCOUNTER FORM IMP/EXP;;FEB 13, 2014
+ Q:'DIFQR(358.3)  F I=1:2 S X=$T(Q+I) Q:X=""  S Y=$E($T(Q+I+1),4,999),X=$E(X,4,999) S:$A(Y)=126 I=I+1,Y=$E(Y,2,999)_$E($T(Q+I+1),5,99) S:$A(Y)=61 Y=$E(Y,2,999) X NO E  S @X=Y
 Q Q
- ;;^UTILITY(U,$J,358.98)
- ;;=^IBD(358.98,
- ;;^UTILITY(U,$J,358.98,0)
- ;;=IMP/EXP AICS DATA QUALIFIERS^358.98I^9^9
- ;;^UTILITY(U,$J,358.98,1,0)
- ;;=PRIMARY^P^P
- ;;^UTILITY(U,$J,358.98,2,0)
- ;;=SECONDARY^S^S
- ;;^UTILITY(U,$J,358.98,3,0)
- ;;=SERVICE CONNECTED^1^SC
- ;;^UTILITY(U,$J,358.98,4,0)
- ;;=AGENT ORANGE RELATED^1^AO
- ;;^UTILITY(U,$J,358.98,5,0)
- ;;=IONIZING RADIATION RELATED^1^IR
- ;;^UTILITY(U,$J,358.98,6,0)
- ;;=ENVIRONMENTAL CONTAMINANTS RELATED^1^EC
- ;;^UTILITY(U,$J,358.98,7,0)
- ;;=ADD TO PROBLEM LIST^1^ADD
- ;;^UTILITY(U,$J,358.98,8,0)
- ;;=ACTIVE^A^A
- ;;^UTILITY(U,$J,358.98,9,0)
- ;;=INACTIVE^I^I
+ ;;^UTILITY(U,$J,358.3,25447,1,0)
+ ;;=^358.31IA^5^2
+ ;;^UTILITY(U,$J,358.3,25447,1,2,0)
+ ;;=2^297.9
+ ;;^UTILITY(U,$J,358.3,25447,1,5,0)
+ ;;=5^Paranoia
+ ;;^UTILITY(U,$J,358.3,25447,2)
+ ;;=^123970
+ ;;^UTILITY(U,$J,358.3,25448,0)
+ ;;=297.1^^178^1588^1
+ ;;^UTILITY(U,$J,358.3,25448,1,0)
+ ;;=^358.31IA^5^2
+ ;;^UTILITY(U,$J,358.3,25448,1,2,0)
+ ;;=2^297.1
+ ;;^UTILITY(U,$J,358.3,25448,1,5,0)
+ ;;=5^Delusional Disorder
+ ;;^UTILITY(U,$J,358.3,25448,2)
+ ;;=^331896
+ ;;^UTILITY(U,$J,358.3,25449,0)
+ ;;=301.7^^178^1589^1
+ ;;^UTILITY(U,$J,358.3,25449,1,0)
+ ;;=^358.31IA^5^2
+ ;;^UTILITY(U,$J,358.3,25449,1,2,0)
+ ;;=2^301.7
+ ;;^UTILITY(U,$J,358.3,25449,1,5,0)
+ ;;=5^Antisocial Personality Dis
+ ;;^UTILITY(U,$J,358.3,25449,2)
+ ;;=Antisocial Personality Dis^9066
+ ;;^UTILITY(U,$J,358.3,25450,0)
+ ;;=301.82^^178^1589^2
+ ;;^UTILITY(U,$J,358.3,25450,1,0)
+ ;;=^358.31IA^5^2
+ ;;^UTILITY(U,$J,358.3,25450,1,2,0)
+ ;;=2^301.82
+ ;;^UTILITY(U,$J,358.3,25450,1,5,0)
+ ;;=5^Avoidant Personality Disorder
+ ;;^UTILITY(U,$J,358.3,25450,2)
+ ;;=Avoidant Personality Disorder^265347
+ ;;^UTILITY(U,$J,358.3,25451,0)
+ ;;=301.83^^178^1589^3
+ ;;^UTILITY(U,$J,358.3,25451,1,0)
+ ;;=^358.31IA^5^2
+ ;;^UTILITY(U,$J,358.3,25451,1,2,0)
+ ;;=2^301.83
+ ;;^UTILITY(U,$J,358.3,25451,1,5,0)
+ ;;=5^Borderline Personality Disorder
+ ;;^UTILITY(U,$J,358.3,25451,2)
+ ;;=Borderline Personality Disorder^16372
+ ;;^UTILITY(U,$J,358.3,25452,0)
+ ;;=301.6^^178^1589^6
+ ;;^UTILITY(U,$J,358.3,25452,1,0)
+ ;;=^358.31IA^5^2
+ ;;^UTILITY(U,$J,358.3,25452,1,2,0)
+ ;;=2^301.6
+ ;;^UTILITY(U,$J,358.3,25452,1,5,0)
+ ;;=5^Dependent Personality Disorder
+ ;;^UTILITY(U,$J,358.3,25452,2)
+ ;;=Dependent Personality Disorder^32860
+ ;;^UTILITY(U,$J,358.3,25453,0)
+ ;;=301.50^^178^1589^8
+ ;;^UTILITY(U,$J,358.3,25453,1,0)
+ ;;=^358.31IA^5^2
+ ;;^UTILITY(U,$J,358.3,25453,1,2,0)
+ ;;=2^301.50
+ ;;^UTILITY(U,$J,358.3,25453,1,5,0)
+ ;;=5^Histrionic Personality Disorder
+ ;;^UTILITY(U,$J,358.3,25453,2)
+ ;;=Histrionic Personality Disorder^57763
+ ;;^UTILITY(U,$J,358.3,25454,0)
+ ;;=301.81^^178^1589^11
+ ;;^UTILITY(U,$J,358.3,25454,1,0)
+ ;;=^358.31IA^5^2
+ ;;^UTILITY(U,$J,358.3,25454,1,2,0)
+ ;;=2^301.81
+ ;;^UTILITY(U,$J,358.3,25454,1,5,0)
+ ;;=5^Narcissistic Personality Disorder
+ ;;^UTILITY(U,$J,358.3,25454,2)
+ ;;=Narcissistic Personality Disorder^265353
+ ;;^UTILITY(U,$J,358.3,25455,0)
+ ;;=301.0^^178^1589^12
+ ;;^UTILITY(U,$J,358.3,25455,1,0)
+ ;;=^358.31IA^5^2
+ ;;^UTILITY(U,$J,358.3,25455,1,2,0)
+ ;;=2^301.0
+ ;;^UTILITY(U,$J,358.3,25455,1,5,0)
+ ;;=5^Paranoid Personality Disorder
+ ;;^UTILITY(U,$J,358.3,25455,2)
+ ;;=Paranoid Personality Disorder^89982
+ ;;^UTILITY(U,$J,358.3,25456,0)
+ ;;=301.9^^178^1589^16
+ ;;^UTILITY(U,$J,358.3,25456,1,0)
+ ;;=^358.31IA^5^2
+ ;;^UTILITY(U,$J,358.3,25456,1,2,0)
+ ;;=2^301.9
+ ;;^UTILITY(U,$J,358.3,25456,1,5,0)
+ ;;=5^Unspecified Personality Disorder
+ ;;^UTILITY(U,$J,358.3,25456,2)
+ ;;=Unspecified Personality Disorder^92451
+ ;;^UTILITY(U,$J,358.3,25457,0)
+ ;;=301.20^^178^1589^14
+ ;;^UTILITY(U,$J,358.3,25457,1,0)
+ ;;=^358.31IA^5^2
+ ;;^UTILITY(U,$J,358.3,25457,1,2,0)
+ ;;=2^301.20
+ ;;^UTILITY(U,$J,358.3,25457,1,5,0)
+ ;;=5^Schizoid Personality Disorder
+ ;;^UTILITY(U,$J,358.3,25457,2)
+ ;;=^108271
+ ;;^UTILITY(U,$J,358.3,25458,0)
+ ;;=301.22^^178^1589^15
+ ;;^UTILITY(U,$J,358.3,25458,1,0)
+ ;;=^358.31IA^5^2
+ ;;^UTILITY(U,$J,358.3,25458,1,2,0)
+ ;;=2^301.22
+ ;;^UTILITY(U,$J,358.3,25458,1,5,0)
+ ;;=5^Schizotypal Personality Disorder
+ ;;^UTILITY(U,$J,358.3,25458,2)
+ ;;=Schizotypal Personality Disorder^108367
+ ;;^UTILITY(U,$J,358.3,25459,0)
+ ;;=301.4^^178^1589^4
+ ;;^UTILITY(U,$J,358.3,25459,1,0)
+ ;;=^358.31IA^5^2
+ ;;^UTILITY(U,$J,358.3,25459,1,2,0)
+ ;;=2^301.4
+ ;;^UTILITY(U,$J,358.3,25459,1,5,0)
+ ;;=5^Compulsive Personality Disorder
+ ;;^UTILITY(U,$J,358.3,25459,2)
+ ;;=Compulsive Personality Disorder^27122
+ ;;^UTILITY(U,$J,358.3,25460,0)
+ ;;=301.84^^178^1589^13
+ ;;^UTILITY(U,$J,358.3,25460,1,0)
+ ;;=^358.31IA^5^2
+ ;;^UTILITY(U,$J,358.3,25460,1,2,0)
+ ;;=2^301.84
+ ;;^UTILITY(U,$J,358.3,25460,1,5,0)
+ ;;=5^Passive-Aggressive Personality Dis
+ ;;^UTILITY(U,$J,358.3,25460,2)
+ ;;=Passive-Aggressive Personality Dis^90602
+ ;;^UTILITY(U,$J,358.3,25461,0)
+ ;;=301.11^^178^1589^9
+ ;;^UTILITY(U,$J,358.3,25461,1,0)
+ ;;=^358.31IA^5^2
+ ;;^UTILITY(U,$J,358.3,25461,1,2,0)
+ ;;=2^301.11
+ ;;^UTILITY(U,$J,358.3,25461,1,5,0)
+ ;;=5^Hypomanic Personality D/O,Chr
+ ;;^UTILITY(U,$J,358.3,25461,2)
+ ;;=^268171
+ ;;^UTILITY(U,$J,358.3,25462,0)
+ ;;=301.12^^178^1589^7
+ ;;^UTILITY(U,$J,358.3,25462,1,0)
+ ;;=^358.31IA^5^2
+ ;;^UTILITY(U,$J,358.3,25462,1,2,0)
+ ;;=2^301.12
+ ;;^UTILITY(U,$J,358.3,25462,1,5,0)
+ ;;=5^Depressive Personality D/O,Chr
+ ;;^UTILITY(U,$J,358.3,25462,2)
+ ;;=^268173
+ ;;^UTILITY(U,$J,358.3,25463,0)
+ ;;=301.13^^178^1589^5
+ ;;^UTILITY(U,$J,358.3,25463,1,0)
+ ;;=^358.31IA^5^2
+ ;;^UTILITY(U,$J,358.3,25463,1,2,0)
+ ;;=2^301.13
+ ;;^UTILITY(U,$J,358.3,25463,1,5,0)
+ ;;=5^Cyclothymic Disorder
+ ;;^UTILITY(U,$J,358.3,25463,2)
+ ;;=^30028
+ ;;^UTILITY(U,$J,358.3,25464,0)
+ ;;=301.21^^178^1589^10
+ ;;^UTILITY(U,$J,358.3,25464,1,0)
+ ;;=^358.31IA^5^2
+ ;;^UTILITY(U,$J,358.3,25464,1,2,0)
+ ;;=2^301.21
+ ;;^UTILITY(U,$J,358.3,25464,1,5,0)
+ ;;=5^Introverted Personality
+ ;;^UTILITY(U,$J,358.3,25464,2)
+ ;;=^268174
+ ;;^UTILITY(U,$J,358.3,25465,0)
+ ;;=302.2^^178^1590^7
+ ;;^UTILITY(U,$J,358.3,25465,1,0)
+ ;;=^358.31IA^5^2
+ ;;^UTILITY(U,$J,358.3,25465,1,2,0)
+ ;;=2^302.2
+ ;;^UTILITY(U,$J,358.3,25465,1,5,0)
+ ;;=5^Pedophilia
+ ;;^UTILITY(U,$J,358.3,25465,2)
+ ;;=^91008
+ ;;^UTILITY(U,$J,358.3,25466,0)
+ ;;=302.4^^178^1590^2
+ ;;^UTILITY(U,$J,358.3,25466,1,0)
+ ;;=^358.31IA^5^2
+ ;;^UTILITY(U,$J,358.3,25466,1,2,0)
+ ;;=2^302.4
+ ;;^UTILITY(U,$J,358.3,25466,1,5,0)
+ ;;=5^Exhibitionism
+ ;;^UTILITY(U,$J,358.3,25466,2)
+ ;;=^43610
+ ;;^UTILITY(U,$J,358.3,25467,0)
+ ;;=302.72^^178^1590^6
+ ;;^UTILITY(U,$J,358.3,25467,1,0)
+ ;;=^358.31IA^5^2
+ ;;^UTILITY(U,$J,358.3,25467,1,2,0)
+ ;;=2^302.72
+ ;;^UTILITY(U,$J,358.3,25467,1,5,0)
+ ;;=5^Inhibited Sex Excite
+ ;;^UTILITY(U,$J,358.3,25467,2)
+ ;;=^100632
+ ;;^UTILITY(U,$J,358.3,25468,0)
+ ;;=302.73^^178^1590^4
+ ;;^UTILITY(U,$J,358.3,25468,1,0)
+ ;;=^358.31IA^5^2
+ ;;^UTILITY(U,$J,358.3,25468,1,2,0)
+ ;;=2^302.73
+ ;;^UTILITY(U,$J,358.3,25468,1,5,0)
+ ;;=5^Inhibited Female Orgasm
+ ;;^UTILITY(U,$J,358.3,25468,2)
+ ;;=^100628
+ ;;^UTILITY(U,$J,358.3,25469,0)
+ ;;=302.74^^178^1590^5
+ ;;^UTILITY(U,$J,358.3,25469,1,0)
+ ;;=^358.31IA^5^2
+ ;;^UTILITY(U,$J,358.3,25469,1,2,0)
+ ;;=2^302.74
+ ;;^UTILITY(U,$J,358.3,25469,1,5,0)
+ ;;=5^Inhibited Male Orgasm
+ ;;^UTILITY(U,$J,358.3,25469,2)
+ ;;=^100630
+ ;;^UTILITY(U,$J,358.3,25470,0)
+ ;;=302.75^^178^1590^8
+ ;;^UTILITY(U,$J,358.3,25470,1,0)
+ ;;=^358.31IA^5^2
+ ;;^UTILITY(U,$J,358.3,25470,1,2,0)
+ ;;=2^302.75
+ ;;^UTILITY(U,$J,358.3,25470,1,5,0)
+ ;;=5^Premature Ejaculation
+ ;;^UTILITY(U,$J,358.3,25470,2)
+ ;;=^100637
+ ;;^UTILITY(U,$J,358.3,25471,0)
+ ;;=302.85^^178^1590^3
+ ;;^UTILITY(U,$J,358.3,25471,1,0)
+ ;;=^358.31IA^5^2
+ ;;^UTILITY(U,$J,358.3,25471,1,2,0)
+ ;;=2^302.85
+ ;;^UTILITY(U,$J,358.3,25471,1,5,0)
+ ;;=5^Gender Ident Disorder
+ ;;^UTILITY(U,$J,358.3,25471,2)
+ ;;=^268180
+ ;;^UTILITY(U,$J,358.3,25472,0)
+ ;;=302.0^^178^1590^1
+ ;;^UTILITY(U,$J,358.3,25472,1,0)
+ ;;=^358.31IA^5^2
+ ;;^UTILITY(U,$J,358.3,25472,1,2,0)
+ ;;=2^302.0
+ ;;^UTILITY(U,$J,358.3,25472,1,5,0)
+ ;;=5^Ego-Dystonic Sexual Orient
+ ;;^UTILITY(U,$J,358.3,25472,2)
+ ;;=^331922
+ ;;^UTILITY(U,$J,358.3,25473,0)
+ ;;=302.1^^178^1590^14
+ ;;^UTILITY(U,$J,358.3,25473,1,0)
+ ;;=^358.31IA^5^2
+ ;;^UTILITY(U,$J,358.3,25473,1,2,0)
+ ;;=2^302.1
+ ;;^UTILITY(U,$J,358.3,25473,1,5,0)
+ ;;=5^Zoophilia
+ ;;^UTILITY(U,$J,358.3,25473,2)
+ ;;=^265356
+ ;;^UTILITY(U,$J,358.3,25474,0)
+ ;;=302.3^^178^1590^13
+ ;;^UTILITY(U,$J,358.3,25474,1,0)
+ ;;=^358.31IA^5^2
+ ;;^UTILITY(U,$J,358.3,25474,1,2,0)
+ ;;=2^302.3
+ ;;^UTILITY(U,$J,358.3,25474,1,5,0)
+ ;;=5^Transvestic Fetishism
+ ;;^UTILITY(U,$J,358.3,25474,2)
+ ;;=^331923
+ ;;^UTILITY(U,$J,358.3,25475,0)
+ ;;=302.50^^178^1590^9
+ ;;^UTILITY(U,$J,358.3,25475,1,0)
+ ;;=^358.31IA^5^2
+ ;;^UTILITY(U,$J,358.3,25475,1,2,0)
+ ;;=2^302.50
+ ;;^UTILITY(U,$J,358.3,25475,1,5,0)
+ ;;=5^Trans-sexualism NOS
+ ;;^UTILITY(U,$J,358.3,25475,2)
+ ;;=^120949
+ ;;^UTILITY(U,$J,358.3,25476,0)
+ ;;=302.51^^178^1590^10
+ ;;^UTILITY(U,$J,358.3,25476,1,0)
+ ;;=^358.31IA^5^2
+ ;;^UTILITY(U,$J,358.3,25476,1,2,0)
+ ;;=2^302.51
+ ;;^UTILITY(U,$J,358.3,25476,1,5,0)
+ ;;=5^Trans-sexualism w/ Asexual Hx
+ ;;^UTILITY(U,$J,358.3,25476,2)
+ ;;=^268175
+ ;;^UTILITY(U,$J,358.3,25477,0)
+ ;;=302.52^^178^1590^12
+ ;;^UTILITY(U,$J,358.3,25477,1,0)
+ ;;=^358.31IA^5^2
+ ;;^UTILITY(U,$J,358.3,25477,1,2,0)
+ ;;=2^302.52
+ ;;^UTILITY(U,$J,358.3,25477,1,5,0)
+ ;;=5^Trans-sexualism w/ Homosexual Hx
+ ;;^UTILITY(U,$J,358.3,25477,2)
+ ;;=^268176
+ ;;^UTILITY(U,$J,358.3,25478,0)
+ ;;=302.53^^178^1590^11
+ ;;^UTILITY(U,$J,358.3,25478,1,0)
+ ;;=^358.31IA^5^2
+ ;;^UTILITY(U,$J,358.3,25478,1,2,0)
+ ;;=2^302.53
+ ;;^UTILITY(U,$J,358.3,25478,1,5,0)
+ ;;=5^Trans-sexualism w/ Heterosexual Hx
+ ;;^UTILITY(U,$J,358.3,25478,2)
+ ;;=^268177
+ ;;^UTILITY(U,$J,358.3,25479,0)
+ ;;=780.52^^178^1591^3
+ ;;^UTILITY(U,$J,358.3,25479,1,0)
+ ;;=^358.31IA^5^2
+ ;;^UTILITY(U,$J,358.3,25479,1,2,0)
+ ;;=2^780.52
+ ;;^UTILITY(U,$J,358.3,25479,1,5,0)
+ ;;=5^Insomnia
+ ;;^UTILITY(U,$J,358.3,25479,2)
+ ;;=^87662
+ ;;^UTILITY(U,$J,358.3,25480,0)
+ ;;=780.51^^178^1591^4
+ ;;^UTILITY(U,$J,358.3,25480,1,0)
+ ;;=^358.31IA^5^2
+ ;;^UTILITY(U,$J,358.3,25480,1,2,0)
+ ;;=2^780.51
+ ;;^UTILITY(U,$J,358.3,25480,1,5,0)
+ ;;=5^Insomnia w/Sleep Apnea
+ ;;^UTILITY(U,$J,358.3,25480,2)
+ ;;=^273348
+ ;;^UTILITY(U,$J,358.3,25481,0)
+ ;;=780.57^^178^1591^5
+ ;;^UTILITY(U,$J,358.3,25481,1,0)
+ ;;=^358.31IA^5^2
+ ;;^UTILITY(U,$J,358.3,25481,1,2,0)
+ ;;=2^780.57
+ ;;^UTILITY(U,$J,358.3,25481,1,5,0)
+ ;;=5^Sleep Apnea
+ ;;^UTILITY(U,$J,358.3,25481,2)
+ ;;=^293933
+ ;;^UTILITY(U,$J,358.3,25482,0)
+ ;;=780.50^^178^1591^6
+ ;;^UTILITY(U,$J,358.3,25482,1,0)
+ ;;=^358.31IA^5^2
+ ;;^UTILITY(U,$J,358.3,25482,1,2,0)
+ ;;=2^780.50
+ ;;^UTILITY(U,$J,358.3,25482,1,5,0)
+ ;;=5^Sleep Disturbance, Unspec

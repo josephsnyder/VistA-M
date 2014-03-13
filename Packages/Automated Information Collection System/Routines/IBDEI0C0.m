@@ -1,338 +1,372 @@
-IBDEI0C0 ; ; 20-FEB-2013
- ;;3.0;IB ENCOUNTER FORM IMP/EXP;;FEB 20, 2013
+IBDEI0C0 ; ; 13-FEB-2014
+ ;;3.0;IB ENCOUNTER FORM IMP/EXP;;FEB 13, 2014
  Q:'DIFQR(358.3)  F I=1:2 S X=$T(Q+I) Q:X=""  S Y=$E($T(Q+I+1),4,999),X=$E(X,4,999) S:$A(Y)=126 I=I+1,Y=$E(Y,2,999)_$E($T(Q+I+1),5,99) S:$A(Y)=61 Y=$E(Y,2,999) X NO E  S @X=Y
 Q Q
- ;;^UTILITY(U,$J,358.3,15981,2)
- ;;=^272548
- ;;^UTILITY(U,$J,358.3,15982,0)
- ;;=736.72^^116^995^5
- ;;^UTILITY(U,$J,358.3,15982,1,0)
+ ;;^UTILITY(U,$J,358.3,16026,1,0)
  ;;=^358.31IA^5^2
- ;;^UTILITY(U,$J,358.3,15982,1,3,0)
- ;;=3^736.72
- ;;^UTILITY(U,$J,358.3,15982,1,5,0)
- ;;=5^Equinus deformity of foot, acquired
- ;;^UTILITY(U,$J,358.3,15982,2)
- ;;=^272744
- ;;^UTILITY(U,$J,358.3,15983,0)
- ;;=726.91^^116^995^6
- ;;^UTILITY(U,$J,358.3,15983,1,0)
+ ;;^UTILITY(U,$J,358.3,16026,1,4,0)
+ ;;=4^454.1
+ ;;^UTILITY(U,$J,358.3,16026,1,5,0)
+ ;;=5^Dermatitis,Stasis
+ ;;^UTILITY(U,$J,358.3,16026,2)
+ ;;=^125435
+ ;;^UTILITY(U,$J,358.3,16027,0)
+ ;;=424.90^^107^951^31
+ ;;^UTILITY(U,$J,358.3,16027,1,0)
  ;;=^358.31IA^5^2
- ;;^UTILITY(U,$J,358.3,15983,1,3,0)
- ;;=3^726.91
- ;;^UTILITY(U,$J,358.3,15983,1,5,0)
- ;;=5^Exostosis of unspecified site
- ;;^UTILITY(U,$J,358.3,15983,2)
- ;;=^43688
- ;;^UTILITY(U,$J,358.3,15984,0)
- ;;=728.71^^116^996^1
- ;;^UTILITY(U,$J,358.3,15984,1,0)
+ ;;^UTILITY(U,$J,358.3,16027,1,4,0)
+ ;;=4^424.90
+ ;;^UTILITY(U,$J,358.3,16027,1,5,0)
+ ;;=5^Endocarditis
+ ;;^UTILITY(U,$J,358.3,16027,2)
+ ;;=^40327
+ ;;^UTILITY(U,$J,358.3,16028,0)
+ ;;=456.1^^107^951^32
+ ;;^UTILITY(U,$J,358.3,16028,1,0)
  ;;=^358.31IA^5^2
- ;;^UTILITY(U,$J,358.3,15984,1,3,0)
- ;;=3^728.71
- ;;^UTILITY(U,$J,358.3,15984,1,5,0)
- ;;=5^Fascite, Plantar
- ;;^UTILITY(U,$J,358.3,15984,2)
- ;;=^272598
- ;;^UTILITY(U,$J,358.3,15985,0)
- ;;=729.1^^116^996^2
- ;;^UTILITY(U,$J,358.3,15985,1,0)
+ ;;^UTILITY(U,$J,358.3,16028,1,4,0)
+ ;;=4^456.1
+ ;;^UTILITY(U,$J,358.3,16028,1,5,0)
+ ;;=5^Esoph Varices w/o Bleed
+ ;;^UTILITY(U,$J,358.3,16028,2)
+ ;;=^269836
+ ;;^UTILITY(U,$J,358.3,16029,0)
+ ;;=403.10^^107^951^37
+ ;;^UTILITY(U,$J,358.3,16029,1,0)
  ;;=^358.31IA^5^2
- ;;^UTILITY(U,$J,358.3,15985,1,3,0)
- ;;=3^729.1
- ;;^UTILITY(U,$J,358.3,15985,1,5,0)
- ;;=5^Fibromyalgia
- ;;^UTILITY(U,$J,358.3,15985,2)
- ;;=^80160
- ;;^UTILITY(U,$J,358.3,15986,0)
- ;;=709.8^^116^996^3
- ;;^UTILITY(U,$J,358.3,15986,1,0)
+ ;;^UTILITY(U,$J,358.3,16029,1,4,0)
+ ;;=4^403.10
+ ;;^UTILITY(U,$J,358.3,16029,1,5,0)
+ ;;=5^HTN w/ Renal Failure I-IV or Unspec
+ ;;^UTILITY(U,$J,358.3,16029,2)
+ ;;=^334271
+ ;;^UTILITY(U,$J,358.3,16030,0)
+ ;;=457.1^^107^951^61
+ ;;^UTILITY(U,$J,358.3,16030,1,0)
  ;;=^358.31IA^5^2
- ;;^UTILITY(U,$J,358.3,15986,1,3,0)
- ;;=3^709.8
- ;;^UTILITY(U,$J,358.3,15986,1,5,0)
- ;;=5^Fissured skin
- ;;^UTILITY(U,$J,358.3,15986,2)
- ;;=^88026
- ;;^UTILITY(U,$J,358.3,15987,0)
- ;;=V53.7^^116^996^4
- ;;^UTILITY(U,$J,358.3,15987,1,0)
+ ;;^UTILITY(U,$J,358.3,16030,1,4,0)
+ ;;=4^457.1
+ ;;^UTILITY(U,$J,358.3,16030,1,5,0)
+ ;;=5^Lymphedema,Acquired
+ ;;^UTILITY(U,$J,358.3,16030,2)
+ ;;=^87693
+ ;;^UTILITY(U,$J,358.3,16031,0)
+ ;;=436.^^107^951^74
+ ;;^UTILITY(U,$J,358.3,16031,1,0)
  ;;=^358.31IA^5^2
- ;;^UTILITY(U,$J,358.3,15987,1,3,0)
- ;;=3^V53.7
- ;;^UTILITY(U,$J,358.3,15987,1,5,0)
- ;;=5^Fitting of Orthotic
- ;;^UTILITY(U,$J,358.3,15987,2)
- ;;=^295510
- ;;^UTILITY(U,$J,358.3,15988,0)
- ;;=709.4^^116^996^5
- ;;^UTILITY(U,$J,358.3,15988,1,0)
+ ;;^UTILITY(U,$J,358.3,16031,1,4,0)
+ ;;=4^436.
+ ;;^UTILITY(U,$J,358.3,16031,1,5,0)
+ ;;=5^Stroke,Acute Ill Defined
+ ;;^UTILITY(U,$J,358.3,16031,2)
+ ;;=^2710
+ ;;^UTILITY(U,$J,358.3,16032,0)
+ ;;=451.9^^107^951^75
+ ;;^UTILITY(U,$J,358.3,16032,1,0)
  ;;=^358.31IA^5^2
- ;;^UTILITY(U,$J,358.3,15988,1,3,0)
- ;;=3^709.4
- ;;^UTILITY(U,$J,358.3,15988,1,5,0)
- ;;=5^Foreign body granuloma of skin and subcutaneous tissue (old) 
- ;;^UTILITY(U,$J,358.3,15988,2)
- ;;=^271943
- ;;^UTILITY(U,$J,358.3,15989,0)
- ;;=917.6^^116^996^6
- ;;^UTILITY(U,$J,358.3,15989,1,0)
+ ;;^UTILITY(U,$J,358.3,16032,1,4,0)
+ ;;=4^451.9
+ ;;^UTILITY(U,$J,358.3,16032,1,5,0)
+ ;;=5^Thrombophlebitis
+ ;;^UTILITY(U,$J,358.3,16032,2)
+ ;;=^93357
+ ;;^UTILITY(U,$J,358.3,16033,0)
+ ;;=446.6^^107^951^76
+ ;;^UTILITY(U,$J,358.3,16033,1,0)
  ;;=^358.31IA^5^2
- ;;^UTILITY(U,$J,358.3,15989,1,3,0)
- ;;=3^917.6
- ;;^UTILITY(U,$J,358.3,15989,1,5,0)
- ;;=5^Foreign body, superficial injury (splinter) of foot & toe(s)without major open wound & without mention of infection  
- ;;^UTILITY(U,$J,358.3,15989,2)
- ;;=^275347
- ;;^UTILITY(U,$J,358.3,15990,0)
- ;;=892.1^^116^996^7
- ;;^UTILITY(U,$J,358.3,15990,1,0)
+ ;;^UTILITY(U,$J,358.3,16033,1,4,0)
+ ;;=4^446.6
+ ;;^UTILITY(U,$J,358.3,16033,1,5,0)
+ ;;=5^Thrombotic Thrombocytopenic Purpu
+ ;;^UTILITY(U,$J,358.3,16033,2)
+ ;;=^119061
+ ;;^UTILITY(U,$J,358.3,16034,0)
+ ;;=435.9^^107^951^77
+ ;;^UTILITY(U,$J,358.3,16034,1,0)
  ;;=^358.31IA^5^2
- ;;^UTILITY(U,$J,358.3,15990,1,3,0)
- ;;=3^892.1
- ;;^UTILITY(U,$J,358.3,15990,1,5,0)
- ;;=5^Foreign body, open wound of foot except toe(s); complicated
- ;;^UTILITY(U,$J,358.3,15990,2)
- ;;=^275092
- ;;^UTILITY(U,$J,358.3,15991,0)
- ;;=893.1^^116^996^8
- ;;^UTILITY(U,$J,358.3,15991,1,0)
+ ;;^UTILITY(U,$J,358.3,16034,1,4,0)
+ ;;=4^435.9
+ ;;^UTILITY(U,$J,358.3,16034,1,5,0)
+ ;;=5^Transient Ischemic Attack
+ ;;^UTILITY(U,$J,358.3,16034,2)
+ ;;=^21635
+ ;;^UTILITY(U,$J,358.3,16035,0)
+ ;;=455.6^^107^951^58
+ ;;^UTILITY(U,$J,358.3,16035,1,0)
  ;;=^358.31IA^5^2
- ;;^UTILITY(U,$J,358.3,15991,1,3,0)
- ;;=3^893.1
- ;;^UTILITY(U,$J,358.3,15991,1,5,0)
- ;;=5^Foreign body, open wound of toe; complicated
- ;;^UTILITY(U,$J,358.3,15991,2)
- ;;=^275096
- ;;^UTILITY(U,$J,358.3,15992,0)
- ;;=916.6^^116^996^9
- ;;^UTILITY(U,$J,358.3,15992,1,0)
+ ;;^UTILITY(U,$J,358.3,16035,1,4,0)
+ ;;=4^455.6
+ ;;^UTILITY(U,$J,358.3,16035,1,5,0)
+ ;;=5^Hemorrhoids
+ ;;^UTILITY(U,$J,358.3,16035,2)
+ ;;=^123922
+ ;;^UTILITY(U,$J,358.3,16036,0)
+ ;;=403.90^^107^951^34
+ ;;^UTILITY(U,$J,358.3,16036,1,0)
  ;;=^358.31IA^5^2
- ;;^UTILITY(U,$J,358.3,15992,1,3,0)
- ;;=3^916.6
- ;;^UTILITY(U,$J,358.3,15992,1,5,0)
- ;;=5^Foreign body, superficial injury (splinter) of hip, thigh, leg, and ankle w/o major open wound & w/o mention of infection
- ;;^UTILITY(U,$J,358.3,15992,2)
- ;;=^275336
- ;;^UTILITY(U,$J,358.3,15993,0)
- ;;=891.1^^116^996^10
- ;;^UTILITY(U,$J,358.3,15993,1,0)
+ ;;^UTILITY(U,$J,358.3,16036,1,4,0)
+ ;;=4^403.90
+ ;;^UTILITY(U,$J,358.3,16036,1,5,0)
+ ;;=5^HTN w/ CKD I-IV,Unspec
+ ;;^UTILITY(U,$J,358.3,16036,2)
+ ;;=^334272
+ ;;^UTILITY(U,$J,358.3,16037,0)
+ ;;=271.3^^107^952^10
+ ;;^UTILITY(U,$J,358.3,16037,1,0)
  ;;=^358.31IA^5^2
- ;;^UTILITY(U,$J,358.3,15993,1,3,0)
- ;;=3^891.1
- ;;^UTILITY(U,$J,358.3,15993,1,5,0)
- ;;=5^Foreign body, open wound of knee, leg(except thigh), & ankle; complicated
- ;;^UTILITY(U,$J,358.3,15993,2)
- ;;=^275088
- ;;^UTILITY(U,$J,358.3,15994,0)
- ;;=824.8^^116^996^11
- ;;^UTILITY(U,$J,358.3,15994,1,0)
+ ;;^UTILITY(U,$J,358.3,16037,1,4,0)
+ ;;=4^271.3
+ ;;^UTILITY(U,$J,358.3,16037,1,5,0)
+ ;;=5^Glucose Intolerance
+ ;;^UTILITY(U,$J,358.3,16037,2)
+ ;;=^64790
+ ;;^UTILITY(U,$J,358.3,16038,0)
+ ;;=251.2^^107^952^28
+ ;;^UTILITY(U,$J,358.3,16038,1,0)
  ;;=^358.31IA^5^2
- ;;^UTILITY(U,$J,358.3,15994,1,3,0)
- ;;=3^824.8
- ;;^UTILITY(U,$J,358.3,15994,1,5,0)
- ;;=5^Fracture of ankle; unspecified, closed
- ;;^UTILITY(U,$J,358.3,15994,2)
- ;;=^274256
- ;;^UTILITY(U,$J,358.3,15995,0)
- ;;=824.4^^116^996^12
- ;;^UTILITY(U,$J,358.3,15995,1,0)
+ ;;^UTILITY(U,$J,358.3,16038,1,4,0)
+ ;;=4^251.2
+ ;;^UTILITY(U,$J,358.3,16038,1,5,0)
+ ;;=5^Hypoglycemia Nos
+ ;;^UTILITY(U,$J,358.3,16038,2)
+ ;;=^60580
+ ;;^UTILITY(U,$J,358.3,16039,0)
+ ;;=257.2^^107^952^29
+ ;;^UTILITY(U,$J,358.3,16039,1,0)
  ;;=^358.31IA^5^2
- ;;^UTILITY(U,$J,358.3,15995,1,3,0)
- ;;=3^824.4
- ;;^UTILITY(U,$J,358.3,15995,1,5,0)
- ;;=5^Fracture of ankle; bimalleolar, closed
- ;;^UTILITY(U,$J,358.3,15995,2)
- ;;=^14370
- ;;^UTILITY(U,$J,358.3,15996,0)
- ;;=824.2^^116^996^13
- ;;^UTILITY(U,$J,358.3,15996,1,0)
+ ;;^UTILITY(U,$J,358.3,16039,1,4,0)
+ ;;=4^257.2
+ ;;^UTILITY(U,$J,358.3,16039,1,5,0)
+ ;;=5^Hypogonadism,Male
+ ;;^UTILITY(U,$J,358.3,16039,2)
+ ;;=^88213
+ ;;^UTILITY(U,$J,358.3,16040,0)
+ ;;=253.2^^107^952^32
+ ;;^UTILITY(U,$J,358.3,16040,1,0)
  ;;=^358.31IA^5^2
- ;;^UTILITY(U,$J,358.3,15996,1,3,0)
- ;;=3^824.2
- ;;^UTILITY(U,$J,358.3,15996,1,5,0)
- ;;=5^Fracture of ankle; lateral malleolus, closed
- ;;^UTILITY(U,$J,358.3,15996,2)
- ;;=^274247
- ;;^UTILITY(U,$J,358.3,15997,0)
- ;;=824.0^^116^996^14
- ;;^UTILITY(U,$J,358.3,15997,1,0)
+ ;;^UTILITY(U,$J,358.3,16040,1,4,0)
+ ;;=4^253.2
+ ;;^UTILITY(U,$J,358.3,16040,1,5,0)
+ ;;=5^Hypopituitarism
+ ;;^UTILITY(U,$J,358.3,16040,2)
+ ;;=^60686
+ ;;^UTILITY(U,$J,358.3,16041,0)
+ ;;=278.00^^107^952^39
+ ;;^UTILITY(U,$J,358.3,16041,1,0)
  ;;=^358.31IA^5^2
- ;;^UTILITY(U,$J,358.3,15997,1,3,0)
- ;;=3^824.0
- ;;^UTILITY(U,$J,358.3,15997,1,5,0)
- ;;=5^Fracture of ankle; medial malleolus, closed
- ;;^UTILITY(U,$J,358.3,15997,2)
- ;;=^274245
- ;;^UTILITY(U,$J,358.3,15998,0)
- ;;=824.6^^116^996^15
- ;;^UTILITY(U,$J,358.3,15998,1,0)
+ ;;^UTILITY(U,$J,358.3,16041,1,4,0)
+ ;;=4^278.00
+ ;;^UTILITY(U,$J,358.3,16041,1,5,0)
+ ;;=5^Obesity (2nd dx only)
+ ;;^UTILITY(U,$J,358.3,16041,2)
+ ;;=^84823
+ ;;^UTILITY(U,$J,358.3,16042,0)
+ ;;=278.01^^107^952^38
+ ;;^UTILITY(U,$J,358.3,16042,1,0)
  ;;=^358.31IA^5^2
- ;;^UTILITY(U,$J,358.3,15998,1,3,0)
- ;;=3^824.6
- ;;^UTILITY(U,$J,358.3,15998,1,5,0)
- ;;=5^Fracture of ankle; trimalleolar, closed
- ;;^UTILITY(U,$J,358.3,15998,2)
- ;;=^274251
- ;;^UTILITY(U,$J,358.3,15999,0)
- ;;=825.20^^116^996^16
- ;;^UTILITY(U,$J,358.3,15999,1,0)
+ ;;^UTILITY(U,$J,358.3,16042,1,4,0)
+ ;;=4^278.01
+ ;;^UTILITY(U,$J,358.3,16042,1,5,0)
+ ;;=5^Morbid Obesity
+ ;;^UTILITY(U,$J,358.3,16042,2)
+ ;;=^84844
+ ;;^UTILITY(U,$J,358.3,16043,0)
+ ;;=250.80^^107^952^9
+ ;;^UTILITY(U,$J,358.3,16043,1,0)
  ;;=^358.31IA^5^2
- ;;^UTILITY(U,$J,358.3,15999,1,3,0)
- ;;=3^825.20
- ;;^UTILITY(U,$J,358.3,15999,1,5,0)
- ;;=5^Fracture of other tarsal & metatarsal bone, closed; unspecified bone(s) of foot (except toes)
- ;;^UTILITY(U,$J,358.3,15999,2)
- ;;=^274265
- ;;^UTILITY(U,$J,358.3,16000,0)
- ;;=825.0^^116^996^17
- ;;^UTILITY(U,$J,358.3,16000,1,0)
+ ;;^UTILITY(U,$J,358.3,16043,1,4,0)
+ ;;=4^250.80
+ ;;^UTILITY(U,$J,358.3,16043,1,5,0)
+ ;;=5^DM Type II with LE Ulcer
+ ;;^UTILITY(U,$J,358.3,16043,2)
+ ;;=DM Type II with LE Ulcer^267846^707.10
+ ;;^UTILITY(U,$J,358.3,16044,0)
+ ;;=250.00^^107^952^4
+ ;;^UTILITY(U,$J,358.3,16044,1,0)
  ;;=^358.31IA^5^2
- ;;^UTILITY(U,$J,358.3,16000,1,3,0)
- ;;=3^825.0
- ;;^UTILITY(U,$J,358.3,16000,1,5,0)
- ;;=5^Fracture of one or more tarsal & metatarsal bone, closed; calcaneus, closed
- ;;^UTILITY(U,$J,358.3,16000,2)
- ;;=^274259
- ;;^UTILITY(U,$J,358.3,16001,0)
- ;;=825.23^^116^996^18
- ;;^UTILITY(U,$J,358.3,16001,1,0)
+ ;;^UTILITY(U,$J,358.3,16044,1,4,0)
+ ;;=4^250.00
+ ;;^UTILITY(U,$J,358.3,16044,1,5,0)
+ ;;=5^DM Type II Dm W/O Complications
+ ;;^UTILITY(U,$J,358.3,16044,2)
+ ;;=^33605
+ ;;^UTILITY(U,$J,358.3,16045,0)
+ ;;=250.40^^107^952^5
+ ;;^UTILITY(U,$J,358.3,16045,1,0)
  ;;=^358.31IA^5^2
- ;;^UTILITY(U,$J,358.3,16001,1,3,0)
- ;;=3^825.23
- ;;^UTILITY(U,$J,358.3,16001,1,5,0)
- ;;=5^Fracture of other tarsal & metatarsal bones, closed; Cuboid
- ;;^UTILITY(U,$J,358.3,16001,2)
- ;;=^274270
- ;;^UTILITY(U,$J,358.3,16002,0)
- ;;=825.24^^116^996^19
- ;;^UTILITY(U,$J,358.3,16002,1,0)
+ ;;^UTILITY(U,$J,358.3,16045,1,4,0)
+ ;;=4^250.40
+ ;;^UTILITY(U,$J,358.3,16045,1,5,0)
+ ;;=5^DM Type II Dm with Nephropathy
+ ;;^UTILITY(U,$J,358.3,16045,2)
+ ;;=^267837^583.81
+ ;;^UTILITY(U,$J,358.3,16046,0)
+ ;;=250.50^^107^952^8
+ ;;^UTILITY(U,$J,358.3,16046,1,0)
  ;;=^358.31IA^5^2
- ;;^UTILITY(U,$J,358.3,16002,1,3,0)
- ;;=3^825.24
- ;;^UTILITY(U,$J,358.3,16002,1,5,0)
- ;;=5^Fracture of other tarsal & metatarsal bones, closed; Cuneiform, foot &
- ;;^UTILITY(U,$J,358.3,16002,2)
- ;;=^274271
- ;;^UTILITY(U,$J,358.3,16003,0)
- ;;=825.25^^116^996^20
- ;;^UTILITY(U,$J,358.3,16003,1,0)
+ ;;^UTILITY(U,$J,358.3,16046,1,4,0)
+ ;;=4^250.50
+ ;;^UTILITY(U,$J,358.3,16046,1,5,0)
+ ;;=5^DM Type II w/ Ophthal Manifest
+ ;;^UTILITY(U,$J,358.3,16046,2)
+ ;;=DM Type II w/ Ophthal Manifest^267839^362.02
+ ;;^UTILITY(U,$J,358.3,16047,0)
+ ;;=250.60^^107^952^6
+ ;;^UTILITY(U,$J,358.3,16047,1,0)
  ;;=^358.31IA^5^2
- ;;^UTILITY(U,$J,358.3,16003,1,3,0)
- ;;=3^825.25
- ;;^UTILITY(U,$J,358.3,16003,1,5,0)
- ;;=5^Fracture of other tarsal & metatarsal bones, closed; Jones 
- ;;^UTILITY(U,$J,358.3,16003,2)
- ;;=^274272
- ;;^UTILITY(U,$J,358.3,16004,0)
- ;;=825.22^^116^996^21
- ;;^UTILITY(U,$J,358.3,16004,1,0)
+ ;;^UTILITY(U,$J,358.3,16047,1,4,0)
+ ;;=4^250.60
+ ;;^UTILITY(U,$J,358.3,16047,1,5,0)
+ ;;=5^DM Type II Dm with Neuropathy
+ ;;^UTILITY(U,$J,358.3,16047,2)
+ ;;=^267841^357.2
+ ;;^UTILITY(U,$J,358.3,16048,0)
+ ;;=250.70^^107^952^7
+ ;;^UTILITY(U,$J,358.3,16048,1,0)
  ;;=^358.31IA^5^2
- ;;^UTILITY(U,$J,358.3,16004,1,3,0)
- ;;=3^825.22
- ;;^UTILITY(U,$J,358.3,16004,1,5,0)
- ;;=5^Fracture of other tarsal & metatarsal bones, closed; Navicular (scapiod), foot & metatarsal
- ;;^UTILITY(U,$J,358.3,16004,2)
- ;;=^274269
- ;;^UTILITY(U,$J,358.3,16005,0)
- ;;=825.21^^116^996^22
- ;;^UTILITY(U,$J,358.3,16005,1,0)
+ ;;^UTILITY(U,$J,358.3,16048,1,4,0)
+ ;;=4^250.70
+ ;;^UTILITY(U,$J,358.3,16048,1,5,0)
+ ;;=5^DM Type II Dm with Peripheral Vasc Dis
+ ;;^UTILITY(U,$J,358.3,16048,2)
+ ;;=^267843^443.81
+ ;;^UTILITY(U,$J,358.3,16049,0)
+ ;;=250.01^^107^952^3
+ ;;^UTILITY(U,$J,358.3,16049,1,0)
  ;;=^358.31IA^5^2
- ;;^UTILITY(U,$J,358.3,16005,1,3,0)
- ;;=3^825.21
- ;;^UTILITY(U,$J,358.3,16005,1,5,0)
- ;;=5^Fracture of other tarsal & metatarsal bones, closed; Astragalus, talus
- ;;^UTILITY(U,$J,358.3,16005,2)
- ;;=^274266
- ;;^UTILITY(U,$J,358.3,16006,0)
- ;;=825.29^^116^996^23
- ;;^UTILITY(U,$J,358.3,16006,1,0)
+ ;;^UTILITY(U,$J,358.3,16049,1,4,0)
+ ;;=4^250.01
+ ;;^UTILITY(U,$J,358.3,16049,1,5,0)
+ ;;=5^DM Type I DM W/O Complications
+ ;;^UTILITY(U,$J,358.3,16049,2)
+ ;;=^33586
+ ;;^UTILITY(U,$J,358.3,16050,0)
+ ;;=272.0^^107^952^20
+ ;;^UTILITY(U,$J,358.3,16050,1,0)
  ;;=^358.31IA^5^2
- ;;^UTILITY(U,$J,358.3,16006,1,3,0)
- ;;=3^825.29
- ;;^UTILITY(U,$J,358.3,16006,1,5,0)
- ;;=5^Fracture of other tarsal & metatarsal bones, closed; Tarsal or tarsal w/metatarsal
- ;;^UTILITY(U,$J,358.3,16006,2)
- ;;=^274263
- ;;^UTILITY(U,$J,358.3,16007,0)
- ;;=826.0^^116^996^24
- ;;^UTILITY(U,$J,358.3,16007,1,0)
+ ;;^UTILITY(U,$J,358.3,16050,1,4,0)
+ ;;=4^272.0
+ ;;^UTILITY(U,$J,358.3,16050,1,5,0)
+ ;;=5^Hypercholesterolemia, Pure
+ ;;^UTILITY(U,$J,358.3,16050,2)
+ ;;=Hypercholesterolemia, Pure^59973
+ ;;^UTILITY(U,$J,358.3,16051,0)
+ ;;=272.1^^107^952^26
+ ;;^UTILITY(U,$J,358.3,16051,1,0)
  ;;=^358.31IA^5^2
- ;;^UTILITY(U,$J,358.3,16007,1,3,0)
- ;;=3^826.0
- ;;^UTILITY(U,$J,358.3,16007,1,5,0)
- ;;=5^Fracture of one or more phalanges of foot/toe(s), closed
- ;;^UTILITY(U,$J,358.3,16007,2)
- ;;=^274282
- ;;^UTILITY(U,$J,358.3,16008,0)
- ;;=733.16^^116^996^25
- ;;^UTILITY(U,$J,358.3,16008,1,0)
+ ;;^UTILITY(U,$J,358.3,16051,1,4,0)
+ ;;=4^272.1
+ ;;^UTILITY(U,$J,358.3,16051,1,5,0)
+ ;;=5^Hypertriglyceridemia, Pure
+ ;;^UTILITY(U,$J,358.3,16051,2)
+ ;;=Hypertriglyceridemia, Pure^101303
+ ;;^UTILITY(U,$J,358.3,16052,0)
+ ;;=272.2^^107^952^23
+ ;;^UTILITY(U,$J,358.3,16052,1,0)
  ;;=^358.31IA^5^2
- ;;^UTILITY(U,$J,358.3,16008,1,3,0)
- ;;=3^733.16
- ;;^UTILITY(U,$J,358.3,16008,1,5,0)
- ;;=5^Fracture-stress/pathologic/spontaneous; tibia or fibula
- ;;^UTILITY(U,$J,358.3,16008,2)
- ;;=^295757
- ;;^UTILITY(U,$J,358.3,16009,0)
- ;;=733.19^^116^996^26
- ;;^UTILITY(U,$J,358.3,16009,1,0)
+ ;;^UTILITY(U,$J,358.3,16052,1,4,0)
+ ;;=4^272.2
+ ;;^UTILITY(U,$J,358.3,16052,1,5,0)
+ ;;=5^Hyperlipidemia, Mixed
+ ;;^UTILITY(U,$J,358.3,16052,2)
+ ;;=^78424
+ ;;^UTILITY(U,$J,358.3,16053,0)
+ ;;=275.42^^107^952^19
+ ;;^UTILITY(U,$J,358.3,16053,1,0)
  ;;=^358.31IA^5^2
- ;;^UTILITY(U,$J,358.3,16009,1,3,0)
- ;;=3^733.19
- ;;^UTILITY(U,$J,358.3,16009,1,5,0)
- ;;=5^Fracture-stress/pathologic/spontanous; foot, toe, other of lower extremities
- ;;^UTILITY(U,$J,358.3,16009,2)
- ;;=^295758
- ;;^UTILITY(U,$J,358.3,16010,0)
- ;;=991.2^^116^996^27
- ;;^UTILITY(U,$J,358.3,16010,1,0)
+ ;;^UTILITY(U,$J,358.3,16053,1,4,0)
+ ;;=4^275.42
+ ;;^UTILITY(U,$J,358.3,16053,1,5,0)
+ ;;=5^Hypercalcemia
+ ;;^UTILITY(U,$J,358.3,16053,2)
+ ;;=^59932
+ ;;^UTILITY(U,$J,358.3,16054,0)
+ ;;=275.41^^107^952^27
+ ;;^UTILITY(U,$J,358.3,16054,1,0)
  ;;=^358.31IA^5^2
- ;;^UTILITY(U,$J,358.3,16010,1,3,0)
- ;;=3^991.2
- ;;^UTILITY(U,$J,358.3,16010,1,5,0)
- ;;=5^Frostbite of foot
- ;;^UTILITY(U,$J,358.3,16010,2)
- ;;=^276237
- ;;^UTILITY(U,$J,358.3,16011,0)
- ;;=909.4^^116^996^28
- ;;^UTILITY(U,$J,358.3,16011,1,0)
+ ;;^UTILITY(U,$J,358.3,16054,1,4,0)
+ ;;=4^275.41
+ ;;^UTILITY(U,$J,358.3,16054,1,5,0)
+ ;;=5^Hypocalcaemia
+ ;;^UTILITY(U,$J,358.3,16054,2)
+ ;;=^60542
+ ;;^UTILITY(U,$J,358.3,16055,0)
+ ;;=276.7^^107^952^21
+ ;;^UTILITY(U,$J,358.3,16055,1,0)
  ;;=^358.31IA^5^2
- ;;^UTILITY(U,$J,358.3,16011,1,3,0)
- ;;=3^909.4
- ;;^UTILITY(U,$J,358.3,16011,1,5,0)
- ;;=5^Frostbite of foot; late effect of certain other external causes
- ;;^UTILITY(U,$J,358.3,16011,2)
- ;;=^275260
- ;;^UTILITY(U,$J,358.3,16012,0)
- ;;=781.2^^116^997^1
- ;;^UTILITY(U,$J,358.3,16012,1,0)
+ ;;^UTILITY(U,$J,358.3,16055,1,4,0)
+ ;;=4^276.7
+ ;;^UTILITY(U,$J,358.3,16055,1,5,0)
+ ;;=5^Hyperkalemia
+ ;;^UTILITY(U,$J,358.3,16055,2)
+ ;;=^60042
+ ;;^UTILITY(U,$J,358.3,16056,0)
+ ;;=275.2^^107^952^17
+ ;;^UTILITY(U,$J,358.3,16056,1,0)
  ;;=^358.31IA^5^2
- ;;^UTILITY(U,$J,358.3,16012,1,3,0)
- ;;=3^781.2
- ;;^UTILITY(U,$J,358.3,16012,1,5,0)
- ;;=5^Gait abnormality
- ;;^UTILITY(U,$J,358.3,16012,2)
- ;;=^48820
- ;;^UTILITY(U,$J,358.3,16013,0)
- ;;=727.41^^116^997^2
- ;;^UTILITY(U,$J,358.3,16013,1,0)
+ ;;^UTILITY(U,$J,358.3,16056,1,4,0)
+ ;;=4^275.2
+ ;;^UTILITY(U,$J,358.3,16056,1,5,0)
+ ;;=5^Hyper Or Hypomagnesemia
+ ;;^UTILITY(U,$J,358.3,16056,2)
+ ;;=^35626
+ ;;^UTILITY(U,$J,358.3,16057,0)
+ ;;=276.0^^107^952^24
+ ;;^UTILITY(U,$J,358.3,16057,1,0)
  ;;=^358.31IA^5^2
- ;;^UTILITY(U,$J,358.3,16013,1,3,0)
- ;;=3^727.41
- ;;^UTILITY(U,$J,358.3,16013,1,5,0)
- ;;=5^Ganglion of joint
- ;;^UTILITY(U,$J,358.3,16013,2)
- ;;=^272567
- ;;^UTILITY(U,$J,358.3,16014,0)
- ;;=727.42^^116^997^3
- ;;^UTILITY(U,$J,358.3,16014,1,0)
+ ;;^UTILITY(U,$J,358.3,16057,1,4,0)
+ ;;=4^276.0
+ ;;^UTILITY(U,$J,358.3,16057,1,5,0)
+ ;;=5^Hypernatremia
+ ;;^UTILITY(U,$J,358.3,16057,2)
+ ;;=^60144
+ ;;^UTILITY(U,$J,358.3,16058,0)
+ ;;=276.1^^107^952^30
+ ;;^UTILITY(U,$J,358.3,16058,1,0)
  ;;=^358.31IA^5^2
- ;;^UTILITY(U,$J,358.3,16014,1,3,0)
- ;;=3^727.42
- ;;^UTILITY(U,$J,358.3,16014,1,5,0)
- ;;=5^Ganglion of tendon sheath
- ;;^UTILITY(U,$J,358.3,16014,2)
- ;;=^272569
- ;;^UTILITY(U,$J,358.3,16015,0)
- ;;=727.43^^116^997^4
+ ;;^UTILITY(U,$J,358.3,16058,1,4,0)
+ ;;=4^276.1
+ ;;^UTILITY(U,$J,358.3,16058,1,5,0)
+ ;;=5^Hyponatremia
+ ;;^UTILITY(U,$J,358.3,16058,2)
+ ;;=Hyponatremia^60722
+ ;;^UTILITY(U,$J,358.3,16059,0)
+ ;;=275.3^^107^952^18
+ ;;^UTILITY(U,$J,358.3,16059,1,0)
+ ;;=^358.31IA^5^2
+ ;;^UTILITY(U,$J,358.3,16059,1,4,0)
+ ;;=4^275.3
+ ;;^UTILITY(U,$J,358.3,16059,1,5,0)
+ ;;=5^Hyper Or Hypophosphatemia
+ ;;^UTILITY(U,$J,358.3,16059,2)
+ ;;=^93796
+ ;;^UTILITY(U,$J,358.3,16060,0)
+ ;;=240.0^^107^952^13
+ ;;^UTILITY(U,$J,358.3,16060,1,0)
+ ;;=^358.31IA^5^2
+ ;;^UTILITY(U,$J,358.3,16060,1,4,0)
+ ;;=4^240.0
+ ;;^UTILITY(U,$J,358.3,16060,1,5,0)
+ ;;=5^Goiter, Simple
+ ;;^UTILITY(U,$J,358.3,16060,2)
+ ;;=^259806
+ ;;^UTILITY(U,$J,358.3,16061,0)
+ ;;=241.1^^107^952^12
+ ;;^UTILITY(U,$J,358.3,16061,1,0)
+ ;;=^358.31IA^5^2
+ ;;^UTILITY(U,$J,358.3,16061,1,4,0)
+ ;;=4^241.1
+ ;;^UTILITY(U,$J,358.3,16061,1,5,0)
+ ;;=5^Goiter, Nontox, Multinod
+ ;;^UTILITY(U,$J,358.3,16061,2)
+ ;;=^267790
+ ;;^UTILITY(U,$J,358.3,16062,0)
+ ;;=241.0^^107^952^42
+ ;;^UTILITY(U,$J,358.3,16062,1,0)
+ ;;=^358.31IA^5^2
+ ;;^UTILITY(U,$J,358.3,16062,1,4,0)
+ ;;=4^241.0
+ ;;^UTILITY(U,$J,358.3,16062,1,5,0)
+ ;;=5^Thyroid Nodule, Nontoxic
+ ;;^UTILITY(U,$J,358.3,16062,2)
+ ;;=^83865

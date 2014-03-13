@@ -1,316 +1,340 @@
-IBDEI0BV ; ; 20-FEB-2013
- ;;3.0;IB ENCOUNTER FORM IMP/EXP;;FEB 20, 2013
+IBDEI0BV ; ; 13-FEB-2014
+ ;;3.0;IB ENCOUNTER FORM IMP/EXP;;FEB 13, 2014
  Q:'DIFQR(358.3)  F I=1:2 S X=$T(Q+I) Q:X=""  S Y=$E($T(Q+I+1),4,999),X=$E(X,4,999) S:$A(Y)=126 I=I+1,Y=$E(Y,2,999)_$E($T(Q+I+1),5,99) S:$A(Y)=61 Y=$E(Y,2,999) X NO E  S @X=Y
 Q Q
- ;;^UTILITY(U,$J,358.3,15795,1,2,0)
- ;;=2^Open Tx of tarsometatarsal joint dislocation, with or w/o internal or external fixation
- ;;^UTILITY(U,$J,358.3,15795,1,3,0)
- ;;=3^28615
- ;;^UTILITY(U,$J,358.3,15796,0)
- ;;=28630^^114^980^58^^^^1
- ;;^UTILITY(U,$J,358.3,15796,1,0)
- ;;=^358.31IA^3^2
- ;;^UTILITY(U,$J,358.3,15796,1,2,0)
- ;;=2^Closed Tx of metatarsophalangeal joint dislocation; w/o anesthesia
- ;;^UTILITY(U,$J,358.3,15796,1,3,0)
- ;;=3^28630
- ;;^UTILITY(U,$J,358.3,15797,0)
- ;;=28635^^114^980^59^^^^1
- ;;^UTILITY(U,$J,358.3,15797,1,0)
- ;;=^358.31IA^3^2
- ;;^UTILITY(U,$J,358.3,15797,1,2,0)
- ;;=2^Closed Tx of metatarsophalangeal joint dislocation; requiring anesthesia
- ;;^UTILITY(U,$J,358.3,15797,1,3,0)
- ;;=3^28635
- ;;^UTILITY(U,$J,358.3,15798,0)
- ;;=28636^^114^980^60^^^^1
- ;;^UTILITY(U,$J,358.3,15798,1,0)
- ;;=^358.31IA^3^2
- ;;^UTILITY(U,$J,358.3,15798,1,2,0)
- ;;=2^Perc Fixation Metatarsophalangeal Joint Dislocation
- ;;^UTILITY(U,$J,358.3,15798,1,3,0)
- ;;=3^28636
- ;;^UTILITY(U,$J,358.3,15799,0)
- ;;=28645^^114^980^61^^^^1
- ;;^UTILITY(U,$J,358.3,15799,1,0)
- ;;=^358.31IA^3^2
- ;;^UTILITY(U,$J,358.3,15799,1,2,0)
- ;;=2^Open Tx of metatarsophalangeal joint dislocation, with or w/o internal or external fixation
- ;;^UTILITY(U,$J,358.3,15799,1,3,0)
- ;;=3^28645
- ;;^UTILITY(U,$J,358.3,15800,0)
- ;;=28660^^114^980^62^^^^1
- ;;^UTILITY(U,$J,358.3,15800,1,0)
- ;;=^358.31IA^3^2
- ;;^UTILITY(U,$J,358.3,15800,1,2,0)
- ;;=2^Closed Tx of interphalangeal joint dislocation; w/o anesthesia
- ;;^UTILITY(U,$J,358.3,15800,1,3,0)
- ;;=3^28660
- ;;^UTILITY(U,$J,358.3,15801,0)
- ;;=28665^^114^980^63^^^^1
- ;;^UTILITY(U,$J,358.3,15801,1,0)
- ;;=^358.31IA^3^2
- ;;^UTILITY(U,$J,358.3,15801,1,2,0)
- ;;=2^Closed Tx of interphalangeal joint dislocation; requiring anesthesia
- ;;^UTILITY(U,$J,358.3,15801,1,3,0)
- ;;=3^28665
- ;;^UTILITY(U,$J,358.3,15802,0)
- ;;=28666^^114^980^64^^^^1
- ;;^UTILITY(U,$J,358.3,15802,1,0)
- ;;=^358.31IA^3^2
- ;;^UTILITY(U,$J,358.3,15802,1,2,0)
- ;;=2^Perc Fixation Interphalangeal Joint Dislocation
- ;;^UTILITY(U,$J,358.3,15802,1,3,0)
- ;;=3^28666
- ;;^UTILITY(U,$J,358.3,15803,0)
- ;;=28675^^114^980^65^^^^1
- ;;^UTILITY(U,$J,358.3,15803,1,0)
- ;;=^358.31IA^3^2
- ;;^UTILITY(U,$J,358.3,15803,1,2,0)
- ;;=2^Open Tx of interphalangeal joint dislocation, with or without internal or external fixation
- ;;^UTILITY(U,$J,358.3,15803,1,3,0)
- ;;=3^28675
- ;;^UTILITY(U,$J,358.3,15804,0)
- ;;=27840^^114^980^66^^^^1
- ;;^UTILITY(U,$J,358.3,15804,1,0)
- ;;=^358.31IA^3^2
- ;;^UTILITY(U,$J,358.3,15804,1,2,0)
- ;;=2^Closed Tx of ankle dislocation; w/o anesthesia
- ;;^UTILITY(U,$J,358.3,15804,1,3,0)
- ;;=3^27840
- ;;^UTILITY(U,$J,358.3,15805,0)
- ;;=27842^^114^980^67^^^^1
- ;;^UTILITY(U,$J,358.3,15805,1,0)
- ;;=^358.31IA^3^2
- ;;^UTILITY(U,$J,358.3,15805,1,2,0)
- ;;=2^Closed Tx of ankle dislocation; requiring anesthesia, with or w/o percutaneous skeletal fixation
- ;;^UTILITY(U,$J,358.3,15805,1,3,0)
- ;;=3^27842
- ;;^UTILITY(U,$J,358.3,15806,0)
- ;;=27846^^114^980^68^^^^1
- ;;^UTILITY(U,$J,358.3,15806,1,0)
- ;;=^358.31IA^3^2
- ;;^UTILITY(U,$J,358.3,15806,1,2,0)
- ;;=2^Open Tx of ankle dislocation, with or w/o percutaneous skeletal fixation; w/o repair or internal fixation
- ;;^UTILITY(U,$J,358.3,15806,1,3,0)
- ;;=3^27846
- ;;^UTILITY(U,$J,358.3,15807,0)
- ;;=27848^^114^980^69^^^^1
- ;;^UTILITY(U,$J,358.3,15807,1,0)
- ;;=^358.31IA^3^2
- ;;^UTILITY(U,$J,358.3,15807,1,2,0)
- ;;=2^Open Tx of ankle dislocation, with or w/o precutaneous skeletalfixation; with repair or internal or external fixation
- ;;^UTILITY(U,$J,358.3,15807,1,3,0)
- ;;=3^27848
- ;;^UTILITY(U,$J,358.3,15808,0)
- ;;=28750^^114^981^1^^^^1
- ;;^UTILITY(U,$J,358.3,15808,1,0)
- ;;=^358.31IA^3^2
- ;;^UTILITY(U,$J,358.3,15808,1,2,0)
- ;;=2^Arthrodesis, great toe; metartarsophalangeal joint
- ;;^UTILITY(U,$J,358.3,15808,1,3,0)
- ;;=3^28750
- ;;^UTILITY(U,$J,358.3,15809,0)
- ;;=28755^^114^981^2^^^^1
- ;;^UTILITY(U,$J,358.3,15809,1,0)
- ;;=^358.31IA^3^2
- ;;^UTILITY(U,$J,358.3,15809,1,2,0)
- ;;=2^Arthrodesis, great toe; interphlangeal joint
- ;;^UTILITY(U,$J,358.3,15809,1,3,0)
- ;;=3^28755
- ;;^UTILITY(U,$J,358.3,15810,0)
- ;;=27870^^114^981^3^^^^1
- ;;^UTILITY(U,$J,358.3,15810,1,0)
- ;;=^358.31IA^3^2
- ;;^UTILITY(U,$J,358.3,15810,1,2,0)
- ;;=2^Arthrodesis, ankle, any method
- ;;^UTILITY(U,$J,358.3,15810,1,3,0)
- ;;=3^27870
- ;;^UTILITY(U,$J,358.3,15811,0)
- ;;=27871^^114^981^4^^^^1
- ;;^UTILITY(U,$J,358.3,15811,1,0)
- ;;=^358.31IA^3^2
- ;;^UTILITY(U,$J,358.3,15811,1,2,0)
- ;;=2^Arthrodesis, tibiofibular joint, proximal or distal
- ;;^UTILITY(U,$J,358.3,15811,1,3,0)
- ;;=3^27871
- ;;^UTILITY(U,$J,358.3,15812,0)
- ;;=29358^^114^982^2^^^^1
- ;;^UTILITY(U,$J,358.3,15812,1,0)
- ;;=^358.31IA^3^2
- ;;^UTILITY(U,$J,358.3,15812,1,2,0)
- ;;=2^Application Of Long Leg Cast Brace
- ;;^UTILITY(U,$J,358.3,15812,1,3,0)
- ;;=3^29358
- ;;^UTILITY(U,$J,358.3,15813,0)
- ;;=29405^^114^982^4^^^^1
- ;;^UTILITY(U,$J,358.3,15813,1,0)
- ;;=^358.31IA^3^2
- ;;^UTILITY(U,$J,358.3,15813,1,2,0)
- ;;=2^Application Of Short Leg Cast
- ;;^UTILITY(U,$J,358.3,15813,1,3,0)
- ;;=3^29405
- ;;^UTILITY(U,$J,358.3,15814,0)
- ;;=29425^^114^982^5^^^^1
- ;;^UTILITY(U,$J,358.3,15814,1,0)
- ;;=^358.31IA^3^2
- ;;^UTILITY(U,$J,358.3,15814,1,2,0)
- ;;=2^Application Of Short Leg Cast; Walking Or Ambulatory Type
- ;;^UTILITY(U,$J,358.3,15814,1,3,0)
- ;;=3^29425
- ;;^UTILITY(U,$J,358.3,15815,0)
- ;;=29440^^114^982^1^^^^1
- ;;^UTILITY(U,$J,358.3,15815,1,0)
- ;;=^358.31IA^3^2
- ;;^UTILITY(U,$J,358.3,15815,1,2,0)
- ;;=2^Adding Walker to Previous Cast
- ;;^UTILITY(U,$J,358.3,15815,1,3,0)
- ;;=3^29440
- ;;^UTILITY(U,$J,358.3,15816,0)
- ;;=29445^^114^982^3^^^^1
- ;;^UTILITY(U,$J,358.3,15816,1,0)
- ;;=^358.31IA^3^2
- ;;^UTILITY(U,$J,358.3,15816,1,2,0)
- ;;=2^Application Of Rigid Total Contact Leg Cast
- ;;^UTILITY(U,$J,358.3,15816,1,3,0)
- ;;=3^29445
- ;;^UTILITY(U,$J,358.3,15817,0)
- ;;=29515^^114^982^6^^^^1
- ;;^UTILITY(U,$J,358.3,15817,1,0)
- ;;=^358.31IA^3^2
- ;;^UTILITY(U,$J,358.3,15817,1,2,0)
- ;;=2^Application Of Short Leg Splint (Calf To Foot)
- ;;^UTILITY(U,$J,358.3,15817,1,3,0)
- ;;=3^29515
- ;;^UTILITY(U,$J,358.3,15818,0)
- ;;=29540^^114^982^10^^^^1
- ;;^UTILITY(U,$J,358.3,15818,1,0)
- ;;=^358.31IA^3^2
- ;;^UTILITY(U,$J,358.3,15818,1,2,0)
- ;;=2^Strapping ; Ankle
- ;;^UTILITY(U,$J,358.3,15818,1,3,0)
- ;;=3^29540
- ;;^UTILITY(U,$J,358.3,15819,0)
- ;;=29530^^114^982^11^^^^1
- ;;^UTILITY(U,$J,358.3,15819,1,0)
- ;;=^358.31IA^3^2
- ;;^UTILITY(U,$J,358.3,15819,1,2,0)
- ;;=2^Strapping; Knee
- ;;^UTILITY(U,$J,358.3,15819,1,3,0)
- ;;=3^29530
- ;;^UTILITY(U,$J,358.3,15820,0)
- ;;=29550^^114^982^12^^^^1
- ;;^UTILITY(U,$J,358.3,15820,1,0)
- ;;=^358.31IA^3^2
- ;;^UTILITY(U,$J,358.3,15820,1,2,0)
- ;;=2^Strapping; Toes
- ;;^UTILITY(U,$J,358.3,15820,1,3,0)
- ;;=3^29550
- ;;^UTILITY(U,$J,358.3,15821,0)
- ;;=29580^^114^982^13^^^^1
- ;;^UTILITY(U,$J,358.3,15821,1,0)
- ;;=^358.31IA^3^2
- ;;^UTILITY(U,$J,358.3,15821,1,2,0)
- ;;=2^Strapping; Unna Boot
- ;;^UTILITY(U,$J,358.3,15821,1,3,0)
- ;;=3^29580
- ;;^UTILITY(U,$J,358.3,15822,0)
- ;;=29581^^114^982^8^^^^1
- ;;^UTILITY(U,$J,358.3,15822,1,0)
- ;;=^358.31IA^3^2
- ;;^UTILITY(U,$J,358.3,15822,1,2,0)
- ;;=2^Multilay Venous Wound Comp System
- ;;^UTILITY(U,$J,358.3,15822,1,3,0)
- ;;=3^29581
- ;;^UTILITY(U,$J,358.3,15823,0)
- ;;=29582^^114^982^9^^^^1
- ;;^UTILITY(U,$J,358.3,15823,1,0)
- ;;=^358.31IA^3^2
- ;;^UTILITY(U,$J,358.3,15823,1,2,0)
- ;;=2^Multilay Wnd Comp Syst Thigh,Incl Ft
- ;;^UTILITY(U,$J,358.3,15823,1,3,0)
- ;;=3^29582
- ;;^UTILITY(U,$J,358.3,15824,0)
- ;;=29700^^114^983^1^^^^1
- ;;^UTILITY(U,$J,358.3,15824,1,0)
- ;;=^358.31IA^3^2
- ;;^UTILITY(U,$J,358.3,15824,1,2,0)
- ;;=2^Removal or bivalving; gauntlet, boot or body cast
- ;;^UTILITY(U,$J,358.3,15824,1,3,0)
- ;;=3^29700
- ;;^UTILITY(U,$J,358.3,15825,0)
- ;;=29730^^114^983^2^^^^1
- ;;^UTILITY(U,$J,358.3,15825,1,0)
- ;;=^358.31IA^3^2
- ;;^UTILITY(U,$J,358.3,15825,1,2,0)
- ;;=2^Windowing of cast
- ;;^UTILITY(U,$J,358.3,15825,1,3,0)
- ;;=3^29730
- ;;^UTILITY(U,$J,358.3,15826,0)
- ;;=L9900^^114^984^3^^^^1
- ;;^UTILITY(U,$J,358.3,15826,1,0)
- ;;=^358.31IA^3^2
  ;;^UTILITY(U,$J,358.3,15826,1,2,0)
- ;;=2^Orthotic & prosthetic supply, accessory, &/or service component of another HCPCS L code
- ;;^UTILITY(U,$J,358.3,15826,1,3,0)
- ;;=3^L9900
+ ;;=2^Insert Non-Tunnel CV Cath
+ ;;^UTILITY(U,$J,358.3,15826,1,4,0)
+ ;;=4^36556
  ;;^UTILITY(U,$J,358.3,15827,0)
- ;;=A9150^^114^985^2^^^^1
+ ;;=36558^^105^941^6^^^^1
  ;;^UTILITY(U,$J,358.3,15827,1,0)
- ;;=^358.31IA^3^2
+ ;;=^358.31IA^4^2
  ;;^UTILITY(U,$J,358.3,15827,1,2,0)
- ;;=2^Nonprescription drug
- ;;^UTILITY(U,$J,358.3,15827,1,3,0)
- ;;=3^A9150
+ ;;=2^Insert Tunnel CV Cath w/o Port/Pump
+ ;;^UTILITY(U,$J,358.3,15827,1,4,0)
+ ;;=4^36558
  ;;^UTILITY(U,$J,358.3,15828,0)
- ;;=L3332^^114^985^3^^^^1
+ ;;=36561^^105^941^4^^^^1
  ;;^UTILITY(U,$J,358.3,15828,1,0)
- ;;=^358.31IA^3^2
+ ;;=^358.31IA^4^2
  ;;^UTILITY(U,$J,358.3,15828,1,2,0)
- ;;=2^Lift, elevation, inside shoe, tapered, up to one-half inch
- ;;^UTILITY(U,$J,358.3,15828,1,3,0)
- ;;=3^L3332
+ ;;=2^Insert Tunnel CV Cath w/ Subq Port
+ ;;^UTILITY(U,$J,358.3,15828,1,4,0)
+ ;;=4^36561
  ;;^UTILITY(U,$J,358.3,15829,0)
- ;;=L3170^^114^985^4^^^^1
+ ;;=36563^^105^941^5^^^^1
  ;;^UTILITY(U,$J,358.3,15829,1,0)
- ;;=^358.31IA^3^2
+ ;;=^358.31IA^4^2
  ;;^UTILITY(U,$J,358.3,15829,1,2,0)
- ;;=2^Foot, plastic heel stabilizer
- ;;^UTILITY(U,$J,358.3,15829,1,3,0)
- ;;=3^L3170
+ ;;=2^Insert Tunnel CV Cath w/ Subq Pump
+ ;;^UTILITY(U,$J,358.3,15829,1,4,0)
+ ;;=4^36563
  ;;^UTILITY(U,$J,358.3,15830,0)
- ;;=A4570^^114^985^6^^^^1
+ ;;=36565^^105^941^8^^^^1
  ;;^UTILITY(U,$J,358.3,15830,1,0)
- ;;=^358.31IA^3^2
+ ;;=^358.31IA^4^2
  ;;^UTILITY(U,$J,358.3,15830,1,2,0)
- ;;=2^Splint                      
- ;;^UTILITY(U,$J,358.3,15830,1,3,0)
- ;;=3^A4570
+ ;;=2^Insert Tunnel CV Cath,2,w/o Pump/Port
+ ;;^UTILITY(U,$J,358.3,15830,1,4,0)
+ ;;=4^36565
  ;;^UTILITY(U,$J,358.3,15831,0)
- ;;=L3260^^114^985^7^^^^1
+ ;;=36566^^105^941^7^^^^1
  ;;^UTILITY(U,$J,358.3,15831,1,0)
- ;;=^358.31IA^3^2
+ ;;=^358.31IA^4^2
  ;;^UTILITY(U,$J,358.3,15831,1,2,0)
- ;;=2^Ambulatory surgical boot, each 
- ;;^UTILITY(U,$J,358.3,15831,1,3,0)
- ;;=3^L3260
+ ;;=2^Insert Tunnel CV Cath,2,w/ Port
+ ;;^UTILITY(U,$J,358.3,15831,1,4,0)
+ ;;=4^36566
  ;;^UTILITY(U,$J,358.3,15832,0)
- ;;=A4500^^114^985^8^^^^1
+ ;;=36569^^105^941^3^^^^1
  ;;^UTILITY(U,$J,358.3,15832,1,0)
- ;;=^358.31IA^3^2
+ ;;=^358.31IA^4^2
  ;;^UTILITY(U,$J,358.3,15832,1,2,0)
- ;;=2^Surgical stocking below knee lenght, each
- ;;^UTILITY(U,$J,358.3,15832,1,3,0)
- ;;=3^A4500
+ ;;=2^Insert PICC w/o Pump/Port
+ ;;^UTILITY(U,$J,358.3,15832,1,4,0)
+ ;;=4^36569
  ;;^UTILITY(U,$J,358.3,15833,0)
- ;;=A5501^^114^985^9^^^^1
+ ;;=36571^^105^941^2^^^^1
  ;;^UTILITY(U,$J,358.3,15833,1,0)
- ;;=^358.31IA^3^2
+ ;;=^358.31IA^4^2
  ;;^UTILITY(U,$J,358.3,15833,1,2,0)
- ;;=2^Diabetic Shoes, Custom Fit
- ;;^UTILITY(U,$J,358.3,15833,1,3,0)
- ;;=3^A5501
+ ;;=2^Insert PICC w/ Subq Port
+ ;;^UTILITY(U,$J,358.3,15833,1,4,0)
+ ;;=4^36571
  ;;^UTILITY(U,$J,358.3,15834,0)
- ;;=28190^^114^986^1^^^^1
+ ;;=36575^^105^941^11^^^^1
  ;;^UTILITY(U,$J,358.3,15834,1,0)
- ;;=^358.31IA^3^2
+ ;;=^358.31IA^4^2
+ ;;^UTILITY(U,$J,358.3,15834,1,2,0)
+ ;;=2^Repair CV Cath w/o Subq Port/Pump
+ ;;^UTILITY(U,$J,358.3,15834,1,4,0)
+ ;;=4^36575
+ ;;^UTILITY(U,$J,358.3,15835,0)
+ ;;=36576^^105^941^10^^^^1
+ ;;^UTILITY(U,$J,358.3,15835,1,0)
+ ;;=^358.31IA^4^2
+ ;;^UTILITY(U,$J,358.3,15835,1,2,0)
+ ;;=2^Repair CV Cath w/ Subq Port/Pump
+ ;;^UTILITY(U,$J,358.3,15835,1,4,0)
+ ;;=4^36576
+ ;;^UTILITY(U,$J,358.3,15836,0)
+ ;;=36578^^105^941^9^^^^1
+ ;;^UTILITY(U,$J,358.3,15836,1,0)
+ ;;=^358.31IA^4^2
+ ;;^UTILITY(U,$J,358.3,15836,1,2,0)
+ ;;=2^Part Replacement CV Cath w/ Port/Pump
+ ;;^UTILITY(U,$J,358.3,15836,1,4,0)
+ ;;=4^36578
+ ;;^UTILITY(U,$J,358.3,15837,0)
+ ;;=35471^^105^942^27^^^^1
+ ;;^UTILITY(U,$J,358.3,15837,1,0)
+ ;;=^358.31IA^4^2
+ ;;^UTILITY(U,$J,358.3,15837,1,2,0)
+ ;;=2^Perc Angioplasty,Renal/Visc
+ ;;^UTILITY(U,$J,358.3,15837,1,4,0)
+ ;;=4^35471
+ ;;^UTILITY(U,$J,358.3,15838,0)
+ ;;=35475^^105^942^26^^^^1
+ ;;^UTILITY(U,$J,358.3,15838,1,0)
+ ;;=^358.31IA^4^2
+ ;;^UTILITY(U,$J,358.3,15838,1,2,0)
+ ;;=2^Perc Angioplasty,Brachioceph Trunk/Bran
+ ;;^UTILITY(U,$J,358.3,15838,1,4,0)
+ ;;=4^35475
+ ;;^UTILITY(U,$J,358.3,15839,0)
+ ;;=36011^^105^942^37^^^^1
+ ;;^UTILITY(U,$J,358.3,15839,1,0)
+ ;;=^358.31IA^4^2
+ ;;^UTILITY(U,$J,358.3,15839,1,2,0)
+ ;;=2^Select Cath Venous 1st Order
+ ;;^UTILITY(U,$J,358.3,15839,1,4,0)
+ ;;=4^36011
+ ;;^UTILITY(U,$J,358.3,15840,0)
+ ;;=36246^^105^942^34^^^^1
+ ;;^UTILITY(U,$J,358.3,15840,1,0)
+ ;;=^358.31IA^4^2
+ ;;^UTILITY(U,$J,358.3,15840,1,2,0)
+ ;;=2^Select Cath 2nd Order Abd/Pelv/Le Arteru
+ ;;^UTILITY(U,$J,358.3,15840,1,4,0)
+ ;;=4^36246
+ ;;^UTILITY(U,$J,358.3,15841,0)
+ ;;=36215^^105^942^36^^^^1
+ ;;^UTILITY(U,$J,358.3,15841,1,0)
+ ;;=^358.31IA^4^2
+ ;;^UTILITY(U,$J,358.3,15841,1,2,0)
+ ;;=2^Select Cath Arterial 1st Order Thor/Brac
+ ;;^UTILITY(U,$J,358.3,15841,1,4,0)
+ ;;=4^36215
+ ;;^UTILITY(U,$J,358.3,15842,0)
+ ;;=36245^^105^942^33^^^^1
+ ;;^UTILITY(U,$J,358.3,15842,1,0)
+ ;;=^358.31IA^4^2
+ ;;^UTILITY(U,$J,358.3,15842,1,2,0)
+ ;;=2^Select Cath 1st Order Abd/Pelv/Le Artery
+ ;;^UTILITY(U,$J,358.3,15842,1,4,0)
+ ;;=4^36245
+ ;;^UTILITY(U,$J,358.3,15843,0)
+ ;;=36247^^105^942^35^^^^1
+ ;;^UTILITY(U,$J,358.3,15843,1,0)
+ ;;=^358.31IA^4^2
+ ;;^UTILITY(U,$J,358.3,15843,1,2,0)
+ ;;=2^Select Cath 3rd Order Abd/Pelv/Le Artery
+ ;;^UTILITY(U,$J,358.3,15843,1,4,0)
+ ;;=4^36247
+ ;;^UTILITY(U,$J,358.3,15844,0)
+ ;;=36251^^105^942^32^^^^1
+ ;;^UTILITY(U,$J,358.3,15844,1,0)
+ ;;=^358.31IA^4^2
+ ;;^UTILITY(U,$J,358.3,15844,1,2,0)
+ ;;=2^Select Cath 1st Main Ren&Access Art
+ ;;^UTILITY(U,$J,358.3,15844,1,4,0)
+ ;;=4^36251
+ ;;^UTILITY(U,$J,358.3,15845,0)
+ ;;=36252^^105^942^31^^^^1
+ ;;^UTILITY(U,$J,358.3,15845,1,0)
+ ;;=^358.31IA^4^2
+ ;;^UTILITY(U,$J,358.3,15845,1,2,0)
+ ;;=2^Select Cath 1st Main Ren&Acc Art,Bilat
+ ;;^UTILITY(U,$J,358.3,15845,1,4,0)
+ ;;=4^36252
+ ;;^UTILITY(U,$J,358.3,15846,0)
+ ;;=36254^^105^942^40^^^^1
+ ;;^UTILITY(U,$J,358.3,15846,1,0)
+ ;;=^358.31IA^4^2
+ ;;^UTILITY(U,$J,358.3,15846,1,2,0)
+ ;;=2^Superselect Cath Ren Art&Access Art
+ ;;^UTILITY(U,$J,358.3,15846,1,4,0)
+ ;;=4^36254
+ ;;^UTILITY(U,$J,358.3,15847,0)
+ ;;=37191^^105^942^21^^^^1
+ ;;^UTILITY(U,$J,358.3,15847,1,0)
+ ;;=^358.31IA^4^2
+ ;;^UTILITY(U,$J,358.3,15847,1,2,0)
+ ;;=2^Insert Intravas Vena Cava Filter,Endovas
+ ;;^UTILITY(U,$J,358.3,15847,1,4,0)
+ ;;=4^37191
+ ;;^UTILITY(U,$J,358.3,15848,0)
+ ;;=37220^^105^942^20^^^^1
+ ;;^UTILITY(U,$J,358.3,15848,1,0)
+ ;;=^358.31IA^4^2
+ ;;^UTILITY(U,$J,358.3,15848,1,2,0)
+ ;;=2^Iliac Revasc,Unilat,1st Vessel
+ ;;^UTILITY(U,$J,358.3,15848,1,4,0)
+ ;;=4^37220
+ ;;^UTILITY(U,$J,358.3,15849,0)
+ ;;=37221^^105^942^17^^^^1
+ ;;^UTILITY(U,$J,358.3,15849,1,0)
+ ;;=^358.31IA^4^2
+ ;;^UTILITY(U,$J,358.3,15849,1,2,0)
+ ;;=2^Iliac Revasc w/ Stent
+ ;;^UTILITY(U,$J,358.3,15849,1,4,0)
+ ;;=4^37221
+ ;;^UTILITY(U,$J,358.3,15850,0)
+ ;;=37223^^105^942^18^^^^1
+ ;;^UTILITY(U,$J,358.3,15850,1,0)
+ ;;=^358.31IA^4^2
+ ;;^UTILITY(U,$J,358.3,15850,1,2,0)
+ ;;=2^Iliac Revasc w/ Stent,Add-on
+ ;;^UTILITY(U,$J,358.3,15850,1,4,0)
+ ;;=4^37223
+ ;;^UTILITY(U,$J,358.3,15851,0)
+ ;;=37222^^105^942^19^^^^1
+ ;;^UTILITY(U,$J,358.3,15851,1,0)
+ ;;=^358.31IA^4^2
+ ;;^UTILITY(U,$J,358.3,15851,1,2,0)
+ ;;=2^Iliac Revasc,Ea Addl Vessel
+ ;;^UTILITY(U,$J,358.3,15851,1,4,0)
+ ;;=4^37222
+ ;;^UTILITY(U,$J,358.3,15852,0)
+ ;;=37224^^105^942^14^^^^1
+ ;;^UTILITY(U,$J,358.3,15852,1,0)
+ ;;=^358.31IA^4^2
+ ;;^UTILITY(U,$J,358.3,15852,1,2,0)
+ ;;=2^Fem/Popl Revas w/ TLA 1st Vessel
+ ;;^UTILITY(U,$J,358.3,15852,1,4,0)
+ ;;=4^37224
+ ;;^UTILITY(U,$J,358.3,15853,0)
+ ;;=37225^^105^942^13^^^^1
+ ;;^UTILITY(U,$J,358.3,15853,1,0)
+ ;;=^358.31IA^4^2
+ ;;^UTILITY(U,$J,358.3,15853,1,2,0)
+ ;;=2^Fem/Popl Revas w/ Ather
+ ;;^UTILITY(U,$J,358.3,15853,1,4,0)
+ ;;=4^37225
+ ;;^UTILITY(U,$J,358.3,15854,0)
+ ;;=37226^^105^942^15^^^^1
+ ;;^UTILITY(U,$J,358.3,15854,1,0)
+ ;;=^358.31IA^4^2
+ ;;^UTILITY(U,$J,358.3,15854,1,2,0)
+ ;;=2^Fem/Popl Revasc w/ Stent
+ ;;^UTILITY(U,$J,358.3,15854,1,4,0)
+ ;;=4^37226
+ ;;^UTILITY(U,$J,358.3,15855,0)
+ ;;=37227^^105^942^16^^^^1
+ ;;^UTILITY(U,$J,358.3,15855,1,0)
+ ;;=^358.31IA^4^2
+ ;;^UTILITY(U,$J,358.3,15855,1,2,0)
+ ;;=2^Fem/Popl Revasc w/ Stent&Ather
+ ;;^UTILITY(U,$J,358.3,15855,1,4,0)
+ ;;=4^37227
+ ;;^UTILITY(U,$J,358.3,15856,0)
+ ;;=37228^^105^942^47^^^^1
+ ;;^UTILITY(U,$J,358.3,15856,1,0)
+ ;;=^358.31IA^4^2
+ ;;^UTILITY(U,$J,358.3,15856,1,2,0)
+ ;;=2^TIB/Per Revasc w/ TLA, 1st Vessel
+ ;;^UTILITY(U,$J,358.3,15856,1,4,0)
+ ;;=4^37228
+ ;;^UTILITY(U,$J,358.3,15857,0)
+ ;;=37229^^105^942^42^^^^1
+ ;;^UTILITY(U,$J,358.3,15857,1,0)
+ ;;=^358.31IA^4^2
+ ;;^UTILITY(U,$J,358.3,15857,1,2,0)
+ ;;=2^TIB/Per Revasc w/ Ather
+ ;;^UTILITY(U,$J,358.3,15857,1,4,0)
+ ;;=4^37229
+ ;;^UTILITY(U,$J,358.3,15858,0)
+ ;;=37230^^105^942^44^^^^1
+ ;;^UTILITY(U,$J,358.3,15858,1,0)
+ ;;=^358.31IA^4^2
+ ;;^UTILITY(U,$J,358.3,15858,1,2,0)
+ ;;=2^TIB/Per Revasc w/ Stent
+ ;;^UTILITY(U,$J,358.3,15858,1,4,0)
+ ;;=4^37230
+ ;;^UTILITY(U,$J,358.3,15859,0)
+ ;;=37231^^105^942^41^^^^1
+ ;;^UTILITY(U,$J,358.3,15859,1,0)
+ ;;=^358.31IA^4^2
+ ;;^UTILITY(U,$J,358.3,15859,1,2,0)
+ ;;=2^TIB/Per Revasc Stent&Ather
+ ;;^UTILITY(U,$J,358.3,15859,1,4,0)
+ ;;=4^37231
+ ;;^UTILITY(U,$J,358.3,15860,0)
+ ;;=37232^^105^942^48^^^^1
+ ;;^UTILITY(U,$J,358.3,15860,1,0)
+ ;;=^358.31IA^4^2
+ ;;^UTILITY(U,$J,358.3,15860,1,2,0)
+ ;;=2^TIB/Per Revasc,Ea Addl Vessel
+ ;;^UTILITY(U,$J,358.3,15860,1,4,0)
+ ;;=4^37232
+ ;;^UTILITY(U,$J,358.3,15861,0)
+ ;;=37233^^105^942^43^^^^1
+ ;;^UTILITY(U,$J,358.3,15861,1,0)
+ ;;=^358.31IA^4^2
+ ;;^UTILITY(U,$J,358.3,15861,1,2,0)
+ ;;=2^TIB/Per Revasc w/ Ather,Ea Addl Vessel
+ ;;^UTILITY(U,$J,358.3,15861,1,4,0)
+ ;;=4^37233
+ ;;^UTILITY(U,$J,358.3,15862,0)
+ ;;=37234^^105^942^46^^^^1
+ ;;^UTILITY(U,$J,358.3,15862,1,0)
+ ;;=^358.31IA^4^2
+ ;;^UTILITY(U,$J,358.3,15862,1,2,0)
+ ;;=2^TIB/Per Revasc w/ Stent,Ea Addl Vessel
+ ;;^UTILITY(U,$J,358.3,15862,1,4,0)
+ ;;=4^37234
+ ;;^UTILITY(U,$J,358.3,15863,0)
+ ;;=37235^^105^942^45^^^^1
+ ;;^UTILITY(U,$J,358.3,15863,1,0)
+ ;;=^358.31IA^4^2
+ ;;^UTILITY(U,$J,358.3,15863,1,2,0)
+ ;;=2^TIB/Per Revasc w/ Stent&Ather,Add Vessel
+ ;;^UTILITY(U,$J,358.3,15863,1,4,0)
+ ;;=4^37235
+ ;;^UTILITY(U,$J,358.3,15864,0)
+ ;;=37250^^105^942^23^^^^1
+ ;;^UTILITY(U,$J,358.3,15864,1,0)
+ ;;=^358.31IA^4^2
+ ;;^UTILITY(U,$J,358.3,15864,1,2,0)
+ ;;=2^Intravas US,Non/Cor,Diag/Ther Interv
+ ;;^UTILITY(U,$J,358.3,15864,1,4,0)
+ ;;=4^37250
+ ;;^UTILITY(U,$J,358.3,15865,0)
+ ;;=75605^^105^942^3^^^^1
+ ;;^UTILITY(U,$J,358.3,15865,1,0)
+ ;;=^358.31IA^4^2
+ ;;^UTILITY(U,$J,358.3,15865,1,2,0)
+ ;;=2^AO Thoracic w/ Serialography
+ ;;^UTILITY(U,$J,358.3,15865,1,4,0)
+ ;;=4^75605
+ ;;^UTILITY(U,$J,358.3,15866,0)
+ ;;=37619^^105^942^24^^^^1
+ ;;^UTILITY(U,$J,358.3,15866,1,0)
+ ;;=^358.31IA^4^2
+ ;;^UTILITY(U,$J,358.3,15866,1,2,0)
+ ;;=2^Open Inferior Vena Cava Filter Plmnt
+ ;;^UTILITY(U,$J,358.3,15866,1,4,0)
+ ;;=4^37619
+ ;;^UTILITY(U,$J,358.3,15867,0)
+ ;;=75625^^105^942^2^^^^1
+ ;;^UTILITY(U,$J,358.3,15867,1,0)
+ ;;=^358.31IA^4^2
+ ;;^UTILITY(U,$J,358.3,15867,1,2,0)
+ ;;=2^AO Abd w/o Runoff
+ ;;^UTILITY(U,$J,358.3,15867,1,4,0)
+ ;;=4^75625
+ ;;^UTILITY(U,$J,358.3,15868,0)
+ ;;=75630^^105^942^1^^^^1
+ ;;^UTILITY(U,$J,358.3,15868,1,0)
+ ;;=^358.31IA^4^2

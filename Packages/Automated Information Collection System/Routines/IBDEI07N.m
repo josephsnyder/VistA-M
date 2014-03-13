@@ -1,358 +1,354 @@
-IBDEI07N ; ; 20-FEB-2013
- ;;3.0;IB ENCOUNTER FORM IMP/EXP;;FEB 20, 2013
+IBDEI07N ; ; 13-FEB-2014
+ ;;3.0;IB ENCOUNTER FORM IMP/EXP;;FEB 13, 2014
  Q:'DIFQR(358.3)  F I=1:2 S X=$T(Q+I) Q:X=""  S Y=$E($T(Q+I+1),4,999),X=$E(X,4,999) S:$A(Y)=126 I=I+1,Y=$E(Y,2,999)_$E($T(Q+I+1),5,99) S:$A(Y)=61 Y=$E(Y,2,999) X NO E  S @X=Y
 Q Q
+ ;;^UTILITY(U,$J,358.3,10045,1,4,0)
+ ;;=4^374.14
+ ;;^UTILITY(U,$J,358.3,10045,2)
+ ;;=Edctropion, Cicatricial^269089
+ ;;^UTILITY(U,$J,358.3,10046,0)
+ ;;=374.12^^72^688^14
+ ;;^UTILITY(U,$J,358.3,10046,1,0)
+ ;;=^358.31IA^4^2
+ ;;^UTILITY(U,$J,358.3,10046,1,3,0)
+ ;;=3^Ectropion, Mechanical
+ ;;^UTILITY(U,$J,358.3,10046,1,4,0)
+ ;;=4^374.12
+ ;;^UTILITY(U,$J,358.3,10046,2)
+ ;;=Ectropion, Mechanical^269085
+ ;;^UTILITY(U,$J,358.3,10047,0)
+ ;;=374.13^^72^688^16
+ ;;^UTILITY(U,$J,358.3,10047,1,0)
+ ;;=^358.31IA^4^2
+ ;;^UTILITY(U,$J,358.3,10047,1,3,0)
+ ;;=3^Ectropion, Spastic
+ ;;^UTILITY(U,$J,358.3,10047,1,4,0)
+ ;;=4^374.13
+ ;;^UTILITY(U,$J,358.3,10047,2)
+ ;;=Ectropion, Spastic^269087
+ ;;^UTILITY(U,$J,358.3,10048,0)
+ ;;=374.00^^72^688^22
+ ;;^UTILITY(U,$J,358.3,10048,1,0)
+ ;;=^358.31IA^4^2
+ ;;^UTILITY(U,$J,358.3,10048,1,3,0)
+ ;;=3^Entropion, Unspec
+ ;;^UTILITY(U,$J,358.3,10048,1,4,0)
+ ;;=4^374.00
+ ;;^UTILITY(U,$J,358.3,10048,2)
+ ;;=Entropion, Unspec^41016
+ ;;^UTILITY(U,$J,358.3,10049,0)
+ ;;=374.04^^72^688^18
+ ;;^UTILITY(U,$J,358.3,10049,1,0)
+ ;;=^358.31IA^4^2
+ ;;^UTILITY(U,$J,358.3,10049,1,3,0)
+ ;;=3^Entropion, Cicatricial
+ ;;^UTILITY(U,$J,358.3,10049,1,4,0)
+ ;;=4^374.04
+ ;;^UTILITY(U,$J,358.3,10049,2)
+ ;;=Entropion, Cicatricial^269080
+ ;;^UTILITY(U,$J,358.3,10050,0)
+ ;;=374.02^^72^688^19
  ;;^UTILITY(U,$J,358.3,10050,1,0)
  ;;=^358.31IA^4^2
  ;;^UTILITY(U,$J,358.3,10050,1,3,0)
- ;;=3^Choroidal Rupture
+ ;;=3^Entropion, Mechanical
  ;;^UTILITY(U,$J,358.3,10050,1,4,0)
- ;;=4^363.63
+ ;;=4^374.02
  ;;^UTILITY(U,$J,358.3,10050,2)
- ;;=Choroidal Rupture^268698
+ ;;=Entropion, Mechanical^269076
  ;;^UTILITY(U,$J,358.3,10051,0)
- ;;=379.22^^79^675^3
+ ;;=374.03^^72^688^21
  ;;^UTILITY(U,$J,358.3,10051,1,0)
  ;;=^358.31IA^4^2
  ;;^UTILITY(U,$J,358.3,10051,1,3,0)
- ;;=3^Asteroid Hyalosis
+ ;;=3^Entropion, Spastic
  ;;^UTILITY(U,$J,358.3,10051,1,4,0)
- ;;=4^379.22
+ ;;=4^374.03
  ;;^UTILITY(U,$J,358.3,10051,2)
- ;;=Asteroid Hyalosis^269310
+ ;;=Spastic Entropion^269078
  ;;^UTILITY(U,$J,358.3,10052,0)
- ;;=379.21^^79^675^57
+ ;;=870.0^^72^688^58
  ;;^UTILITY(U,$J,358.3,10052,1,0)
  ;;=^358.31IA^4^2
  ;;^UTILITY(U,$J,358.3,10052,1,3,0)
- ;;=3^Vitreous Detachment/Degeneration (Pvd)
+ ;;=3^Eyelid/Periocular Skin Laceration
  ;;^UTILITY(U,$J,358.3,10052,1,4,0)
- ;;=4^379.21
+ ;;=4^870.0
  ;;^UTILITY(U,$J,358.3,10052,2)
- ;;=Vitreous Detachment/Degeneration^88242
+ ;;=Laceration, Eyelid^274879
  ;;^UTILITY(U,$J,358.3,10053,0)
- ;;=379.24^^79^675^58
+ ;;=374.20^^72^688^72
  ;;^UTILITY(U,$J,358.3,10053,1,0)
  ;;=^358.31IA^4^2
  ;;^UTILITY(U,$J,358.3,10053,1,3,0)
- ;;=3^Vitreous Floaters
+ ;;=3^Lagophthalmos
  ;;^UTILITY(U,$J,358.3,10053,1,4,0)
- ;;=4^379.24
+ ;;=4^374.20
  ;;^UTILITY(U,$J,358.3,10053,2)
- ;;=Vitreous Floaters^88242
+ ;;=Lagophthalmos^265452
  ;;^UTILITY(U,$J,358.3,10054,0)
- ;;=379.26^^79^675^60
+ ;;=378.9^^72^688^98
  ;;^UTILITY(U,$J,358.3,10054,1,0)
  ;;=^358.31IA^4^2
  ;;^UTILITY(U,$J,358.3,10054,1,3,0)
- ;;=3^Vitreous Prolapse
+ ;;=3^Strabismus
  ;;^UTILITY(U,$J,358.3,10054,1,4,0)
- ;;=4^379.26
+ ;;=4^378.9
  ;;^UTILITY(U,$J,358.3,10054,2)
- ;;=Vitreous Prolapse^269312
+ ;;=Strabismus^123833
  ;;^UTILITY(U,$J,358.3,10055,0)
- ;;=379.23^^79^675^59
+ ;;=242.90^^72^688^99
  ;;^UTILITY(U,$J,358.3,10055,1,0)
  ;;=^358.31IA^4^2
  ;;^UTILITY(U,$J,358.3,10055,1,3,0)
- ;;=3^Vitreous Hemorrhage
+ ;;=3^Thyrotoxicosis w/o Crisis Thyroid Eye Dis
  ;;^UTILITY(U,$J,358.3,10055,1,4,0)
- ;;=4^379.23
+ ;;=4^242.90
  ;;^UTILITY(U,$J,358.3,10055,2)
- ;;=Vitreous Hemorrhage^127096
+ ;;=Thyroid Eye Disease^267811^376.21
  ;;^UTILITY(U,$J,358.3,10056,0)
- ;;=362.18^^79^675^47
+ ;;=374.05^^72^688^100
  ;;^UTILITY(U,$J,358.3,10056,1,0)
  ;;=^358.31IA^4^2
  ;;^UTILITY(U,$J,358.3,10056,1,3,0)
- ;;=3^Retinal Vasculitis
+ ;;=3^Trichiasis w/o Entropion
  ;;^UTILITY(U,$J,358.3,10056,1,4,0)
- ;;=4^362.18
+ ;;=4^374.05
  ;;^UTILITY(U,$J,358.3,10056,2)
- ;;=Retinal Vasculitis^264463
+ ;;=Trichiasis^269082
  ;;^UTILITY(U,$J,358.3,10057,0)
- ;;=360.21^^79^675^19
+ ;;=375.21^^72^688^69
  ;;^UTILITY(U,$J,358.3,10057,1,0)
  ;;=^358.31IA^4^2
  ;;^UTILITY(U,$J,358.3,10057,1,3,0)
- ;;=3^Degenerative Myopia
+ ;;=3^Lacrimal,Epiphora,Excess
  ;;^UTILITY(U,$J,358.3,10057,1,4,0)
- ;;=4^360.21
+ ;;=4^375.21
  ;;^UTILITY(U,$J,358.3,10057,2)
- ;;=Degenerative Myopia^268553
+ ;;=Epiphora, excess lacrimation^269137
  ;;^UTILITY(U,$J,358.3,10058,0)
- ;;=362.64^^79^675^43
+ ;;=375.22^^72^688^23
  ;;^UTILITY(U,$J,358.3,10058,1,0)
  ;;=^358.31IA^4^2
  ;;^UTILITY(U,$J,358.3,10058,1,3,0)
- ;;=3^Reticular Degeneration
+ ;;=3^Epiphora, Insuff Drainage
  ;;^UTILITY(U,$J,358.3,10058,1,4,0)
- ;;=4^362.64
+ ;;=4^375.22
  ;;^UTILITY(U,$J,358.3,10058,2)
- ;;=Reticular Degeneration^268645
+ ;;=Epiphora, Insuff Drainage^269138
  ;;^UTILITY(U,$J,358.3,10059,0)
- ;;=362.61^^79^675^17
+ ;;=375.53^^72^688^67
  ;;^UTILITY(U,$J,358.3,10059,1,0)
  ;;=^358.31IA^4^2
  ;;^UTILITY(U,$J,358.3,10059,1,3,0)
- ;;=3^Degeneration, Paving Stone
+ ;;=3^Lacrimal,Canal Stenosis
  ;;^UTILITY(U,$J,358.3,10059,1,4,0)
- ;;=4^362.61
+ ;;=4^375.53
  ;;^UTILITY(U,$J,358.3,10059,2)
- ;;=Paving Stone Degeneration^268642
+ ;;=Lacrimal Canal Stenosis^269154
  ;;^UTILITY(U,$J,358.3,10060,0)
- ;;=362.42^^79^675^51
+ ;;=375.51^^72^688^70
  ;;^UTILITY(U,$J,358.3,10060,1,0)
  ;;=^358.31IA^4^2
  ;;^UTILITY(U,$J,358.3,10060,1,3,0)
- ;;=3^Rpe Detachment, Serous
+ ;;=3^Lacrimal,Punctum Eversion
  ;;^UTILITY(U,$J,358.3,10060,1,4,0)
- ;;=4^362.42
+ ;;=4^375.51
  ;;^UTILITY(U,$J,358.3,10060,2)
- ;;=Serous RPE Detachment^268633
+ ;;=Lacrimal Punctum Eversion^269150
  ;;^UTILITY(U,$J,358.3,10061,0)
- ;;=362.43^^79^675^50
+ ;;=375.54^^72^688^71
  ;;^UTILITY(U,$J,358.3,10061,1,0)
  ;;=^358.31IA^4^2
  ;;^UTILITY(U,$J,358.3,10061,1,3,0)
- ;;=3^Rpe Detachment, Hemorrhagic
+ ;;=3^Lacrimal,Sac Stenosis
  ;;^UTILITY(U,$J,358.3,10061,1,4,0)
- ;;=4^362.43
+ ;;=4^375.54
  ;;^UTILITY(U,$J,358.3,10061,2)
- ;;=Hemorrhagic RPE Detachment^268634
+ ;;=Lacrimal Punctum Stenosis^269156
  ;;^UTILITY(U,$J,358.3,10062,0)
- ;;=250.00^^79^675^22
+ ;;=375.56^^72^688^78
  ;;^UTILITY(U,$J,358.3,10062,1,0)
  ;;=^358.31IA^4^2
  ;;^UTILITY(U,$J,358.3,10062,1,3,0)
- ;;=3^Dm Type II, No Retinopathy
+ ;;=3^Nasolacrimal Duct Obstruction
  ;;^UTILITY(U,$J,358.3,10062,1,4,0)
- ;;=4^250.00
+ ;;=4^375.56
  ;;^UTILITY(U,$J,358.3,10062,2)
- ;;=DM Type II, No Retinopathy^33605
+ ;;=Obstruction, Nasolacrimal duct^269159
  ;;^UTILITY(U,$J,358.3,10063,0)
- ;;=250.01^^79^675^21
+ ;;=376.30^^72^688^87
  ;;^UTILITY(U,$J,358.3,10063,1,0)
  ;;=^358.31IA^4^2
  ;;^UTILITY(U,$J,358.3,10063,1,3,0)
- ;;=3^Dm Type I, No Retinopathy
+ ;;=3^Orbit Exophalmos
  ;;^UTILITY(U,$J,358.3,10063,1,4,0)
- ;;=4^250.01
+ ;;=4^376.30
  ;;^UTILITY(U,$J,358.3,10063,2)
- ;;=DM Type I, No Retinopathy^33586
+ ;;=Exophthalmos^43683
  ;;^UTILITY(U,$J,358.3,10064,0)
- ;;=250.50^^79^675^15
+ ;;=802.8^^72^688^88
  ;;^UTILITY(U,$J,358.3,10064,1,0)
  ;;=^358.31IA^4^2
  ;;^UTILITY(U,$J,358.3,10064,1,3,0)
- ;;=3^Csme In DM Type II
+ ;;=3^Orbit Fracture
  ;;^UTILITY(U,$J,358.3,10064,1,4,0)
- ;;=4^250.50
+ ;;=4^802.8
  ;;^UTILITY(U,$J,358.3,10064,2)
- ;;=CSME in DM type II^267839^362.83
+ ;;=Fracture of Orbit^25315
  ;;^UTILITY(U,$J,358.3,10065,0)
- ;;=250.51^^79^675^14
+ ;;=870.4^^72^688^92
  ;;^UTILITY(U,$J,358.3,10065,1,0)
  ;;=^358.31IA^4^2
  ;;^UTILITY(U,$J,358.3,10065,1,3,0)
- ;;=3^Csme In Dm Type I
+ ;;=3^Orbit Penetrating Wound w/ Foreign Body
  ;;^UTILITY(U,$J,358.3,10065,1,4,0)
- ;;=4^250.51
+ ;;=4^870.4
  ;;^UTILITY(U,$J,358.3,10065,2)
- ;;=CSME in DM Type I^267840^362.83
+ ;;=Foreign Body in Orbit^274883
  ;;^UTILITY(U,$J,358.3,10066,0)
- ;;=362.01^^79^675^20
+ ;;=376.10^^72^688^91
  ;;^UTILITY(U,$J,358.3,10066,1,0)
  ;;=^358.31IA^4^2
  ;;^UTILITY(U,$J,358.3,10066,1,3,0)
- ;;=3^Diabetic Retinopathy Nos
+ ;;=3^Orbit Inflammation,Chronic
  ;;^UTILITY(U,$J,358.3,10066,1,4,0)
- ;;=4^362.01
+ ;;=4^376.10
  ;;^UTILITY(U,$J,358.3,10066,2)
- ;;=^12257
+ ;;=Orbital Inflammation^269175
  ;;^UTILITY(U,$J,358.3,10067,0)
- ;;=362.02^^79^675^40
+ ;;=360.41^^72^688^66
  ;;^UTILITY(U,$J,358.3,10067,1,0)
  ;;=^358.31IA^4^2
  ;;^UTILITY(U,$J,358.3,10067,1,3,0)
- ;;=3^Prolif Diab Retinopathy
+ ;;=3^Hypotensive Blind Phthisis,Blind
  ;;^UTILITY(U,$J,358.3,10067,1,4,0)
- ;;=4^362.02
+ ;;=4^360.41
  ;;^UTILITY(U,$J,358.3,10067,2)
- ;;=^268610
+ ;;=Phthisis^268564
  ;;^UTILITY(U,$J,358.3,10068,0)
- ;;=362.03^^79^675^36
+ ;;=376.50^^72^688^86
  ;;^UTILITY(U,$J,358.3,10068,1,0)
  ;;=^358.31IA^4^2
  ;;^UTILITY(U,$J,358.3,10068,1,3,0)
- ;;=3^Nonprolf Db Retnoph Nos
+ ;;=3^Orbit Enopthalmos
  ;;^UTILITY(U,$J,358.3,10068,1,4,0)
- ;;=4^362.03
+ ;;=4^376.50
  ;;^UTILITY(U,$J,358.3,10068,2)
- ;;=^332786
+ ;;=Enopthalmos^40801
  ;;^UTILITY(U,$J,358.3,10069,0)
- ;;=362.04^^79^675^33
+ ;;=239.2^^72^688^95
  ;;^UTILITY(U,$J,358.3,10069,1,0)
  ;;=^358.31IA^4^2
  ;;^UTILITY(U,$J,358.3,10069,1,3,0)
- ;;=3^Mild Nonprolf Db Retnoph
+ ;;=3^Orbital Tumor,Neopl,Unspec Nature
  ;;^UTILITY(U,$J,358.3,10069,1,4,0)
- ;;=4^362.04
+ ;;=4^239.2
  ;;^UTILITY(U,$J,358.3,10069,2)
- ;;=^332787
+ ;;=Orbital Tumor^267783
  ;;^UTILITY(U,$J,358.3,10070,0)
- ;;=362.05^^79^675^34
+ ;;=239.7^^72^688^79
  ;;^UTILITY(U,$J,358.3,10070,1,0)
  ;;=^358.31IA^4^2
  ;;^UTILITY(U,$J,358.3,10070,1,3,0)
- ;;=3^Mod Nonprolf Db Retinoph
+ ;;=3^Optic Nerve Neop,Unspec Nature
  ;;^UTILITY(U,$J,358.3,10070,1,4,0)
- ;;=4^362.05
+ ;;=4^239.7
  ;;^UTILITY(U,$J,358.3,10070,2)
- ;;=^332788
+ ;;=Optic Nerve Tumor^267785
  ;;^UTILITY(U,$J,358.3,10071,0)
- ;;=362.06^^79^675^52
+ ;;=V52.2^^72^688^2
  ;;^UTILITY(U,$J,358.3,10071,1,0)
  ;;=^358.31IA^4^2
  ;;^UTILITY(U,$J,358.3,10071,1,3,0)
- ;;=3^Sev Nonprolf Db Retinoph
+ ;;=3^Artificial Eye Prosthethic Check
  ;;^UTILITY(U,$J,358.3,10071,1,4,0)
- ;;=4^362.06
+ ;;=4^V52.2
  ;;^UTILITY(U,$J,358.3,10071,2)
- ;;=^332789
+ ;;=Prosthethic Eye Check^295498^V43.0
  ;;^UTILITY(U,$J,358.3,10072,0)
- ;;=379.27^^79^675^56
+ ;;=173.10^^72^688^56
  ;;^UTILITY(U,$J,358.3,10072,1,0)
  ;;=^358.31IA^4^2
  ;;^UTILITY(U,$J,358.3,10072,1,3,0)
- ;;=3^Vitreomacular Adhesion
+ ;;=3^Eyelid/Canthus,Malig Neopl,Unspec
  ;;^UTILITY(U,$J,358.3,10072,1,4,0)
- ;;=4^379.27
+ ;;=4^173.10
  ;;^UTILITY(U,$J,358.3,10072,2)
- ;;=^340517
+ ;;=^340597
  ;;^UTILITY(U,$J,358.3,10073,0)
- ;;=377.41^^79^676^23
+ ;;=173.11^^72^688^53
  ;;^UTILITY(U,$J,358.3,10073,1,0)
  ;;=^358.31IA^4^2
  ;;^UTILITY(U,$J,358.3,10073,1,3,0)
- ;;=3^Optic Neuropathy, Ischemic
+ ;;=3^Eyelid/Canthus,BCC
  ;;^UTILITY(U,$J,358.3,10073,1,4,0)
- ;;=4^377.41
+ ;;=4^173.11
  ;;^UTILITY(U,$J,358.3,10073,2)
- ;;=Optic Neuropathy, Ischemic^269231
+ ;;=^340467
  ;;^UTILITY(U,$J,358.3,10074,0)
- ;;=377.21^^79^676^20
+ ;;=173.12^^72^688^57
  ;;^UTILITY(U,$J,358.3,10074,1,0)
  ;;=^358.31IA^4^2
  ;;^UTILITY(U,$J,358.3,10074,1,3,0)
- ;;=3^Drusen (ONH)
+ ;;=3^Eyelid/Canthus,SCC
  ;;^UTILITY(U,$J,358.3,10074,1,4,0)
- ;;=4^377.21
+ ;;=4^173.12
  ;;^UTILITY(U,$J,358.3,10074,2)
- ;;=^269221
+ ;;=^340468
  ;;^UTILITY(U,$J,358.3,10075,0)
- ;;=377.10^^79^676^21
+ ;;=173.19^^72^688^55
  ;;^UTILITY(U,$J,358.3,10075,1,0)
  ;;=^358.31IA^4^2
  ;;^UTILITY(U,$J,358.3,10075,1,3,0)
- ;;=3^Optic Atrophy
+ ;;=3^Eyelid/Canthus,Malig Neopl,Oth
  ;;^UTILITY(U,$J,358.3,10075,1,4,0)
- ;;=4^377.10
+ ;;=4^173.19
  ;;^UTILITY(U,$J,358.3,10075,2)
- ;;=^85926
+ ;;=^340469
  ;;^UTILITY(U,$J,358.3,10076,0)
- ;;=377.30^^79^676^22
+ ;;=053.20^^72^688^51
  ;;^UTILITY(U,$J,358.3,10076,1,0)
  ;;=^358.31IA^4^2
  ;;^UTILITY(U,$J,358.3,10076,1,3,0)
- ;;=3^Optic Neuritis
+ ;;=3^Eyelid,Herpes Zoster
  ;;^UTILITY(U,$J,358.3,10076,1,4,0)
- ;;=4^377.30
+ ;;=4^053.20
  ;;^UTILITY(U,$J,358.3,10076,2)
- ;;=^86002
+ ;;=^56937
  ;;^UTILITY(U,$J,358.3,10077,0)
- ;;=377.01^^79^676^24
+ ;;=054.41^^72^688^50
  ;;^UTILITY(U,$J,358.3,10077,1,0)
  ;;=^358.31IA^4^2
  ;;^UTILITY(U,$J,358.3,10077,1,3,0)
- ;;=3^Papilledema
+ ;;=3^Eyelid,Herpes Simplex
  ;;^UTILITY(U,$J,358.3,10077,1,4,0)
- ;;=4^377.01
+ ;;=4^054.41
  ;;^UTILITY(U,$J,358.3,10077,2)
- ;;=Papilledema Associated with Increased Intracranial Pressure^269212
+ ;;=^266563
  ;;^UTILITY(U,$J,358.3,10078,0)
- ;;=368.40^^79^676^18
+ ;;=078.0^^72^688^77
  ;;^UTILITY(U,$J,358.3,10078,1,0)
  ;;=^358.31IA^4^2
  ;;^UTILITY(U,$J,358.3,10078,1,3,0)
- ;;=3^Visual Field Defect
+ ;;=3^Molluscum Contagiosum
  ;;^UTILITY(U,$J,358.3,10078,1,4,0)
- ;;=4^368.40
+ ;;=4^078.0
  ;;^UTILITY(U,$J,358.3,10078,2)
- ;;=Visual Field Defect^126859
+ ;;=^78675
  ;;^UTILITY(U,$J,358.3,10079,0)
- ;;=379.40^^79^676^16
+ ;;=228.1^^72^688^76
  ;;^UTILITY(U,$J,358.3,10079,1,0)
  ;;=^358.31IA^4^2
  ;;^UTILITY(U,$J,358.3,10079,1,3,0)
- ;;=3^Pupil, Abnormal Function
+ ;;=3^Lymphangioma
  ;;^UTILITY(U,$J,358.3,10079,1,4,0)
- ;;=4^379.40
+ ;;=4^228.1
  ;;^UTILITY(U,$J,358.3,10079,2)
- ;;=Pupil, Abnormal Function^101288
+ ;;=^72391
  ;;^UTILITY(U,$J,358.3,10080,0)
- ;;=362.34^^79^676^1
+ ;;=238.2^^72^688^3
  ;;^UTILITY(U,$J,358.3,10080,1,0)
  ;;=^358.31IA^4^2
  ;;^UTILITY(U,$J,358.3,10080,1,3,0)
- ;;=3^Amaurosis Fugax
- ;;^UTILITY(U,$J,358.3,10080,1,4,0)
- ;;=4^362.34
- ;;^UTILITY(U,$J,358.3,10080,2)
- ;;=Amaurosis Fugax^268622
- ;;^UTILITY(U,$J,358.3,10081,0)
- ;;=351.0^^79^676^2
- ;;^UTILITY(U,$J,358.3,10081,1,0)
- ;;=^358.31IA^4^2
- ;;^UTILITY(U,$J,358.3,10081,1,3,0)
- ;;=3^Bell's Palsy
- ;;^UTILITY(U,$J,358.3,10081,1,4,0)
- ;;=4^351.0
- ;;^UTILITY(U,$J,358.3,10081,2)
- ;;=Bell's Palsy^13238
- ;;^UTILITY(U,$J,358.3,10082,0)
- ;;=333.81^^79^676^3
- ;;^UTILITY(U,$J,358.3,10082,1,0)
- ;;=^358.31IA^4^2
- ;;^UTILITY(U,$J,358.3,10082,1,3,0)
- ;;=3^Blepharospasm
- ;;^UTILITY(U,$J,358.3,10082,1,4,0)
- ;;=4^333.81
- ;;^UTILITY(U,$J,358.3,10082,2)
- ;;=Blepharospasm^15293
- ;;^UTILITY(U,$J,358.3,10083,0)
- ;;=437.9^^79^676^4
- ;;^UTILITY(U,$J,358.3,10083,1,0)
- ;;=^358.31IA^4^2
- ;;^UTILITY(U,$J,358.3,10083,1,3,0)
- ;;=3^Cerebrovascular Dis
- ;;^UTILITY(U,$J,358.3,10083,1,4,0)
- ;;=4^437.9
- ;;^UTILITY(U,$J,358.3,10083,2)
- ;;=Cerebrovascular Dis^21803
- ;;^UTILITY(U,$J,358.3,10084,0)
- ;;=368.2^^79^676^5
- ;;^UTILITY(U,$J,358.3,10084,1,0)
- ;;=^358.31IA^4^2
- ;;^UTILITY(U,$J,358.3,10084,1,3,0)
- ;;=3^Diplopia
- ;;^UTILITY(U,$J,358.3,10084,1,4,0)
- ;;=4^368.2
- ;;^UTILITY(U,$J,358.3,10084,2)
- ;;=Diplopia^35208
- ;;^UTILITY(U,$J,358.3,10085,0)
- ;;=378.53^^79^676^27
- ;;^UTILITY(U,$J,358.3,10085,1,0)
- ;;=^358.31IA^4^2
- ;;^UTILITY(U,$J,358.3,10085,1,3,0)
- ;;=3^Fourth Nerve Paresis
+ ;;=3^Benign Neopl,Oth & Unspec Sites/Tissue

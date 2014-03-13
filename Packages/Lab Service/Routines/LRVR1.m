@@ -1,5 +1,5 @@
 LRVR1 ;DALOI/CJS/JAH - LAB ROUTINE DATA VERIFICATION ;11/23/11  12:11
- ;;5.2;LAB SERVICE;**42,153,221,286,291,350**;Sep 27, 1994;Build 230
+ ;;5.2;LAB SERVICE;**42,153,221,286,291,350,424**;Sep 27, 1994;Build 4
  ;
  N LRBETST,LRBEY,LRI,LRN,LRPRGSQ
  S (LRI,LRN)=0
@@ -42,7 +42,7 @@ T1 R !,"What tray: ",X:DTIME Q:X["^"!'$T  I X["?"!(X'?.N) W !,"Enter a number" G
  ;
 T2 R !,"What cup: ",X:DTIME Q:X["^"!'$T  I X["?"!(X'?.N) W !,"Enter a number" G T2
  Q:X=""
- S LRTRCP=LRTRAY_";"_X
+ S LRTRCP=LRTRAY_";"_X I $L(LRTRCP)>200 S LRN=0 G T3 ;*424 - Do not allow string over 200
  K LRPRGSQ
  S LRN=0
  F LRI=0:0 S LRI=$O(^LAH(LRLL,1,"B",LRTRCP,LRI)) Q:LRI<1  S LRN=LRN+1,LRSQ=LRI,LRPRGSQ(LRI)="" W !,?5,LRI
@@ -167,7 +167,6 @@ EX2 ;
  . S LRSB=$P(LRSUB,";",2)
  . Q:'$D(LRVTS(LRSB))
  . I $D(^TMP("LR",$J,"TMP",LRSB)) S ^(LRSB,"P")=XP
- . Q:$D(^TMP("LR",$J,"TMP",LRSB))
  . S ^TMP("LR",$J,"TMP",LRSB)=+X
  . S XP=XP_$$RNLT^LRVER1(+X)
  . S ^TMP("LR",$J,"TMP",LRSB,"P")=XP

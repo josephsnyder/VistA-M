@@ -1,310 +1,382 @@
-IBDEI0BT ; ; 20-FEB-2013
- ;;3.0;IB ENCOUNTER FORM IMP/EXP;;FEB 20, 2013
+IBDEI0BT ; ; 13-FEB-2014
+ ;;3.0;IB ENCOUNTER FORM IMP/EXP;;FEB 13, 2014
  Q:'DIFQR(358.3)  F I=1:2 S X=$T(Q+I) Q:X=""  S Y=$E($T(Q+I+1),4,999),X=$E(X,4,999) S:$A(Y)=126 I=I+1,Y=$E(Y,2,999)_$E($T(Q+I+1),5,99) S:$A(Y)=61 Y=$E(Y,2,999) X NO E  S @X=Y
 Q Q
- ;;^UTILITY(U,$J,358.3,15723,1,0)
- ;;=^358.31IA^3^2
- ;;^UTILITY(U,$J,358.3,15723,1,2,0)
- ;;=2^Excision of neuroma; digital nerve, each additional digit (list separately in addition to code for primary procedure)
- ;;^UTILITY(U,$J,358.3,15723,1,3,0)
- ;;=3^64778
- ;;^UTILITY(U,$J,358.3,15724,0)
- ;;=64782^^114^978^33^^^^1
- ;;^UTILITY(U,$J,358.3,15724,1,0)
- ;;=^358.31IA^3^2
- ;;^UTILITY(U,$J,358.3,15724,1,2,0)
- ;;=2^Excision of neuroma; hand or foot, except digital nerve
- ;;^UTILITY(U,$J,358.3,15724,1,3,0)
- ;;=3^64782
- ;;^UTILITY(U,$J,358.3,15725,0)
- ;;=64783^^114^978^34^^^^1
- ;;^UTILITY(U,$J,358.3,15725,1,0)
- ;;=^358.31IA^3^2
- ;;^UTILITY(U,$J,358.3,15725,1,2,0)
- ;;=2^Excision of neuroma; hand or foot, each additional nerve, except same digit
- ;;^UTILITY(U,$J,358.3,15725,1,3,0)
- ;;=3^64783
- ;;^UTILITY(U,$J,358.3,15726,0)
- ;;=29999^^114^979^11^^^^1
- ;;^UTILITY(U,$J,358.3,15726,1,0)
- ;;=^358.31IA^3^2
- ;;^UTILITY(U,$J,358.3,15726,1,2,0)
- ;;=2^Unlisted procedure, arthroscopy
- ;;^UTILITY(U,$J,358.3,15726,1,3,0)
- ;;=3^29999
- ;;^UTILITY(U,$J,358.3,15727,0)
- ;;=29893^^114^979^3^^^^1
- ;;^UTILITY(U,$J,358.3,15727,1,0)
- ;;=^358.31IA^3^2
- ;;^UTILITY(U,$J,358.3,15727,1,2,0)
- ;;=2^Endoscopic plantar fasciotomy
- ;;^UTILITY(U,$J,358.3,15727,1,3,0)
- ;;=3^29893
- ;;^UTILITY(U,$J,358.3,15728,0)
- ;;=29894^^114^979^4^^^^1
- ;;^UTILITY(U,$J,358.3,15728,1,0)
- ;;=^358.31IA^3^2
- ;;^UTILITY(U,$J,358.3,15728,1,2,0)
- ;;=2^Arthroscopy, ankle, surgical; w/removalof loose body or foreign body
- ;;^UTILITY(U,$J,358.3,15728,1,3,0)
- ;;=3^29894
- ;;^UTILITY(U,$J,358.3,15729,0)
- ;;=29897^^114^979^5^^^^1
- ;;^UTILITY(U,$J,358.3,15729,1,0)
- ;;=^358.31IA^3^2
- ;;^UTILITY(U,$J,358.3,15729,1,2,0)
- ;;=2^Arthroscopy, ankle, surgical; debridement, limited
- ;;^UTILITY(U,$J,358.3,15729,1,3,0)
- ;;=3^29897
- ;;^UTILITY(U,$J,358.3,15730,0)
- ;;=29898^^114^979^6^^^^1
- ;;^UTILITY(U,$J,358.3,15730,1,0)
- ;;=^358.31IA^3^2
- ;;^UTILITY(U,$J,358.3,15730,1,2,0)
- ;;=2^Arthroscopy, ankle, surgical; debridement, extensive
- ;;^UTILITY(U,$J,358.3,15730,1,3,0)
- ;;=3^29898
- ;;^UTILITY(U,$J,358.3,15731,0)
- ;;=20220^^114^979^1^^^^1
- ;;^UTILITY(U,$J,358.3,15731,1,0)
- ;;=^358.31IA^3^2
- ;;^UTILITY(U,$J,358.3,15731,1,2,0)
- ;;=2^Biopsy, bone, trocar, or needle; superficial
- ;;^UTILITY(U,$J,358.3,15731,1,3,0)
- ;;=3^20220
- ;;^UTILITY(U,$J,358.3,15732,0)
- ;;=20650^^114^979^2^^^^1
- ;;^UTILITY(U,$J,358.3,15732,1,0)
- ;;=^358.31IA^3^2
- ;;^UTILITY(U,$J,358.3,15732,1,2,0)
- ;;=2^Insertion of wire or pin with application of skeletal traction, including removal
- ;;^UTILITY(U,$J,358.3,15732,1,3,0)
- ;;=3^20650
- ;;^UTILITY(U,$J,358.3,15733,0)
- ;;=64726^^114^979^12^^^^1
- ;;^UTILITY(U,$J,358.3,15733,1,0)
- ;;=^358.31IA^3^2
- ;;^UTILITY(U,$J,358.3,15733,1,2,0)
- ;;=2^Decompression; plantar digital nerve
- ;;^UTILITY(U,$J,358.3,15733,1,3,0)
- ;;=3^64726
- ;;^UTILITY(U,$J,358.3,15734,0)
- ;;=64999^^114^979^13^^^^1
- ;;^UTILITY(U,$J,358.3,15734,1,0)
- ;;=^358.31IA^3^2
- ;;^UTILITY(U,$J,358.3,15734,1,2,0)
- ;;=2^Unlisted procedure, nervous system
- ;;^UTILITY(U,$J,358.3,15734,1,3,0)
- ;;=3^64999
- ;;^UTILITY(U,$J,358.3,15735,0)
- ;;=93922^^114^979^14^^^^1
- ;;^UTILITY(U,$J,358.3,15735,1,0)
- ;;=^358.31IA^3^2
- ;;^UTILITY(U,$J,358.3,15735,1,2,0)
- ;;=2^Non-invasive physiologic studies of upper or lower extremity arteries, single level, bilateral
- ;;^UTILITY(U,$J,358.3,15735,1,3,0)
- ;;=3^93922
- ;;^UTILITY(U,$J,358.3,15736,0)
- ;;=29904^^114^979^7^^^^1
- ;;^UTILITY(U,$J,358.3,15736,1,0)
- ;;=^358.31IA^3^2
- ;;^UTILITY(U,$J,358.3,15736,1,2,0)
- ;;=2^Arthroscopy,subtalar jt,w/rem of foreign body
- ;;^UTILITY(U,$J,358.3,15736,1,3,0)
- ;;=3^29904
- ;;^UTILITY(U,$J,358.3,15737,0)
- ;;=29905^^114^979^8^^^^1
- ;;^UTILITY(U,$J,358.3,15737,1,0)
- ;;=^358.31IA^3^2
- ;;^UTILITY(U,$J,358.3,15737,1,2,0)
- ;;=2^Arthroscopy,subtalar jt,w/ Synovectomy
- ;;^UTILITY(U,$J,358.3,15737,1,3,0)
- ;;=3^29905
- ;;^UTILITY(U,$J,358.3,15738,0)
- ;;=29906^^114^979^9^^^^1
- ;;^UTILITY(U,$J,358.3,15738,1,0)
- ;;=^358.31IA^3^2
- ;;^UTILITY(U,$J,358.3,15738,1,2,0)
- ;;=2^Arthroscopy, subtalar jt,w/ debridement
- ;;^UTILITY(U,$J,358.3,15738,1,3,0)
- ;;=3^29906
- ;;^UTILITY(U,$J,358.3,15739,0)
- ;;=29907^^114^979^10^^^^1
- ;;^UTILITY(U,$J,358.3,15739,1,0)
- ;;=^358.31IA^3^2
- ;;^UTILITY(U,$J,358.3,15739,1,2,0)
- ;;=2^Arthroscopy,subtalar w/ fusion
- ;;^UTILITY(U,$J,358.3,15739,1,3,0)
- ;;=3^29907
- ;;^UTILITY(U,$J,358.3,15740,0)
- ;;=28400^^114^980^1^^^^1
- ;;^UTILITY(U,$J,358.3,15740,1,0)
- ;;=^358.31IA^3^2
- ;;^UTILITY(U,$J,358.3,15740,1,2,0)
- ;;=2^Closed TX of calcaneal fracture; without manipulation
- ;;^UTILITY(U,$J,358.3,15740,1,3,0)
- ;;=3^28400
- ;;^UTILITY(U,$J,358.3,15741,0)
- ;;=28405^^114^980^2^^^^1
- ;;^UTILITY(U,$J,358.3,15741,1,0)
- ;;=^358.31IA^3^2
- ;;^UTILITY(U,$J,358.3,15741,1,2,0)
- ;;=2^Closed TX of calcaneal fracture; with manipulation
- ;;^UTILITY(U,$J,358.3,15741,1,3,0)
- ;;=3^28405
- ;;^UTILITY(U,$J,358.3,15742,0)
- ;;=28406^^114^980^3^^^^1
- ;;^UTILITY(U,$J,358.3,15742,1,0)
- ;;=^358.31IA^3^2
- ;;^UTILITY(U,$J,358.3,15742,1,2,0)
- ;;=2^Perc Fixation of Calcaneous Fx
- ;;^UTILITY(U,$J,358.3,15742,1,3,0)
- ;;=3^28406
- ;;^UTILITY(U,$J,358.3,15743,0)
- ;;=28415^^114^980^4^^^^1
- ;;^UTILITY(U,$J,358.3,15743,1,0)
- ;;=^358.31IA^3^2
- ;;^UTILITY(U,$J,358.3,15743,1,2,0)
- ;;=2^Open TX of calcaneal fracture, with or without internal or external fixation;
- ;;^UTILITY(U,$J,358.3,15743,1,3,0)
- ;;=3^28415
- ;;^UTILITY(U,$J,358.3,15744,0)
- ;;=28420^^114^980^5^^^^1
- ;;^UTILITY(U,$J,358.3,15744,1,0)
- ;;=^358.31IA^3^2
- ;;^UTILITY(U,$J,358.3,15744,1,2,0)
- ;;=2^Open TX of calcaneal fracture, with or without internal or external fixation; with primary iliac or other autogenous bone graft
- ;;^UTILITY(U,$J,358.3,15744,1,3,0)
- ;;=3^28420
- ;;^UTILITY(U,$J,358.3,15745,0)
- ;;=28430^^114^980^6^^^^1
- ;;^UTILITY(U,$J,358.3,15745,1,0)
- ;;=^358.31IA^3^2
- ;;^UTILITY(U,$J,358.3,15745,1,2,0)
- ;;=2^Closed TX of talus fracture; without manipulation 
- ;;^UTILITY(U,$J,358.3,15745,1,3,0)
- ;;=3^28430
- ;;^UTILITY(U,$J,358.3,15746,0)
- ;;=28435^^114^980^7^^^^1
- ;;^UTILITY(U,$J,358.3,15746,1,0)
- ;;=^358.31IA^3^2
- ;;^UTILITY(U,$J,358.3,15746,1,2,0)
- ;;=2^Closed TX of talus fracture; with manipulation 
- ;;^UTILITY(U,$J,358.3,15746,1,3,0)
- ;;=3^28435
- ;;^UTILITY(U,$J,358.3,15747,0)
- ;;=28436^^114^980^8^^^^1
- ;;^UTILITY(U,$J,358.3,15747,1,0)
- ;;=^358.31IA^3^2
- ;;^UTILITY(U,$J,358.3,15747,1,2,0)
- ;;=2^Perc Fixation Talus Fx
- ;;^UTILITY(U,$J,358.3,15747,1,3,0)
- ;;=3^28436
- ;;^UTILITY(U,$J,358.3,15748,0)
- ;;=28445^^114^980^9^^^^1
- ;;^UTILITY(U,$J,358.3,15748,1,0)
- ;;=^358.31IA^3^2
- ;;^UTILITY(U,$J,358.3,15748,1,2,0)
- ;;=2^Open/Closed TX of Talus FX,w/internal fixation
- ;;^UTILITY(U,$J,358.3,15748,1,3,0)
- ;;=3^28445
- ;;^UTILITY(U,$J,358.3,15749,0)
- ;;=28450^^114^980^10^^^^1
- ;;^UTILITY(U,$J,358.3,15749,1,0)
- ;;=^358.31IA^3^2
- ;;^UTILITY(U,$J,358.3,15749,1,2,0)
- ;;=2^TX of tarsal bone fracture; without manipulation, each 
- ;;^UTILITY(U,$J,358.3,15749,1,3,0)
- ;;=3^28450
- ;;^UTILITY(U,$J,358.3,15750,0)
- ;;=28455^^114^980^11^^^^1
  ;;^UTILITY(U,$J,358.3,15750,1,0)
- ;;=^358.31IA^3^2
- ;;^UTILITY(U,$J,358.3,15750,1,2,0)
- ;;=2^TX of tarsal bone fracture; with manipulation, each
- ;;^UTILITY(U,$J,358.3,15750,1,3,0)
- ;;=3^28455
+ ;;=^358.31IA^5^2
+ ;;^UTILITY(U,$J,358.3,15750,1,4,0)
+ ;;=4^Staphylococcus,Unspec
+ ;;^UTILITY(U,$J,358.3,15750,1,5,0)
+ ;;=5^041.10
+ ;;^UTILITY(U,$J,358.3,15750,2)
+ ;;=^293212
  ;;^UTILITY(U,$J,358.3,15751,0)
- ;;=28456^^114^980^12^^^^1
+ ;;=041.11^^104^939^42
  ;;^UTILITY(U,$J,358.3,15751,1,0)
- ;;=^358.31IA^3^2
- ;;^UTILITY(U,$J,358.3,15751,1,2,0)
- ;;=2^Perc Fixation Tarsal Fx
- ;;^UTILITY(U,$J,358.3,15751,1,3,0)
- ;;=3^28456
+ ;;=^358.31IA^5^2
+ ;;^UTILITY(U,$J,358.3,15751,1,4,0)
+ ;;=4^Methacill Suscept Staph Aureus
+ ;;^UTILITY(U,$J,358.3,15751,1,5,0)
+ ;;=5^041.11
+ ;;^UTILITY(U,$J,358.3,15751,2)
+ ;;=^336846
  ;;^UTILITY(U,$J,358.3,15752,0)
- ;;=28465^^114^980^13^^^^1
+ ;;=041.12^^104^939^43
  ;;^UTILITY(U,$J,358.3,15752,1,0)
- ;;=^358.31IA^3^2
- ;;^UTILITY(U,$J,358.3,15752,1,2,0)
- ;;=2^Open/Closed TX of tarsal FX,w/ internal fixation
- ;;^UTILITY(U,$J,358.3,15752,1,3,0)
- ;;=3^28465
+ ;;=^358.31IA^5^2
+ ;;^UTILITY(U,$J,358.3,15752,1,4,0)
+ ;;=4^Methicill Resist Staph Aureus
+ ;;^UTILITY(U,$J,358.3,15752,1,5,0)
+ ;;=5^041.12
+ ;;^UTILITY(U,$J,358.3,15752,2)
+ ;;=^336700
  ;;^UTILITY(U,$J,358.3,15753,0)
- ;;=28470^^114^980^14^^^^1
+ ;;=041.19^^104^939^59
  ;;^UTILITY(U,$J,358.3,15753,1,0)
- ;;=^358.31IA^3^2
- ;;^UTILITY(U,$J,358.3,15753,1,2,0)
- ;;=2^Closed TX of metatarsal fracture; without manipulation, eachnt of me
- ;;^UTILITY(U,$J,358.3,15753,1,3,0)
- ;;=3^28470
+ ;;=^358.31IA^5^2
+ ;;^UTILITY(U,$J,358.3,15753,1,4,0)
+ ;;=4^Staphylococcus,Other
+ ;;^UTILITY(U,$J,358.3,15753,1,5,0)
+ ;;=5^041.19
+ ;;^UTILITY(U,$J,358.3,15753,2)
+ ;;=^293981
  ;;^UTILITY(U,$J,358.3,15754,0)
- ;;=28475^^114^980^15^^^^1
+ ;;=041.3^^104^939^38
  ;;^UTILITY(U,$J,358.3,15754,1,0)
- ;;=^358.31IA^3^2
- ;;^UTILITY(U,$J,358.3,15754,1,2,0)
- ;;=2^Closed TX of metatarsal fracture; with manipulation, each
- ;;^UTILITY(U,$J,358.3,15754,1,3,0)
- ;;=3^28475
+ ;;=^358.31IA^5^2
+ ;;^UTILITY(U,$J,358.3,15754,1,4,0)
+ ;;=4^Klebsiella Pneumoniae
+ ;;^UTILITY(U,$J,358.3,15754,1,5,0)
+ ;;=5^041.3
+ ;;^UTILITY(U,$J,358.3,15754,2)
+ ;;=^338552
  ;;^UTILITY(U,$J,358.3,15755,0)
- ;;=28476^^114^980^16^^^^1
+ ;;=041.49^^104^939^18
  ;;^UTILITY(U,$J,358.3,15755,1,0)
- ;;=^358.31IA^3^2
- ;;^UTILITY(U,$J,358.3,15755,1,2,0)
- ;;=2^Perc Fixation Metatarsal Fx
- ;;^UTILITY(U,$J,358.3,15755,1,3,0)
- ;;=3^28476
+ ;;=^358.31IA^5^2
+ ;;^UTILITY(U,$J,358.3,15755,1,4,0)
+ ;;=4^Escherichia Coli (E. Coli)
+ ;;^UTILITY(U,$J,358.3,15755,1,5,0)
+ ;;=5^041.49
+ ;;^UTILITY(U,$J,358.3,15755,2)
+ ;;=^340595
  ;;^UTILITY(U,$J,358.3,15756,0)
- ;;=28485^^114^980^17^^^^1
+ ;;=042.^^104^939^23
  ;;^UTILITY(U,$J,358.3,15756,1,0)
- ;;=^358.31IA^3^2
- ;;^UTILITY(U,$J,358.3,15756,1,2,0)
- ;;=2^Open/Closed TX of Metatarsal FX,w/internal fixation
- ;;^UTILITY(U,$J,358.3,15756,1,3,0)
- ;;=3^28485
+ ;;=^358.31IA^5^2
+ ;;^UTILITY(U,$J,358.3,15756,1,4,0)
+ ;;=4^HIV Disease (symptomatic)
+ ;;^UTILITY(U,$J,358.3,15756,1,5,0)
+ ;;=5^042.
+ ;;^UTILITY(U,$J,358.3,15756,2)
+ ;;=^266500
  ;;^UTILITY(U,$J,358.3,15757,0)
- ;;=28490^^114^980^18^^^^1
+ ;;=053.9^^104^939^34
  ;;^UTILITY(U,$J,358.3,15757,1,0)
- ;;=^358.31IA^3^2
- ;;^UTILITY(U,$J,358.3,15757,1,2,0)
- ;;=2^Closed TX of fracture great toe, phalanx or phalanges; without manipulation
- ;;^UTILITY(U,$J,358.3,15757,1,3,0)
- ;;=3^28490
+ ;;=^358.31IA^5^2
+ ;;^UTILITY(U,$J,358.3,15757,1,4,0)
+ ;;=4^Herpes Zoster NOS
+ ;;^UTILITY(U,$J,358.3,15757,1,5,0)
+ ;;=5^053.9
+ ;;^UTILITY(U,$J,358.3,15757,2)
+ ;;=^56946
  ;;^UTILITY(U,$J,358.3,15758,0)
- ;;=28495^^114^980^19^^^^1
+ ;;=054.10^^104^939^22
  ;;^UTILITY(U,$J,358.3,15758,1,0)
- ;;=^358.31IA^3^2
- ;;^UTILITY(U,$J,358.3,15758,1,2,0)
- ;;=2^Closed TX of fracture great toe, phalanx or phalanges; with manipulation
- ;;^UTILITY(U,$J,358.3,15758,1,3,0)
- ;;=3^28495
+ ;;=^358.31IA^5^2
+ ;;^UTILITY(U,$J,358.3,15758,1,4,0)
+ ;;=4^Genital Herpes,Unspec
+ ;;^UTILITY(U,$J,358.3,15758,1,5,0)
+ ;;=5^054.10
+ ;;^UTILITY(U,$J,358.3,15758,2)
+ ;;=^56853
  ;;^UTILITY(U,$J,358.3,15759,0)
- ;;=28496^^114^980^20^^^^1
+ ;;=054.11^^104^939^35
  ;;^UTILITY(U,$J,358.3,15759,1,0)
- ;;=^358.31IA^3^2
- ;;^UTILITY(U,$J,358.3,15759,1,2,0)
- ;;=2^Perc Fixation Great Toe Fx
- ;;^UTILITY(U,$J,358.3,15759,1,3,0)
- ;;=3^28496
+ ;;=^358.31IA^5^2
+ ;;^UTILITY(U,$J,358.3,15759,1,4,0)
+ ;;=4^Herpetic Vulvovaginitis
+ ;;^UTILITY(U,$J,358.3,15759,1,5,0)
+ ;;=5^054.11
+ ;;^UTILITY(U,$J,358.3,15759,2)
+ ;;=^57012
  ;;^UTILITY(U,$J,358.3,15760,0)
- ;;=28505^^114^980^21^^^^1
+ ;;=054.13^^104^939^32
  ;;^UTILITY(U,$J,358.3,15760,1,0)
- ;;=^358.31IA^3^2
- ;;^UTILITY(U,$J,358.3,15760,1,2,0)
- ;;=2^Open TX of fracture great toe, phalanx or phalanges, with or without internal or external fixation
- ;;^UTILITY(U,$J,358.3,15760,1,3,0)
- ;;=3^28505
+ ;;=^358.31IA^5^2
+ ;;^UTILITY(U,$J,358.3,15760,1,4,0)
+ ;;=4^Herpectic Infect of Penis
+ ;;^UTILITY(U,$J,358.3,15760,1,5,0)
+ ;;=5^054.13
+ ;;^UTILITY(U,$J,358.3,15760,2)
+ ;;=^266560
  ;;^UTILITY(U,$J,358.3,15761,0)
- ;;=28510^^114^980^22^^^^1
+ ;;=070.1^^104^939^24
  ;;^UTILITY(U,$J,358.3,15761,1,0)
- ;;=^358.31IA^3^2
+ ;;=^358.31IA^5^2
+ ;;^UTILITY(U,$J,358.3,15761,1,4,0)
+ ;;=4^Hepatitis A
+ ;;^UTILITY(U,$J,358.3,15761,1,5,0)
+ ;;=5^070.1
+ ;;^UTILITY(U,$J,358.3,15761,2)
+ ;;=^126486
+ ;;^UTILITY(U,$J,358.3,15762,0)
+ ;;=070.30^^104^939^25
+ ;;^UTILITY(U,$J,358.3,15762,1,0)
+ ;;=^358.31IA^5^2
+ ;;^UTILITY(U,$J,358.3,15762,1,4,0)
+ ;;=4^Hepatitis B,Acute
+ ;;^UTILITY(U,$J,358.3,15762,1,5,0)
+ ;;=5^070.30
+ ;;^UTILITY(U,$J,358.3,15762,2)
+ ;;=^266626
+ ;;^UTILITY(U,$J,358.3,15763,0)
+ ;;=070.32^^104^939^26
+ ;;^UTILITY(U,$J,358.3,15763,1,0)
+ ;;=^358.31IA^5^2
+ ;;^UTILITY(U,$J,358.3,15763,1,4,0)
+ ;;=4^Hepatitis B,Chronic
+ ;;^UTILITY(U,$J,358.3,15763,1,5,0)
+ ;;=5^070.32
+ ;;^UTILITY(U,$J,358.3,15763,2)
+ ;;=^303249
+ ;;^UTILITY(U,$J,358.3,15764,0)
+ ;;=070.51^^104^939^27
+ ;;^UTILITY(U,$J,358.3,15764,1,0)
+ ;;=^358.31IA^5^2
+ ;;^UTILITY(U,$J,358.3,15764,1,4,0)
+ ;;=4^Hepatitis C,Acute
+ ;;^UTILITY(U,$J,358.3,15764,1,5,0)
+ ;;=5^070.51
+ ;;^UTILITY(U,$J,358.3,15764,2)
+ ;;=^331778
+ ;;^UTILITY(U,$J,358.3,15765,0)
+ ;;=070.54^^104^939^28
+ ;;^UTILITY(U,$J,358.3,15765,1,0)
+ ;;=^358.31IA^5^2
+ ;;^UTILITY(U,$J,358.3,15765,1,4,0)
+ ;;=4^Hepatitis C,Chronic
+ ;;^UTILITY(U,$J,358.3,15765,1,5,0)
+ ;;=5^070.54
+ ;;^UTILITY(U,$J,358.3,15765,2)
+ ;;=^303252
+ ;;^UTILITY(U,$J,358.3,15766,0)
+ ;;=070.59^^104^939^31
+ ;;^UTILITY(U,$J,358.3,15766,1,0)
+ ;;=^358.31IA^5^2
+ ;;^UTILITY(U,$J,358.3,15766,1,4,0)
+ ;;=4^Hepatitis,Oth Viral
+ ;;^UTILITY(U,$J,358.3,15766,1,5,0)
+ ;;=5^070.59
+ ;;^UTILITY(U,$J,358.3,15766,2)
+ ;;=^266631
+ ;;^UTILITY(U,$J,358.3,15767,0)
+ ;;=079.99^^104^939^83
+ ;;^UTILITY(U,$J,358.3,15767,1,0)
+ ;;=^358.31IA^5^2
+ ;;^UTILITY(U,$J,358.3,15767,1,4,0)
+ ;;=4^Viral Syndrome
+ ;;^UTILITY(U,$J,358.3,15767,1,5,0)
+ ;;=5^079.99
+ ;;^UTILITY(U,$J,358.3,15767,2)
+ ;;=^295798
+ ;;^UTILITY(U,$J,358.3,15768,0)
+ ;;=088.81^^104^939^41
+ ;;^UTILITY(U,$J,358.3,15768,1,0)
+ ;;=^358.31IA^5^2
+ ;;^UTILITY(U,$J,358.3,15768,1,4,0)
+ ;;=4^Lyme Disease
+ ;;^UTILITY(U,$J,358.3,15768,1,5,0)
+ ;;=5^088.81
+ ;;^UTILITY(U,$J,358.3,15768,2)
+ ;;=^72315
+ ;;^UTILITY(U,$J,358.3,15769,0)
+ ;;=091.0^^104^939^71
+ ;;^UTILITY(U,$J,358.3,15769,1,0)
+ ;;=^358.31IA^5^2
+ ;;^UTILITY(U,$J,358.3,15769,1,4,0)
+ ;;=4^Syphilis,Primary,Genital
+ ;;^UTILITY(U,$J,358.3,15769,1,5,0)
+ ;;=5^091.0
+ ;;^UTILITY(U,$J,358.3,15769,2)
+ ;;=^50581
+ ;;^UTILITY(U,$J,358.3,15770,0)
+ ;;=094.9^^104^939^70
+ ;;^UTILITY(U,$J,358.3,15770,1,0)
+ ;;=^358.31IA^5^2
+ ;;^UTILITY(U,$J,358.3,15770,1,4,0)
+ ;;=4^Syphilis,Neurosyphilis
+ ;;^UTILITY(U,$J,358.3,15770,1,5,0)
+ ;;=5^094.9
+ ;;^UTILITY(U,$J,358.3,15770,2)
+ ;;=^83026
+ ;;^UTILITY(U,$J,358.3,15771,0)
+ ;;=097.0^^104^939^69
+ ;;^UTILITY(U,$J,358.3,15771,1,0)
+ ;;=^358.31IA^5^2
+ ;;^UTILITY(U,$J,358.3,15771,1,4,0)
+ ;;=4^Syphilis,Latent
+ ;;^UTILITY(U,$J,358.3,15771,1,5,0)
+ ;;=5^097.0
+ ;;^UTILITY(U,$J,358.3,15771,2)
+ ;;=^266781
+ ;;^UTILITY(U,$J,358.3,15772,0)
+ ;;=097.9^^104^939^68
+ ;;^UTILITY(U,$J,358.3,15772,1,0)
+ ;;=^358.31IA^5^2
+ ;;^UTILITY(U,$J,358.3,15772,1,4,0)
+ ;;=4^Syphilis NOS
+ ;;^UTILITY(U,$J,358.3,15772,1,5,0)
+ ;;=5^097.9
+ ;;^UTILITY(U,$J,358.3,15772,2)
+ ;;=^116808
+ ;;^UTILITY(U,$J,358.3,15773,0)
+ ;;=098.0^^104^939^78
+ ;;^UTILITY(U,$J,358.3,15773,1,0)
+ ;;=^358.31IA^5^2
+ ;;^UTILITY(U,$J,358.3,15773,1,4,0)
+ ;;=4^Urethritis,Gonococcal
+ ;;^UTILITY(U,$J,358.3,15773,1,5,0)
+ ;;=5^098.0
+ ;;^UTILITY(U,$J,358.3,15773,2)
+ ;;=^52567
+ ;;^UTILITY(U,$J,358.3,15774,0)
+ ;;=110.1^^104^939^14
+ ;;^UTILITY(U,$J,358.3,15774,1,0)
+ ;;=^358.31IA^5^2
+ ;;^UTILITY(U,$J,358.3,15774,1,4,0)
+ ;;=4^Dermatophytosis Nail
+ ;;^UTILITY(U,$J,358.3,15774,1,5,0)
+ ;;=5^110.1
+ ;;^UTILITY(U,$J,358.3,15774,2)
+ ;;=^33173
+ ;;^UTILITY(U,$J,358.3,15775,0)
+ ;;=112.1^^104^939^84
+ ;;^UTILITY(U,$J,358.3,15775,1,0)
+ ;;=^358.31IA^5^2
+ ;;^UTILITY(U,$J,358.3,15775,1,4,0)
+ ;;=4^Vulvovaginitis,Candidal
+ ;;^UTILITY(U,$J,358.3,15775,1,5,0)
+ ;;=5^112.1
+ ;;^UTILITY(U,$J,358.3,15775,2)
+ ;;=^18615
+ ;;^UTILITY(U,$J,358.3,15776,0)
+ ;;=130.9^^104^939^73
+ ;;^UTILITY(U,$J,358.3,15776,1,0)
+ ;;=^358.31IA^5^2
+ ;;^UTILITY(U,$J,358.3,15776,1,4,0)
+ ;;=4^Toxoplasmosis NOS
+ ;;^UTILITY(U,$J,358.3,15776,1,5,0)
+ ;;=5^130.9
+ ;;^UTILITY(U,$J,358.3,15776,2)
+ ;;=^120695
+ ;;^UTILITY(U,$J,358.3,15777,0)
+ ;;=131.01^^104^939^81
+ ;;^UTILITY(U,$J,358.3,15777,1,0)
+ ;;=^358.31IA^5^2
+ ;;^UTILITY(U,$J,358.3,15777,1,4,0)
+ ;;=4^Vaginitis,Trichomonas
+ ;;^UTILITY(U,$J,358.3,15777,1,5,0)
+ ;;=5^131.01
+ ;;^UTILITY(U,$J,358.3,15777,2)
+ ;;=^121763
+ ;;^UTILITY(U,$J,358.3,15778,0)
+ ;;=131.02^^104^939^79
+ ;;^UTILITY(U,$J,358.3,15778,1,0)
+ ;;=^358.31IA^5^2
+ ;;^UTILITY(U,$J,358.3,15778,1,4,0)
+ ;;=4^Urethritis,Trichomonal
+ ;;^UTILITY(U,$J,358.3,15778,1,5,0)
+ ;;=5^131.02
+ ;;^UTILITY(U,$J,358.3,15778,2)
+ ;;=^266955
+ ;;^UTILITY(U,$J,358.3,15779,0)
+ ;;=136.3^^104^939^51
+ ;;^UTILITY(U,$J,358.3,15779,1,0)
+ ;;=^358.31IA^5^2
+ ;;^UTILITY(U,$J,358.3,15779,1,4,0)
+ ;;=4^Pneumocystosis
+ ;;^UTILITY(U,$J,358.3,15779,1,5,0)
+ ;;=5^136.3
+ ;;^UTILITY(U,$J,358.3,15779,2)
+ ;;=^95635
+ ;;^UTILITY(U,$J,358.3,15780,0)
+ ;;=372.30^^104^939^12
+ ;;^UTILITY(U,$J,358.3,15780,1,0)
+ ;;=^358.31IA^5^2
+ ;;^UTILITY(U,$J,358.3,15780,1,4,0)
+ ;;=4^Conjunctivitis
+ ;;^UTILITY(U,$J,358.3,15780,1,5,0)
+ ;;=5^372.30
+ ;;^UTILITY(U,$J,358.3,15780,2)
+ ;;=^27546
+ ;;^UTILITY(U,$J,358.3,15781,0)
+ ;;=376.01^^104^939^7
+ ;;^UTILITY(U,$J,358.3,15781,1,0)
+ ;;=^358.31IA^5^2
+ ;;^UTILITY(U,$J,358.3,15781,1,4,0)
+ ;;=4^Cellulitis of Orbit
+ ;;^UTILITY(U,$J,358.3,15781,1,5,0)
+ ;;=5^376.01
+ ;;^UTILITY(U,$J,358.3,15781,2)
+ ;;=^259068
+ ;;^UTILITY(U,$J,358.3,15782,0)
+ ;;=380.10^^104^939^48
+ ;;^UTILITY(U,$J,358.3,15782,1,0)
+ ;;=^358.31IA^5^2
+ ;;^UTILITY(U,$J,358.3,15782,1,4,0)
+ ;;=4^Otitis Externa
+ ;;^UTILITY(U,$J,358.3,15782,1,5,0)
+ ;;=5^380.10
+ ;;^UTILITY(U,$J,358.3,15782,2)
+ ;;=^62807
+ ;;^UTILITY(U,$J,358.3,15783,0)
+ ;;=382.9^^104^939^49
+ ;;^UTILITY(U,$J,358.3,15783,1,0)
+ ;;=^358.31IA^5^2
+ ;;^UTILITY(U,$J,358.3,15783,1,4,0)
+ ;;=4^Otitis Media
+ ;;^UTILITY(U,$J,358.3,15783,1,5,0)
+ ;;=5^382.9
+ ;;^UTILITY(U,$J,358.3,15783,2)
+ ;;=^123967
+ ;;^UTILITY(U,$J,358.3,15784,0)
+ ;;=386.30^^104^939^39
+ ;;^UTILITY(U,$J,358.3,15784,1,0)
+ ;;=^358.31IA^5^2
+ ;;^UTILITY(U,$J,358.3,15784,1,4,0)
+ ;;=4^Labyrinthitis NOS
+ ;;^UTILITY(U,$J,358.3,15784,1,5,0)
+ ;;=5^386.30
+ ;;^UTILITY(U,$J,358.3,15784,2)
+ ;;=^67891
+ ;;^UTILITY(U,$J,358.3,15785,0)
+ ;;=424.90^^104^939^16
+ ;;^UTILITY(U,$J,358.3,15785,1,0)
+ ;;=^358.31IA^5^2
+ ;;^UTILITY(U,$J,358.3,15785,1,4,0)
+ ;;=4^Endocarditis
+ ;;^UTILITY(U,$J,358.3,15785,1,5,0)
+ ;;=5^424.90
+ ;;^UTILITY(U,$J,358.3,15785,2)
+ ;;=^40327
+ ;;^UTILITY(U,$J,358.3,15786,0)
+ ;;=460.^^104^939^45
+ ;;^UTILITY(U,$J,358.3,15786,1,0)
+ ;;=^358.31IA^5^2
+ ;;^UTILITY(U,$J,358.3,15786,1,4,0)
+ ;;=4^Nasopharyngitis,Acute
+ ;;^UTILITY(U,$J,358.3,15786,1,5,0)
+ ;;=5^460.
+ ;;^UTILITY(U,$J,358.3,15786,2)
+ ;;=^26543
+ ;;^UTILITY(U,$J,358.3,15787,0)
+ ;;=461.9^^104^939^56
+ ;;^UTILITY(U,$J,358.3,15787,1,0)
+ ;;=^358.31IA^5^2
+ ;;^UTILITY(U,$J,358.3,15787,1,4,0)
+ ;;=4^Sinusitis,Acute
+ ;;^UTILITY(U,$J,358.3,15787,1,5,0)
+ ;;=5^461.9
+ ;;^UTILITY(U,$J,358.3,15787,2)
+ ;;=^259080
