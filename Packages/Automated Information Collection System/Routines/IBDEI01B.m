@@ -1,140 +1,380 @@
-IBDEI01B ; ; 12-AUG-2014
- ;;3.0;IB ENCOUNTER FORM IMP/EXP;;MAY 15, 2014
+IBDEI01B ; ; 19-NOV-2014
+ ;;3.0;IB ENCOUNTER FORM IMP/EXP;;OCT 15, 2014
  Q:'DIFQR(358.3)  F I=1:2 S X=$T(Q+I) Q:X=""  S Y=$E($T(Q+I+1),4,999),X=$E(X,4,999) S:$A(Y)=126 I=I+1,Y=$E(Y,2,999)_$E($T(Q+I+1),5,99) S:$A(Y)=61 Y=$E(Y,2,999) X NO E  S @X=Y
 Q Q
- ;;^UTILITY(U,$J,358.3,121,2)
- ;;=^303633
- ;;^UTILITY(U,$J,358.3,122,0)
- ;;=296.80^^2^12^8
- ;;^UTILITY(U,$J,358.3,122,1,0)
+ ;;^UTILITY(U,$J,358.3,1175,2)
+ ;;=^19944
+ ;;^UTILITY(U,$J,358.3,1176,0)
+ ;;=780.31^^9^83^29
+ ;;^UTILITY(U,$J,358.3,1176,1,0)
  ;;=^358.31IA^5^2
- ;;^UTILITY(U,$J,358.3,122,1,2,0)
- ;;=2^296.80
- ;;^UTILITY(U,$J,358.3,122,1,5,0)
- ;;=5^Bipolar Disorder,NOS
- ;;^UTILITY(U,$J,358.3,122,2)
- ;;=^331892
- ;;^UTILITY(U,$J,358.3,123,0)
- ;;=296.89^^2^12^10
- ;;^UTILITY(U,$J,358.3,123,1,0)
+ ;;^UTILITY(U,$J,358.3,1176,1,4,0)
+ ;;=4^780.31
+ ;;^UTILITY(U,$J,358.3,1176,1,5,0)
+ ;;=5^Convulsions, Febrile
+ ;;^UTILITY(U,$J,358.3,1176,2)
+ ;;=^28172
+ ;;^UTILITY(U,$J,358.3,1177,0)
+ ;;=331.0^^9^83^31
+ ;;^UTILITY(U,$J,358.3,1177,1,0)
  ;;=^358.31IA^5^2
- ;;^UTILITY(U,$J,358.3,123,1,2,0)
- ;;=2^296.89
- ;;^UTILITY(U,$J,358.3,123,1,5,0)
- ;;=5^Bipolar II Disorder,NOS
- ;;^UTILITY(U,$J,358.3,123,2)
- ;;=^331893
- ;;^UTILITY(U,$J,358.3,124,0)
- ;;=297.0^^2^13^3
- ;;^UTILITY(U,$J,358.3,124,1,0)
+ ;;^UTILITY(U,$J,358.3,1177,1,4,0)
+ ;;=4^331.0
+ ;;^UTILITY(U,$J,358.3,1177,1,5,0)
+ ;;=5^Dementia, Alzheimer's
+ ;;^UTILITY(U,$J,358.3,1177,2)
+ ;;=^5679^294.10
+ ;;^UTILITY(U,$J,358.3,1178,0)
+ ;;=291.2^^9^83^30
+ ;;^UTILITY(U,$J,358.3,1178,1,0)
  ;;=^358.31IA^5^2
- ;;^UTILITY(U,$J,358.3,124,1,2,0)
- ;;=2^297.0
- ;;^UTILITY(U,$J,358.3,124,1,5,0)
- ;;=5^Paranoid State, Simple
- ;;^UTILITY(U,$J,358.3,124,2)
- ;;=^268149
- ;;^UTILITY(U,$J,358.3,125,0)
- ;;=298.9^^2^13^4
- ;;^UTILITY(U,$J,358.3,125,1,0)
+ ;;^UTILITY(U,$J,358.3,1178,1,4,0)
+ ;;=4^291.2
+ ;;^UTILITY(U,$J,358.3,1178,1,5,0)
+ ;;=5^Dementia, Alcoholic
+ ;;^UTILITY(U,$J,358.3,1178,2)
+ ;;=^268015
+ ;;^UTILITY(U,$J,358.3,1179,0)
+ ;;=290.40^^9^83^32
+ ;;^UTILITY(U,$J,358.3,1179,1,0)
  ;;=^358.31IA^5^2
- ;;^UTILITY(U,$J,358.3,125,1,2,0)
- ;;=2^298.9
- ;;^UTILITY(U,$J,358.3,125,1,5,0)
- ;;=5^Psychosis, NOS
- ;;^UTILITY(U,$J,358.3,125,2)
- ;;=^259059
- ;;^UTILITY(U,$J,358.3,126,0)
- ;;=298.8^^2^13^5
- ;;^UTILITY(U,$J,358.3,126,1,0)
+ ;;^UTILITY(U,$J,358.3,1179,1,4,0)
+ ;;=4^290.40
+ ;;^UTILITY(U,$J,358.3,1179,1,5,0)
+ ;;=5^Dementia, Multi-Infarct
+ ;;^UTILITY(U,$J,358.3,1179,2)
+ ;;=^303487
+ ;;^UTILITY(U,$J,358.3,1180,0)
+ ;;=290.0^^9^83^34
+ ;;^UTILITY(U,$J,358.3,1180,1,0)
  ;;=^358.31IA^5^2
- ;;^UTILITY(U,$J,358.3,126,1,2,0)
- ;;=2^298.8
- ;;^UTILITY(U,$J,358.3,126,1,5,0)
- ;;=5^Psychosis, Reactive
- ;;^UTILITY(U,$J,358.3,126,2)
- ;;=^87326
- ;;^UTILITY(U,$J,358.3,127,0)
- ;;=297.9^^2^13^2
- ;;^UTILITY(U,$J,358.3,127,1,0)
+ ;;^UTILITY(U,$J,358.3,1180,1,4,0)
+ ;;=4^290.0
+ ;;^UTILITY(U,$J,358.3,1180,1,5,0)
+ ;;=5^Dementia, Senile
+ ;;^UTILITY(U,$J,358.3,1180,2)
+ ;;=^31703
+ ;;^UTILITY(U,$J,358.3,1181,0)
+ ;;=780.4^^9^83^110
+ ;;^UTILITY(U,$J,358.3,1181,1,0)
  ;;=^358.31IA^5^2
- ;;^UTILITY(U,$J,358.3,127,1,2,0)
- ;;=2^297.9
- ;;^UTILITY(U,$J,358.3,127,1,5,0)
- ;;=5^Paranoia
- ;;^UTILITY(U,$J,358.3,127,2)
- ;;=^123970
- ;;^UTILITY(U,$J,358.3,128,0)
- ;;=297.1^^2^13^1
- ;;^UTILITY(U,$J,358.3,128,1,0)
+ ;;^UTILITY(U,$J,358.3,1181,1,4,0)
+ ;;=4^780.4
+ ;;^UTILITY(U,$J,358.3,1181,1,5,0)
+ ;;=5^Vertigo
+ ;;^UTILITY(U,$J,358.3,1181,2)
+ ;;=^35946
+ ;;^UTILITY(U,$J,358.3,1182,0)
+ ;;=345.90^^9^83^105
+ ;;^UTILITY(U,$J,358.3,1182,1,0)
  ;;=^358.31IA^5^2
- ;;^UTILITY(U,$J,358.3,128,1,2,0)
- ;;=2^297.1
- ;;^UTILITY(U,$J,358.3,128,1,5,0)
- ;;=5^Delusional Disorder
- ;;^UTILITY(U,$J,358.3,128,2)
- ;;=^331896
- ;;^UTILITY(U,$J,358.3,129,0)
- ;;=301.7^^2^14^1
- ;;^UTILITY(U,$J,358.3,129,1,0)
+ ;;^UTILITY(U,$J,358.3,1182,1,4,0)
+ ;;=4^345.90
+ ;;^UTILITY(U,$J,358.3,1182,1,5,0)
+ ;;=5^Seizure Disorder NOS
+ ;;^UTILITY(U,$J,358.3,1182,2)
+ ;;=^268477
+ ;;^UTILITY(U,$J,358.3,1183,0)
+ ;;=355.1^^9^83^75
+ ;;^UTILITY(U,$J,358.3,1183,1,0)
  ;;=^358.31IA^5^2
- ;;^UTILITY(U,$J,358.3,129,1,2,0)
- ;;=2^301.7
- ;;^UTILITY(U,$J,358.3,129,1,5,0)
- ;;=5^Antisocial Personality Dis
- ;;^UTILITY(U,$J,358.3,129,2)
- ;;=Antisocial Personality Dis^9066
- ;;^UTILITY(U,$J,358.3,130,0)
- ;;=301.82^^2^14^2
- ;;^UTILITY(U,$J,358.3,130,1,0)
+ ;;^UTILITY(U,$J,358.3,1183,1,4,0)
+ ;;=4^355.1
+ ;;^UTILITY(U,$J,358.3,1183,1,5,0)
+ ;;=5^Meralgia Paresthetica
+ ;;^UTILITY(U,$J,358.3,1183,2)
+ ;;=^265141
+ ;;^UTILITY(U,$J,358.3,1184,0)
+ ;;=340.^^9^83^83
+ ;;^UTILITY(U,$J,358.3,1184,1,0)
  ;;=^358.31IA^5^2
- ;;^UTILITY(U,$J,358.3,130,1,2,0)
- ;;=2^301.82
- ;;^UTILITY(U,$J,358.3,130,1,5,0)
- ;;=5^Avoidant Personality Disorder
- ;;^UTILITY(U,$J,358.3,130,2)
- ;;=Avoidant Personality Disorder^265347
- ;;^UTILITY(U,$J,358.3,131,0)
- ;;=301.83^^2^14^3
- ;;^UTILITY(U,$J,358.3,131,1,0)
+ ;;^UTILITY(U,$J,358.3,1184,1,4,0)
+ ;;=4^340.
+ ;;^UTILITY(U,$J,358.3,1184,1,5,0)
+ ;;=5^Multiple Sclerosis
+ ;;^UTILITY(U,$J,358.3,1184,2)
+ ;;=^79761
+ ;;^UTILITY(U,$J,358.3,1185,0)
+ ;;=729.2^^9^83^84
+ ;;^UTILITY(U,$J,358.3,1185,1,0)
  ;;=^358.31IA^5^2
- ;;^UTILITY(U,$J,358.3,131,1,2,0)
- ;;=2^301.83
- ;;^UTILITY(U,$J,358.3,131,1,5,0)
- ;;=5^Borderline Personality Disorder
- ;;^UTILITY(U,$J,358.3,131,2)
- ;;=Borderline Personality Disorder^16372
- ;;^UTILITY(U,$J,358.3,132,0)
- ;;=301.6^^2^14^6
- ;;^UTILITY(U,$J,358.3,132,1,0)
+ ;;^UTILITY(U,$J,358.3,1185,1,4,0)
+ ;;=4^729.2
+ ;;^UTILITY(U,$J,358.3,1185,1,5,0)
+ ;;=5^Neuropathic Pain
+ ;;^UTILITY(U,$J,358.3,1185,2)
+ ;;=Neuropathic Pain^82605
+ ;;^UTILITY(U,$J,358.3,1186,0)
+ ;;=053.19^^9^83^92
+ ;;^UTILITY(U,$J,358.3,1186,1,0)
  ;;=^358.31IA^5^2
- ;;^UTILITY(U,$J,358.3,132,1,2,0)
- ;;=2^301.6
- ;;^UTILITY(U,$J,358.3,132,1,5,0)
- ;;=5^Dependent Personality Disorder
- ;;^UTILITY(U,$J,358.3,132,2)
- ;;=Dependent Personality Disorder^32860
- ;;^UTILITY(U,$J,358.3,133,0)
- ;;=301.50^^2^14^8
- ;;^UTILITY(U,$J,358.3,133,1,0)
+ ;;^UTILITY(U,$J,358.3,1186,1,4,0)
+ ;;=4^053.19
+ ;;^UTILITY(U,$J,358.3,1186,1,5,0)
+ ;;=5^Post-Herpetic Neuralgia
+ ;;^UTILITY(U,$J,358.3,1186,2)
+ ;;=^266544
+ ;;^UTILITY(U,$J,358.3,1187,0)
+ ;;=310.9^^9^83^85
+ ;;^UTILITY(U,$J,358.3,1187,1,0)
  ;;=^358.31IA^5^2
- ;;^UTILITY(U,$J,358.3,133,1,2,0)
- ;;=2^301.50
- ;;^UTILITY(U,$J,358.3,133,1,5,0)
- ;;=5^Histrionic Personality Disorder
- ;;^UTILITY(U,$J,358.3,133,2)
- ;;=Histrionic Personality Disorder^57763
- ;;^UTILITY(U,$J,358.3,134,0)
- ;;=301.81^^2^14^11
- ;;^UTILITY(U,$J,358.3,134,1,0)
+ ;;^UTILITY(U,$J,358.3,1187,1,4,0)
+ ;;=4^310.9
+ ;;^UTILITY(U,$J,358.3,1187,1,5,0)
+ ;;=5^Organic Brain Syndrome
+ ;;^UTILITY(U,$J,358.3,1187,2)
+ ;;=^123952
+ ;;^UTILITY(U,$J,358.3,1188,0)
+ ;;=332.0^^9^83^88
+ ;;^UTILITY(U,$J,358.3,1188,1,0)
  ;;=^358.31IA^5^2
- ;;^UTILITY(U,$J,358.3,134,1,2,0)
- ;;=2^301.81
- ;;^UTILITY(U,$J,358.3,134,1,5,0)
- ;;=5^Narcissistic Personality Disorder
- ;;^UTILITY(U,$J,358.3,134,2)
- ;;=Narcissistic Personality Disorder^265353
- ;;^UTILITY(U,$J,358.3,135,0)
- ;;=301.0^^2^14^12
- ;;^UTILITY(U,$J,358.3,135,1,0)
+ ;;^UTILITY(U,$J,358.3,1188,1,4,0)
+ ;;=4^332.0
+ ;;^UTILITY(U,$J,358.3,1188,1,5,0)
+ ;;=5^Parkinson's Disease
+ ;;^UTILITY(U,$J,358.3,1188,2)
+ ;;=Parkinson's Disease^304847
+ ;;^UTILITY(U,$J,358.3,1189,0)
+ ;;=250.60^^9^83^89
+ ;;^UTILITY(U,$J,358.3,1189,1,0)
+ ;;=^358.31IA^5^2
+ ;;^UTILITY(U,$J,358.3,1189,1,4,0)
+ ;;=4^250.60
+ ;;^UTILITY(U,$J,358.3,1189,1,5,0)
+ ;;=5^Peripheral Neuropathy, Diabetic
+ ;;^UTILITY(U,$J,358.3,1189,2)
+ ;;=^267841^357.2
+ ;;^UTILITY(U,$J,358.3,1190,0)
+ ;;=356.9^^9^83^91
+ ;;^UTILITY(U,$J,358.3,1190,1,0)
+ ;;=^358.31IA^5^2
+ ;;^UTILITY(U,$J,358.3,1190,1,4,0)
+ ;;=4^356.9
+ ;;^UTILITY(U,$J,358.3,1190,1,5,0)
+ ;;=5^Peripheral Neuropathy, Unsp
+ ;;^UTILITY(U,$J,358.3,1190,2)
+ ;;=^123931
+ ;;^UTILITY(U,$J,358.3,1191,0)
+ ;;=780.2^^9^83^106
+ ;;^UTILITY(U,$J,358.3,1191,1,0)
+ ;;=^358.31IA^5^2
+ ;;^UTILITY(U,$J,358.3,1191,1,4,0)
+ ;;=4^780.2
+ ;;^UTILITY(U,$J,358.3,1191,1,5,0)
+ ;;=5^Syncope Or Presyncope
+ ;;^UTILITY(U,$J,358.3,1191,2)
+ ;;=^116707
+ ;;^UTILITY(U,$J,358.3,1192,0)
+ ;;=724.3^^9^83^102
+ ;;^UTILITY(U,$J,358.3,1192,1,0)
+ ;;=^358.31IA^5^2
+ ;;^UTILITY(U,$J,358.3,1192,1,4,0)
+ ;;=4^724.3
+ ;;^UTILITY(U,$J,358.3,1192,1,5,0)
+ ;;=5^Sciatica
+ ;;^UTILITY(U,$J,358.3,1192,2)
+ ;;=^108484
+ ;;^UTILITY(U,$J,358.3,1193,0)
+ ;;=780.39^^9^83^103
+ ;;^UTILITY(U,$J,358.3,1193,1,0)
+ ;;=^358.31IA^5^2
+ ;;^UTILITY(U,$J,358.3,1193,1,4,0)
+ ;;=4^780.39
+ ;;^UTILITY(U,$J,358.3,1193,1,5,0)
+ ;;=5^Seizure
+ ;;^UTILITY(U,$J,358.3,1193,2)
+ ;;=^28162
+ ;;^UTILITY(U,$J,358.3,1194,0)
+ ;;=782.0^^9^83^87
+ ;;^UTILITY(U,$J,358.3,1194,1,0)
+ ;;=^358.31IA^5^2
+ ;;^UTILITY(U,$J,358.3,1194,1,4,0)
+ ;;=4^782.0
+ ;;^UTILITY(U,$J,358.3,1194,1,5,0)
+ ;;=5^Parasthesia
+ ;;^UTILITY(U,$J,358.3,1194,2)
+ ;;=Parasthesia^35757
+ ;;^UTILITY(U,$J,358.3,1195,0)
+ ;;=435.9^^9^83^107
+ ;;^UTILITY(U,$J,358.3,1195,1,0)
+ ;;=^358.31IA^5^2
+ ;;^UTILITY(U,$J,358.3,1195,1,4,0)
+ ;;=4^435.9
+ ;;^UTILITY(U,$J,358.3,1195,1,5,0)
+ ;;=5^Transient Ischemic Attack
+ ;;^UTILITY(U,$J,358.3,1195,2)
+ ;;=^21635
+ ;;^UTILITY(U,$J,358.3,1196,0)
+ ;;=354.2^^9^83^109
+ ;;^UTILITY(U,$J,358.3,1196,1,0)
+ ;;=^358.31IA^5^2
+ ;;^UTILITY(U,$J,358.3,1196,1,4,0)
+ ;;=4^354.2
+ ;;^UTILITY(U,$J,358.3,1196,1,5,0)
+ ;;=5^Ulnar Nerve Entrapment
+ ;;^UTILITY(U,$J,358.3,1196,2)
+ ;;=^268506
+ ;;^UTILITY(U,$J,358.3,1197,0)
+ ;;=729.1^^9^83^35
+ ;;^UTILITY(U,$J,358.3,1197,1,0)
+ ;;=^358.31IA^5^2
+ ;;^UTILITY(U,$J,358.3,1197,1,4,0)
+ ;;=4^729.1
+ ;;^UTILITY(U,$J,358.3,1197,1,5,0)
+ ;;=5^Fibromyalgia
+ ;;^UTILITY(U,$J,358.3,1197,2)
+ ;;=Fibromyalgia^80160
+ ;;^UTILITY(U,$J,358.3,1198,0)
+ ;;=438.20^^9^83^11
+ ;;^UTILITY(U,$J,358.3,1198,1,0)
+ ;;=^358.31IA^5^2
+ ;;^UTILITY(U,$J,358.3,1198,1,4,0)
+ ;;=4^438.20
+ ;;^UTILITY(U,$J,358.3,1198,1,5,0)
+ ;;=5^CVA w/Hemiplegia (late effect)
+ ;;^UTILITY(U,$J,358.3,1198,2)
+ ;;=CVA w/Hemiplegia^317910
+ ;;^UTILITY(U,$J,358.3,1199,0)
+ ;;=438.12^^9^83^8
+ ;;^UTILITY(U,$J,358.3,1199,1,0)
+ ;;=^358.31IA^5^2
+ ;;^UTILITY(U,$J,358.3,1199,1,4,0)
+ ;;=4^438.12
+ ;;^UTILITY(U,$J,358.3,1199,1,5,0)
+ ;;=5^CVA w/Dysphasia (late effect)
+ ;;^UTILITY(U,$J,358.3,1199,2)
+ ;;=Stroke w/Dysphasia^317908
+ ;;^UTILITY(U,$J,358.3,1200,0)
+ ;;=356.8^^9^83^90
+ ;;^UTILITY(U,$J,358.3,1200,1,0)
+ ;;=^358.31IA^5^2
+ ;;^UTILITY(U,$J,358.3,1200,1,4,0)
+ ;;=4^356.8
+ ;;^UTILITY(U,$J,358.3,1200,1,5,0)
+ ;;=5^Peripheral Neuropathy, Idiopathic
+ ;;^UTILITY(U,$J,358.3,1200,2)
+ ;;=Peripheral Neuropathy, Idio^268525
+ ;;^UTILITY(U,$J,358.3,1201,0)
+ ;;=337.20^^9^83^100
+ ;;^UTILITY(U,$J,358.3,1201,1,0)
+ ;;=^358.31IA^5^2
+ ;;^UTILITY(U,$J,358.3,1201,1,4,0)
+ ;;=4^337.20
+ ;;^UTILITY(U,$J,358.3,1201,1,5,0)
+ ;;=5^Reflexive Sympathetic Dystrophy
+ ;;^UTILITY(U,$J,358.3,1201,2)
+ ;;=Reflexive Sympathetic Dystrophy^295799
+ ;;^UTILITY(U,$J,358.3,1202,0)
+ ;;=294.8^^9^83^33
+ ;;^UTILITY(U,$J,358.3,1202,1,0)
+ ;;=^358.31IA^5^2
+ ;;^UTILITY(U,$J,358.3,1202,1,4,0)
+ ;;=4^294.8
+ ;;^UTILITY(U,$J,358.3,1202,1,5,0)
+ ;;=5^Dementia, Other
+ ;;^UTILITY(U,$J,358.3,1202,2)
+ ;;=^268044
+ ;;^UTILITY(U,$J,358.3,1203,0)
+ ;;=438.6^^9^83^7
+ ;;^UTILITY(U,$J,358.3,1203,1,0)
+ ;;=^358.31IA^5^2
+ ;;^UTILITY(U,$J,358.3,1203,1,4,0)
+ ;;=4^438.6
+ ;;^UTILITY(U,$J,358.3,1203,1,5,0)
+ ;;=5^CVA w/Dysesthesia (late effect)
+ ;;^UTILITY(U,$J,358.3,1203,2)
+ ;;=CVA w/Dysesthesia (late effect)^328503
+ ;;^UTILITY(U,$J,358.3,1204,0)
+ ;;=438.7^^9^83^26
+ ;;^UTILITY(U,$J,358.3,1204,1,0)
+ ;;=^358.31IA^5^2
+ ;;^UTILITY(U,$J,358.3,1204,1,4,0)
+ ;;=4^438.7
+ ;;^UTILITY(U,$J,358.3,1204,1,5,0)
+ ;;=5^CVA w/Vision Changes (late effect)
+ ;;^UTILITY(U,$J,358.3,1204,2)
+ ;;=CVA w/Vision Changes (late effect)^328504
+ ;;^UTILITY(U,$J,358.3,1205,0)
+ ;;=438.84^^9^83^5
+ ;;^UTILITY(U,$J,358.3,1205,1,0)
+ ;;=^358.31IA^5^2
+ ;;^UTILITY(U,$J,358.3,1205,1,4,0)
+ ;;=4^438.84
+ ;;^UTILITY(U,$J,358.3,1205,1,5,0)
+ ;;=5^CVA w/Ataxia (late effect)
+ ;;^UTILITY(U,$J,358.3,1205,2)
+ ;;=CVA w/Ataxia (late effect)^328507
+ ;;^UTILITY(U,$J,358.3,1206,0)
+ ;;=434.91^^9^83^27
+ ;;^UTILITY(U,$J,358.3,1206,1,0)
+ ;;=^358.31IA^5^2
+ ;;^UTILITY(U,$J,358.3,1206,1,4,0)
+ ;;=4^434.91
+ ;;^UTILITY(U,$J,358.3,1206,1,5,0)
+ ;;=5^CVA, Acute Onset
+ ;;^UTILITY(U,$J,358.3,1206,2)
+ ;;=^295738
+ ;;^UTILITY(U,$J,358.3,1207,0)
+ ;;=333.94^^9^83^101
+ ;;^UTILITY(U,$J,358.3,1207,1,0)
+ ;;=^358.31IA^5^2
+ ;;^UTILITY(U,$J,358.3,1207,1,4,0)
+ ;;=4^333.94
+ ;;^UTILITY(U,$J,358.3,1207,1,5,0)
+ ;;=5^Restless Leg Syndrome
+ ;;^UTILITY(U,$J,358.3,1207,2)
+ ;;=^105368
+ ;;^UTILITY(U,$J,358.3,1208,0)
+ ;;=345.90^^9^83^104
+ ;;^UTILITY(U,$J,358.3,1208,1,0)
+ ;;=^358.31IA^5^2
+ ;;^UTILITY(U,$J,358.3,1208,1,4,0)
+ ;;=4^345.90
+ ;;^UTILITY(U,$J,358.3,1208,1,5,0)
+ ;;=5^Seizure Disorder
+ ;;^UTILITY(U,$J,358.3,1208,2)
+ ;;=^268477
+ ;;^UTILITY(U,$J,358.3,1209,0)
+ ;;=907.0^^9^83^73
+ ;;^UTILITY(U,$J,358.3,1209,1,0)
+ ;;=^358.31IA^5^2
+ ;;^UTILITY(U,$J,358.3,1209,1,4,0)
+ ;;=4^907.0
+ ;;^UTILITY(U,$J,358.3,1209,1,5,0)
+ ;;=5^Late Effect Intracranial Injury
+ ;;^UTILITY(U,$J,358.3,1209,2)
+ ;;=^68489
+ ;;^UTILITY(U,$J,358.3,1210,0)
+ ;;=339.00^^9^83^43
+ ;;^UTILITY(U,$J,358.3,1210,1,0)
+ ;;=^358.31IA^5^2
+ ;;^UTILITY(U,$J,358.3,1210,1,4,0)
+ ;;=4^339.00
+ ;;^UTILITY(U,$J,358.3,1210,1,5,0)
+ ;;=5^Headache,Cluster NOS
+ ;;^UTILITY(U,$J,358.3,1210,2)
+ ;;=^336741
+ ;;^UTILITY(U,$J,358.3,1211,0)
+ ;;=339.01^^9^83^42
+ ;;^UTILITY(U,$J,358.3,1211,1,0)
+ ;;=^358.31IA^5^2
+ ;;^UTILITY(U,$J,358.3,1211,1,4,0)
+ ;;=4^339.01
+ ;;^UTILITY(U,$J,358.3,1211,1,5,0)
+ ;;=5^Headache,Cluster Episodic
+ ;;^UTILITY(U,$J,358.3,1211,2)
+ ;;=^336545
+ ;;^UTILITY(U,$J,358.3,1212,0)
+ ;;=339.02^^9^83^41
+ ;;^UTILITY(U,$J,358.3,1212,1,0)
+ ;;=^358.31IA^5^2
+ ;;^UTILITY(U,$J,358.3,1212,1,4,0)
+ ;;=4^339.02
+ ;;^UTILITY(U,$J,358.3,1212,1,5,0)
+ ;;=5^Headache,Cluster Chronic
+ ;;^UTILITY(U,$J,358.3,1212,2)
+ ;;=^336546
+ ;;^UTILITY(U,$J,358.3,1213,0)
+ ;;=339.03^^9^83^65
+ ;;^UTILITY(U,$J,358.3,1213,1,0)
  ;;=^358.31IA^5^2

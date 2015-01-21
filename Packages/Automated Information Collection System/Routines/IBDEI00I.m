@@ -1,76 +1,378 @@
-IBDEI00I ; ; 12-AUG-2014
- ;;3.0;IB ENCOUNTER FORM IMP/EXP;;MAY 15, 2014
- Q:'DIFQ(358.2)  F I=1:2 S X=$T(Q+I) Q:X=""  S Y=$E($T(Q+I+1),4,999),X=$E(X,4,999) S:$A(Y)=126 I=I+1,Y=$E(Y,2,999)_$E($T(Q+I+1),5,99) S:$A(Y)=61 Y=$E(Y,2,999) X NO E  S @X=Y
+IBDEI00I ; ; 19-NOV-2014
+ ;;3.0;IB ENCOUNTER FORM IMP/EXP;;OCT 15, 2014
+ Q:'DIFQR(358.3)  F I=1:2 S X=$T(Q+I) Q:X=""  S Y=$E($T(Q+I+1),4,999),X=$E(X,4,999) S:$A(Y)=126 I=I+1,Y=$E(Y,2,999)_$E($T(Q+I+1),5,99) S:$A(Y)=61 Y=$E(Y,2,999) X NO E  S @X=Y
 Q Q
- ;;^DIC(358.2,0,"GL")
- ;;=^IBE(358.2,
- ;;^DIC("B","IMP/EXP SELECTION LIST",358.2)
- ;;=
- ;;^DIC(358.2,"%D",0)
- ;;=^^1^1^2940829^^^^
- ;;^DIC(358.2,"%D",1,0)
- ;;=Used by the import/export utility as a workspace.
- ;;^DIC(358.2,"%D",2,0)
- ;;= 
- ;;^DIC(358.2,"%D",3,0)
- ;;= 
- ;;^DIC(358.2,"%D",4,0)
- ;;= 
- ;;^DIC(358.2,"%D",5,0)
- ;;= 
- ;;^DIC(358.2,"%D",6,0)
- ;;= 
- ;;^DIC(358.2,"%D",7,0)
- ;;= 
- ;;^DIC(358.2,"%D",8,0)
- ;;=This file is nearly identical to file #357.2 . It is used by the
- ;;^DIC(358.2,"%D",9,0)
- ;;=Import/Export Utility as a temporary staging area for data from that file
- ;;^DIC(358.2,"%D",10,0)
- ;;=that is being imported or exported.
- ;;^DIC(358.2,"%D",11,0)
- ;;=provisions have been made to specify up to 4 columns per list.
- ;;^DD(358.2,0)
- ;;=FIELD^^2^19
- ;;^DD(358.2,0,"DDA")
- ;;=N
- ;;^DD(358.2,0,"DT")
- ;;=2960123
- ;;^DD(358.2,0,"ID",.02)
- ;;=W ""
- ;;^DD(358.2,0,"ID",.11)
- ;;=W ""
- ;;^DD(358.2,0,"IX","B",358.2,.01)
- ;;=
- ;;^DD(358.2,0,"IX","C",358.2,.02)
- ;;=
- ;;^DD(358.2,0,"NM","IMP/EXP SELECTION LIST")
- ;;=
- ;;^DD(358.2,0,"PT",358.3,.03)
- ;;=
- ;;^DD(358.2,0,"PT",358.4,.03)
- ;;=
- ;;^DD(358.2,0,"VRPK")
- ;;=IBD
- ;;^DD(358.2,.01,0)
- ;;=NAME^RF^^0;1^K:$L(X)>30!($L(X)<3)!'(X'?1P.E) X
- ;;^DD(358.2,.01,1,0)
- ;;=^.1
- ;;^DD(358.2,.01,1,1,0)
- ;;=358.2^B
- ;;^DD(358.2,.01,1,1,1)
- ;;=S ^IBE(358.2,"B",$E(X,1,30),DA)=""
- ;;^DD(358.2,.01,1,1,2)
- ;;=K ^IBE(358.2,"B",$E(X,1,30),DA)
- ;;^DD(358.2,.01,3)
- ;;=Answer must be 3-30 characters in length.
- ;;^DD(358.2,.01,21,0)
- ;;=^^2^2^2930527^
- ;;^DD(358.2,.01,21,1,0)
- ;;= 
- ;;^DD(358.2,.01,21,2,0)
- ;;=The name of the list.
- ;;^DD(358.2,.01,"DEL",1,0)
- ;;=I '$G(IBLISTPR) W "...Selection Lists can only be deleted through the Encounter Form Utilities!"
- ;;^DD(358.2,.01,"DT")
- ;;=2921119
+ ;;^UTILITY(U,$J,358.3)
+ ;;=^IBE(358.3,
+ ;;^UTILITY(U,$J,358.3,0)
+ ;;=IMP/EXP SELECTION^358.3I^28914^28914
+ ;;^UTILITY(U,$J,358.3,1,0)
+ ;;=H0001^^1^1^1^^^^1
+ ;;^UTILITY(U,$J,358.3,1,1,0)
+ ;;=^358.31IA^3^2
+ ;;^UTILITY(U,$J,358.3,1,1,2,0)
+ ;;=2^H0001
+ ;;^UTILITY(U,$J,358.3,1,1,3,0)
+ ;;=3^Addictions Assessment
+ ;;^UTILITY(U,$J,358.3,2,0)
+ ;;=H0002^^1^1^11^^^^1
+ ;;^UTILITY(U,$J,358.3,2,1,0)
+ ;;=^358.31IA^3^2
+ ;;^UTILITY(U,$J,358.3,2,1,2,0)
+ ;;=2^H0002
+ ;;^UTILITY(U,$J,358.3,2,1,3,0)
+ ;;=3^Screen for Addictions Admit
+ ;;^UTILITY(U,$J,358.3,3,0)
+ ;;=H0004^^1^1^7
+ ;;^UTILITY(U,$J,358.3,3,1,0)
+ ;;=^358.31IA^3^2
+ ;;^UTILITY(U,$J,358.3,3,1,2,0)
+ ;;=2^H0004
+ ;;^UTILITY(U,$J,358.3,3,1,3,0)
+ ;;=3^Individual Counseling per 15 min
+ ;;^UTILITY(U,$J,358.3,4,0)
+ ;;=H0005^^1^1^3^^^^1
+ ;;^UTILITY(U,$J,358.3,4,1,0)
+ ;;=^358.31IA^3^2
+ ;;^UTILITY(U,$J,358.3,4,1,2,0)
+ ;;=2^H0005
+ ;;^UTILITY(U,$J,358.3,4,1,3,0)
+ ;;=3^Addictions Group
+ ;;^UTILITY(U,$J,358.3,5,0)
+ ;;=H0020^^1^1^8^^^^1
+ ;;^UTILITY(U,$J,358.3,5,1,0)
+ ;;=^358.31IA^3^2
+ ;;^UTILITY(U,$J,358.3,5,1,2,0)
+ ;;=2^H0020
+ ;;^UTILITY(U,$J,358.3,5,1,3,0)
+ ;;=3^Methadone Administration
+ ;;^UTILITY(U,$J,358.3,6,0)
+ ;;=H0030^^1^1^4^^^^1
+ ;;^UTILITY(U,$J,358.3,6,1,0)
+ ;;=^358.31IA^3^2
+ ;;^UTILITY(U,$J,358.3,6,1,2,0)
+ ;;=2^H0030
+ ;;^UTILITY(U,$J,358.3,6,1,3,0)
+ ;;=3^Addictions Phone Services
+ ;;^UTILITY(U,$J,358.3,7,0)
+ ;;=H0025^^1^1^2^^^^1
+ ;;^UTILITY(U,$J,358.3,7,1,0)
+ ;;=^358.31IA^3^2
+ ;;^UTILITY(U,$J,358.3,7,1,2,0)
+ ;;=2^H0025
+ ;;^UTILITY(U,$J,358.3,7,1,3,0)
+ ;;=3^Addictions Education Service
+ ;;^UTILITY(U,$J,358.3,8,0)
+ ;;=H0046^^1^1^9^^^^1
+ ;;^UTILITY(U,$J,358.3,8,1,0)
+ ;;=^358.31IA^3^2
+ ;;^UTILITY(U,$J,358.3,8,1,2,0)
+ ;;=2^H0046
+ ;;^UTILITY(U,$J,358.3,8,1,3,0)
+ ;;=3^PTSD Group
+ ;;^UTILITY(U,$J,358.3,9,0)
+ ;;=H0003^^1^1^6^^^^1
+ ;;^UTILITY(U,$J,358.3,9,1,0)
+ ;;=^358.31IA^3^2
+ ;;^UTILITY(U,$J,358.3,9,1,2,0)
+ ;;=2^H0003
+ ;;^UTILITY(U,$J,358.3,9,1,3,0)
+ ;;=3^Alcohol/Drug Scrn;lab analysis
+ ;;^UTILITY(U,$J,358.3,10,0)
+ ;;=H0006^^1^1^5^^^^1
+ ;;^UTILITY(U,$J,358.3,10,1,0)
+ ;;=^358.31IA^3^2
+ ;;^UTILITY(U,$J,358.3,10,1,2,0)
+ ;;=2^H0006
+ ;;^UTILITY(U,$J,358.3,10,1,3,0)
+ ;;=3^Alcohol/Drug Case Management
+ ;;^UTILITY(U,$J,358.3,11,0)
+ ;;=H2027^^1^1^10^^^^1
+ ;;^UTILITY(U,$J,358.3,11,1,0)
+ ;;=^358.31IA^3^2
+ ;;^UTILITY(U,$J,358.3,11,1,2,0)
+ ;;=2^H2027
+ ;;^UTILITY(U,$J,358.3,11,1,3,0)
+ ;;=3^Psychoeducational Svc,per 15min
+ ;;^UTILITY(U,$J,358.3,12,0)
+ ;;=M0064^^1^2^3^^^^1
+ ;;^UTILITY(U,$J,358.3,12,1,0)
+ ;;=^358.31IA^3^2
+ ;;^UTILITY(U,$J,358.3,12,1,2,0)
+ ;;=2^M0064
+ ;;^UTILITY(U,$J,358.3,12,1,3,0)
+ ;;=3^Brief Med Mgmt
+ ;;^UTILITY(U,$J,358.3,13,0)
+ ;;=90791^^1^2^1^^^^1
+ ;;^UTILITY(U,$J,358.3,13,1,0)
+ ;;=^358.31IA^3^2
+ ;;^UTILITY(U,$J,358.3,13,1,2,0)
+ ;;=2^90791
+ ;;^UTILITY(U,$J,358.3,13,1,3,0)
+ ;;=3^Psych Diagnostic Eval
+ ;;^UTILITY(U,$J,358.3,14,0)
+ ;;=90792^^1^2^2^^^^1
+ ;;^UTILITY(U,$J,358.3,14,1,0)
+ ;;=^358.31IA^3^2
+ ;;^UTILITY(U,$J,358.3,14,1,2,0)
+ ;;=2^90792
+ ;;^UTILITY(U,$J,358.3,14,1,3,0)
+ ;;=3^Psych Diag Eval w/ Med Svcs
+ ;;^UTILITY(U,$J,358.3,15,0)
+ ;;=90853^^1^3^13^^^^1
+ ;;^UTILITY(U,$J,358.3,15,1,0)
+ ;;=^358.31IA^3^2
+ ;;^UTILITY(U,$J,358.3,15,1,2,0)
+ ;;=2^90853
+ ;;^UTILITY(U,$J,358.3,15,1,3,0)
+ ;;=3^Group Psychotherapy
+ ;;^UTILITY(U,$J,358.3,16,0)
+ ;;=90846^^1^3^14^^^^1
+ ;;^UTILITY(U,$J,358.3,16,1,0)
+ ;;=^358.31IA^3^2
+ ;;^UTILITY(U,$J,358.3,16,1,2,0)
+ ;;=2^90846
+ ;;^UTILITY(U,$J,358.3,16,1,3,0)
+ ;;=3^Family Psychotherapy w/o pt.
+ ;;^UTILITY(U,$J,358.3,17,0)
+ ;;=90847^^1^3^15^^^^1
+ ;;^UTILITY(U,$J,358.3,17,1,0)
+ ;;=^358.31IA^3^2
+ ;;^UTILITY(U,$J,358.3,17,1,2,0)
+ ;;=2^90847
+ ;;^UTILITY(U,$J,358.3,17,1,3,0)
+ ;;=3^Family Psychotherpy w/pt.
+ ;;^UTILITY(U,$J,358.3,18,0)
+ ;;=90875^^1^3^16^^^^1
+ ;;^UTILITY(U,$J,358.3,18,1,0)
+ ;;=^358.31IA^3^2
+ ;;^UTILITY(U,$J,358.3,18,1,2,0)
+ ;;=2^90875
+ ;;^UTILITY(U,$J,358.3,18,1,3,0)
+ ;;=3^Psych Thpy w/ Biofeedback 20-30min
+ ;;^UTILITY(U,$J,358.3,19,0)
+ ;;=90876^^1^3^17^^^^1
+ ;;^UTILITY(U,$J,358.3,19,1,0)
+ ;;=^358.31IA^3^2
+ ;;^UTILITY(U,$J,358.3,19,1,2,0)
+ ;;=2^90876
+ ;;^UTILITY(U,$J,358.3,19,1,3,0)
+ ;;=3^Psych Thpy w/ Biofeedback 45-50min
+ ;;^UTILITY(U,$J,358.3,20,0)
+ ;;=90832^^1^3^1^^^^1
+ ;;^UTILITY(U,$J,358.3,20,1,0)
+ ;;=^358.31IA^3^2
+ ;;^UTILITY(U,$J,358.3,20,1,2,0)
+ ;;=2^90832
+ ;;^UTILITY(U,$J,358.3,20,1,3,0)
+ ;;=3^PsyTx Pt/Fam 16-37Min
+ ;;^UTILITY(U,$J,358.3,21,0)
+ ;;=90834^^1^3^2^^^^1
+ ;;^UTILITY(U,$J,358.3,21,1,0)
+ ;;=^358.31IA^3^2
+ ;;^UTILITY(U,$J,358.3,21,1,2,0)
+ ;;=2^90834
+ ;;^UTILITY(U,$J,358.3,21,1,3,0)
+ ;;=3^PsyTx Pt/Fam 38-52Min
+ ;;^UTILITY(U,$J,358.3,22,0)
+ ;;=90837^^1^3^3^^^^1
+ ;;^UTILITY(U,$J,358.3,22,1,0)
+ ;;=^358.31IA^3^2
+ ;;^UTILITY(U,$J,358.3,22,1,2,0)
+ ;;=2^90837
+ ;;^UTILITY(U,$J,358.3,22,1,3,0)
+ ;;=3^PsyTx Pt/Fam 53+ Min
+ ;;^UTILITY(U,$J,358.3,23,0)
+ ;;=90833^^1^3^4^^^^1
+ ;;^UTILITY(U,$J,358.3,23,1,0)
+ ;;=^358.31IA^3^2
+ ;;^UTILITY(U,$J,358.3,23,1,2,0)
+ ;;=2^90833
+ ;;^UTILITY(U,$J,358.3,23,1,3,0)
+ ;;=3^PsyTx Pt/Fam 16-37min-Report w/ E&M code
+ ;;^UTILITY(U,$J,358.3,24,0)
+ ;;=90836^^1^3^5^^^^1
+ ;;^UTILITY(U,$J,358.3,24,1,0)
+ ;;=^358.31IA^3^2
+ ;;^UTILITY(U,$J,358.3,24,1,2,0)
+ ;;=2^90836
+ ;;^UTILITY(U,$J,358.3,24,1,3,0)
+ ;;=3^PsyTx Pt/Fam 38-52min-Report w/ E&M code
+ ;;^UTILITY(U,$J,358.3,25,0)
+ ;;=90838^^1^3^6^^^^1
+ ;;^UTILITY(U,$J,358.3,25,1,0)
+ ;;=^358.31IA^3^2
+ ;;^UTILITY(U,$J,358.3,25,1,2,0)
+ ;;=2^90838
+ ;;^UTILITY(U,$J,358.3,25,1,3,0)
+ ;;=3^PsyTx Pt/Fam 53+ Min-Report w/ E&M code
+ ;;^UTILITY(U,$J,358.3,26,0)
+ ;;=90839^^1^3^7^^^^1
+ ;;^UTILITY(U,$J,358.3,26,1,0)
+ ;;=^358.31IA^3^2
+ ;;^UTILITY(U,$J,358.3,26,1,2,0)
+ ;;=2^90839
+ ;;^UTILITY(U,$J,358.3,26,1,3,0)
+ ;;=3^PsyTx Crisis Initial 60Min
+ ;;^UTILITY(U,$J,358.3,27,0)
+ ;;=90840^^1^3^8^^^^1
+ ;;^UTILITY(U,$J,358.3,27,1,0)
+ ;;=^358.31IA^3^2
+ ;;^UTILITY(U,$J,358.3,27,1,2,0)
+ ;;=2^90840
+ ;;^UTILITY(U,$J,358.3,27,1,3,0)
+ ;;=3^PsyTx Crisis Ea Addl 30Min
+ ;;^UTILITY(U,$J,358.3,28,0)
+ ;;=90785^^1^3^10^^^^1
+ ;;^UTILITY(U,$J,358.3,28,1,0)
+ ;;=^358.31IA^3^2
+ ;;^UTILITY(U,$J,358.3,28,1,2,0)
+ ;;=2^90785
+ ;;^UTILITY(U,$J,358.3,28,1,3,0)
+ ;;=3^PsyTx Complex Interactive,Add-On
+ ;;^UTILITY(U,$J,358.3,29,0)
+ ;;=99354^^1^3^11^^^^1
+ ;;^UTILITY(U,$J,358.3,29,1,0)
+ ;;=^358.31IA^3^2
+ ;;^UTILITY(U,$J,358.3,29,1,2,0)
+ ;;=2^99354
+ ;;^UTILITY(U,$J,358.3,29,1,3,0)
+ ;;=3^Prolonged Office Visit 1st hr
+ ;;^UTILITY(U,$J,358.3,30,0)
+ ;;=99355^^1^3^12^^^^1
+ ;;^UTILITY(U,$J,358.3,30,1,0)
+ ;;=^358.31IA^3^2
+ ;;^UTILITY(U,$J,358.3,30,1,2,0)
+ ;;=2^99355
+ ;;^UTILITY(U,$J,358.3,30,1,3,0)
+ ;;=3^Prolonged Office Vst Ea Addl 30Min
+ ;;^UTILITY(U,$J,358.3,31,0)
+ ;;=96116^^1^4^1^^^^1
+ ;;^UTILITY(U,$J,358.3,31,1,0)
+ ;;=^358.31IA^3^2
+ ;;^UTILITY(U,$J,358.3,31,1,2,0)
+ ;;=2^96116
+ ;;^UTILITY(U,$J,358.3,31,1,3,0)
+ ;;=3^Neuropsych Status Exam
+ ;;^UTILITY(U,$J,358.3,32,0)
+ ;;=96120^^1^4^2^^^^1
+ ;;^UTILITY(U,$J,358.3,32,1,0)
+ ;;=^358.31IA^3^2
+ ;;^UTILITY(U,$J,358.3,32,1,2,0)
+ ;;=2^96120
+ ;;^UTILITY(U,$J,358.3,32,1,3,0)
+ ;;=3^Neuropsych Tst Adm by Comp
+ ;;^UTILITY(U,$J,358.3,33,0)
+ ;;=96118^^1^4^3^^^^1
+ ;;^UTILITY(U,$J,358.3,33,1,0)
+ ;;=^358.31IA^3^2
+ ;;^UTILITY(U,$J,358.3,33,1,2,0)
+ ;;=2^96118
+ ;;^UTILITY(U,$J,358.3,33,1,3,0)
+ ;;=3^Neuropsych Tst by Psych/Phys
+ ;;^UTILITY(U,$J,358.3,34,0)
+ ;;=96119^^1^4^4^^^^1
+ ;;^UTILITY(U,$J,358.3,34,1,0)
+ ;;=^358.31IA^3^2
+ ;;^UTILITY(U,$J,358.3,34,1,2,0)
+ ;;=2^96119
+ ;;^UTILITY(U,$J,358.3,34,1,3,0)
+ ;;=3^Neuropsych Tst,Tech,Ea Hr
+ ;;^UTILITY(U,$J,358.3,35,0)
+ ;;=90899^^1^4^8^^^^1
+ ;;^UTILITY(U,$J,358.3,35,1,0)
+ ;;=^358.31IA^3^2
+ ;;^UTILITY(U,$J,358.3,35,1,2,0)
+ ;;=2^90899
+ ;;^UTILITY(U,$J,358.3,35,1,3,0)
+ ;;=3^Unlisted Psych Service (Anyone)
+ ;;^UTILITY(U,$J,358.3,36,0)
+ ;;=96103^^1^4^5^^^^1
+ ;;^UTILITY(U,$J,358.3,36,1,0)
+ ;;=^358.31IA^3^2
+ ;;^UTILITY(U,$J,358.3,36,1,2,0)
+ ;;=2^96103
+ ;;^UTILITY(U,$J,358.3,36,1,3,0)
+ ;;=3^Psych Tst Admin by Comp
+ ;;^UTILITY(U,$J,358.3,37,0)
+ ;;=96101^^1^4^6^^^^1
+ ;;^UTILITY(U,$J,358.3,37,1,0)
+ ;;=^358.31IA^3^2
+ ;;^UTILITY(U,$J,358.3,37,1,2,0)
+ ;;=2^96101
+ ;;^UTILITY(U,$J,358.3,37,1,3,0)
+ ;;=3^Psych Tst by Psych/Phys
+ ;;^UTILITY(U,$J,358.3,38,0)
+ ;;=96102^^1^4^7^^^^1
+ ;;^UTILITY(U,$J,358.3,38,1,0)
+ ;;=^358.31IA^3^2
+ ;;^UTILITY(U,$J,358.3,38,1,2,0)
+ ;;=2^96102
+ ;;^UTILITY(U,$J,358.3,38,1,3,0)
+ ;;=3^Psych Tst,Tech,Ea Hr
+ ;;^UTILITY(U,$J,358.3,39,0)
+ ;;=99406^^1^5^1^^^^1
+ ;;^UTILITY(U,$J,358.3,39,1,0)
+ ;;=^358.31IA^3^2
+ ;;^UTILITY(U,$J,358.3,39,1,2,0)
+ ;;=2^99406
+ ;;^UTILITY(U,$J,358.3,39,1,3,0)
+ ;;=3^Smoking/Tob Cessation Counsel 3-10Min
+ ;;^UTILITY(U,$J,358.3,40,0)
+ ;;=99407^^1^5^2^^^^1
+ ;;^UTILITY(U,$J,358.3,40,1,0)
+ ;;=^358.31IA^3^2
+ ;;^UTILITY(U,$J,358.3,40,1,2,0)
+ ;;=2^99407
+ ;;^UTILITY(U,$J,358.3,40,1,3,0)
+ ;;=3^Smoking/Tob Cessation Counsel>10Min
+ ;;^UTILITY(U,$J,358.3,41,0)
+ ;;=J2680^^1^6^1^^^^1
+ ;;^UTILITY(U,$J,358.3,41,1,0)
+ ;;=^358.31IA^3^2
+ ;;^UTILITY(U,$J,358.3,41,1,2,0)
+ ;;=2^J2680
+ ;;^UTILITY(U,$J,358.3,41,1,3,0)
+ ;;=3^Fluphenazine Decanoate up to 25mg
+ ;;^UTILITY(U,$J,358.3,42,0)
+ ;;=J2426^^1^6^3^^^^1
+ ;;^UTILITY(U,$J,358.3,42,1,0)
+ ;;=^358.31IA^3^2
+ ;;^UTILITY(U,$J,358.3,42,1,2,0)
+ ;;=2^J2426
+ ;;^UTILITY(U,$J,358.3,42,1,3,0)
+ ;;=3^Paliperidone Palmitate 1mg
+ ;;^UTILITY(U,$J,358.3,43,0)
+ ;;=J1631^^1^6^2^^^^1
+ ;;^UTILITY(U,$J,358.3,43,1,0)
+ ;;=^358.31IA^3^2
+ ;;^UTILITY(U,$J,358.3,43,1,2,0)
+ ;;=2^J1631
+ ;;^UTILITY(U,$J,358.3,43,1,3,0)
+ ;;=3^Haliperidol Decanoate per 50mg
+ ;;^UTILITY(U,$J,358.3,44,0)
+ ;;=J2794^^1^6^4^^^^1
+ ;;^UTILITY(U,$J,358.3,44,1,0)
+ ;;=^358.31IA^3^2
+ ;;^UTILITY(U,$J,358.3,44,1,2,0)
+ ;;=2^J2794
+ ;;^UTILITY(U,$J,358.3,44,1,3,0)
+ ;;=3^Risperidone Long Acting 0.5mg
+ ;;^UTILITY(U,$J,358.3,45,0)
+ ;;=309.24^^2^7^3
+ ;;^UTILITY(U,$J,358.3,45,1,0)
+ ;;=^358.31IA^5^2
+ ;;^UTILITY(U,$J,358.3,45,1,2,0)
+ ;;=2^309.24
+ ;;^UTILITY(U,$J,358.3,45,1,5,0)
+ ;;=5^Adj Reac w/Anx Mood
+ ;;^UTILITY(U,$J,358.3,45,2)
+ ;;=^268308
+ ;;^UTILITY(U,$J,358.3,46,0)
+ ;;=309.4^^2^7^5
+ ;;^UTILITY(U,$J,358.3,46,1,0)
+ ;;=^358.31IA^5^2
+ ;;^UTILITY(U,$J,358.3,46,1,2,0)
+ ;;=2^309.4
+ ;;^UTILITY(U,$J,358.3,46,1,5,0)
+ ;;=5^Adj Reac w/Emotion & Conduct

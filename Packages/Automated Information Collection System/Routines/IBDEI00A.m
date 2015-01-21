@@ -1,72 +1,380 @@
-IBDEI00A ; ; 12-AUG-2014
- ;;3.0;IB ENCOUNTER FORM IMP/EXP;;MAY 15, 2014
- Q:'DIFQR(358.1)  F I=1:2 S X=$T(Q+I) Q:X=""  S Y=$E($T(Q+I+1),4,999),X=$E(X,4,999) S:$A(Y)=126 I=I+1,Y=$E(Y,2,999)_$E($T(Q+I+1),5,99) S:$A(Y)=61 Y=$E(Y,2,999) X NO E  S @X=Y
+IBDEI00A ; ; 19-NOV-2014
+ ;;3.0;IB ENCOUNTER FORM IMP/EXP;;OCT 15, 2014
+ Q:'DIFQR(358.2)  F I=1:2 S X=$T(Q+I) Q:X=""  S Y=$E($T(Q+I+1),4,999),X=$E(X,4,999) S:$A(Y)=126 I=I+1,Y=$E(Y,2,999)_$E($T(Q+I+1),5,99) S:$A(Y)=61 Y=$E(Y,2,999) X NO E  S @X=Y
 Q Q
- ;;^UTILITY(U,$J,358.1,33,0)
- ;;=CPT CODES (3 COL)^7^^7^0^132^16^^^1^PLEASE CHECK OFF PROCEDURES PERFORMED THIS VISIT^BCU^Selection list - CPT codes^0
- ;;^UTILITY(U,$J,358.1,34,0)
- ;;=PRIMARY DIAGNOSIS^7^^24^0^132^9^^^1^DIAGNOSIS^CR^Common ICD-9 diagnoses^0
- ;;^UTILITY(U,$J,358.1,35,0)
- ;;=DIAGNOSIS NAT PC^7^^34^0^133^179^^^1^DIAGNOSES^CR^Common ICD-9 diagnoses^
- ;;^UTILITY(U,$J,358.1,36,0)
- ;;=1995 VISIT TYPE CODES (V2.1)^8^^6^0^132^9^^^1^TYPE OF VISIT^CR^1995 visit types WITH CODES SHOWN^0
- ;;^UTILITY(U,$J,358.1,37,0)
- ;;=ICD-9 DIAGNOSES (V2.1)^8^^36^0^132^79^^^1^DIAGNOSIS^CR^Common ICD-9 diagnoses^0
- ;;^UTILITY(U,$J,358.1,38,0)
- ;;=HEADER^8^^1^56^21^1^^^2
- ;;^UTILITY(U,$J,358.1,39,0)
- ;;=PATIENT INFORMATION^8^^3^0^132^3^^^2^^^Patient information-name/ssn/age
- ;;^UTILITY(U,$J,358.1,40,0)
- ;;=PROCEDURES (V2.1)^8^^15^0^133^20^^^1^PROCEDURES^CR^Common CPT-4 procedures^0
- ;;^UTILITY(U,$J,358.1,41,0)
- ;;=HEADER^9^^1^51^12^1^^^2
- ;;^UTILITY(U,$J,358.1,42,0)
- ;;=VISIT TYPE CODES^9^^7^0^132^11^^^1^EXAM CODES FOR OUTPATIENT EVALUATION & MANAGMENT^CR^1997 OUTPATIENT E&M TYPES W CODES SHOWN^0
- ;;^UTILITY(U,$J,358.1,43,0)
- ;;=PATIENT INFORMATION^9^^5^0^132^3^^^2^^^Patient information-name/ssn/age
- ;;^UTILITY(U,$J,358.1,44,0)
- ;;=PROCEDURES (V2.1)^9^^19^0^132^6^^^1^PROCEDURES^CR^Common CPT-4 procedures^0
- ;;^UTILITY(U,$J,358.1,45,0)
- ;;=DIAGNOSIS NAT PC^9^^26^0^133^224^^^1^DIAGNOSES^CR^Common ICD-9 diagnoses^0
- ;;^UTILITY(U,$J,358.1,46,0)
- ;;=SECONDARY DX^10^^56^0^132^52^^^1^SECONDARY DX-AS APPROPRIATE^CR^SECONDARY DX^0
- ;;^UTILITY(U,$J,358.1,47,0)
- ;;=HEADER^10^^1^56^19^1^^^2
- ;;^UTILITY(U,$J,358.1,48,0)
- ;;=PATIENT INFORMATION^10^^3^0^132^3^^^2^^^Patient information-name/ssn/age
- ;;^UTILITY(U,$J,358.1,49,0)
- ;;=1995 VISIT TYPE CODES (V2.1)^10^^5^0^132^10^^^1^TYPE OF VISIT^CR^1995 visit types WITH CODES SHOWN^0
- ;;^UTILITY(U,$J,358.1,50,0)
- ;;=PROCEDURES (V2.1)^10^^16^0^133^14^^^1^PROCEDURES^CR^Common CPT-4 procedures^0
- ;;^UTILITY(U,$J,358.1,51,0)
- ;;=PRIMARY DX^10^^31^0^132^24^^^1^PRIMARY DIAGNOSIS^CR^PRIMARY DX^0
- ;;^UTILITY(U,$J,358.1,52,0)
- ;;=1995 VISIT TYPE CODES (V2.1)^11^^6^0^132^14^^^1^TYPE OF VISIT^CR^1995 visit types WITH CODES SHOWN^0
- ;;^UTILITY(U,$J,358.1,53,0)
- ;;=DIAGNOSIS NAT PC^11^^66^0^133^534^^^1^DIAGNOSES^CR^Common ICD-9 diagnoses^0
- ;;^UTILITY(U,$J,358.1,54,0)
- ;;=HEADER^11^^1^56^22^1^^^2
- ;;^UTILITY(U,$J,358.1,55,0)
- ;;=PATIENT INFORMATION^11^^3^0^132^3^^^2^^^Patient information-name/ssn/age
- ;;^UTILITY(U,$J,358.1,56,0)
- ;;=PROCEDURES (V2.1)^11^^21^0^133^44^^^1^MARK ALL PROCEDURES PERFORMED^CR^Common CPT-4 procedures^0
- ;;^UTILITY(U,$J,358.1,57,0)
- ;;=1995 VISIT TYPE CODES (V2.1)^12^^6^0^132^10^^^1^TYPE OF VISIT^CR^1995 visit types WITH CODES SHOWN^0
- ;;^UTILITY(U,$J,358.1,58,0)
- ;;=HEADER^12^^1^55^22^1^^^2
- ;;^UTILITY(U,$J,358.1,59,0)
- ;;=PATIENT INFORMATION^12^^3^0^132^3^^^2^^^Patient information-name/ssn/age
- ;;^UTILITY(U,$J,358.1,60,0)
- ;;=CPT CODES^12^^16^0^132^104^^^1^^RC^Selection list - CPT codes^0
- ;;^UTILITY(U,$J,358.1,61,0)
- ;;=DIAGNOSIS^12^^121^0^132^224^^^1^^RC^ICD-9
- ;;^UTILITY(U,$J,358.1,62,0)
- ;;=1995 VISIT TYPE CODES (V2.1)^13^^6^0^132^10^^^1^TYPE OF VISIT^CR^1995 visit types WITH CODES SHOWN^0
- ;;^UTILITY(U,$J,358.1,63,0)
- ;;=HEADER^13^^1^49^24^1^^^2
- ;;^UTILITY(U,$J,358.1,64,0)
- ;;=PATIENT INFORMATION^13^^3^0^132^3^^^2^^^Patient information-name/ssn/age
- ;;^UTILITY(U,$J,358.1,65,0)
- ;;=DIAGNOSIS CODES^13^^261^0^132^274^^^1^DIAGNOSES^RC^Selection list - ICD-9 dx codes^0
- ;;^UTILITY(U,$J,358.1,66,0)
- ;;=CPT CODES (3 COL)^13^^17^0^132^243^^^1^PLEASE CHECK OFF PROCEDURES PERFORMED THIS VISIT^BCU^Selection list - CPT codes^0
+ ;;^UTILITY(U,$J,358.2)
+ ;;=^IBE(358.2,
+ ;;^UTILITY(U,$J,358.2,0)
+ ;;=IMP/EXP SELECTION LIST^358.2I^161^161
+ ;;^UTILITY(U,$J,358.2,1,0)
+ ;;=CPT CODES^1^^^^^1^0^UBC^^1^0^^0^^0^3^2
+ ;;^UTILITY(U,$J,358.2,1,1,0)
+ ;;=^358.21I^3^3
+ ;;^UTILITY(U,$J,358.2,1,1,1,0)
+ ;;=1^2^4
+ ;;^UTILITY(U,$J,358.2,1,1,2,0)
+ ;;=2^2
+ ;;^UTILITY(U,$J,358.2,1,1,3,0)
+ ;;=3^2
+ ;;^UTILITY(U,$J,358.2,1,2,0)
+ ;;=^358.22I^3^3
+ ;;^UTILITY(U,$J,358.2,1,2,1,0)
+ ;;=1^ ^^2^^1^^1
+ ;;^UTILITY(U,$J,358.2,1,2,2,0)
+ ;;=2^ ^5^1^1^^1
+ ;;^UTILITY(U,$J,358.2,1,2,3,0)
+ ;;=3^ ^35^1^2^^1
+ ;;^UTILITY(U,$J,358.2,2,0)
+ ;;=DIAGNOSIS CODES^4^^^^^1^0^UBC^^6^0^2^0^^0^3^2
+ ;;^UTILITY(U,$J,358.2,2,1,0)
+ ;;=^358.21I^2^2
+ ;;^UTILITY(U,$J,358.2,2,1,1,0)
+ ;;=1^3^1
+ ;;^UTILITY(U,$J,358.2,2,1,2,0)
+ ;;=2^3^59
+ ;;^UTILITY(U,$J,358.2,2,2,0)
+ ;;=^358.22I^4^4
+ ;;^UTILITY(U,$J,358.2,2,2,1,0)
+ ;;=2^CODE^6^1^1^^0
+ ;;^UTILITY(U,$J,358.2,2,2,2,0)
+ ;;=5^ ^40^1^2^^1
+ ;;^UTILITY(U,$J,358.2,2,2,3,0)
+ ;;=4^S^^2^^1^^1^2^0
+ ;;^UTILITY(U,$J,358.2,2,2,4,0)
+ ;;=3^P^^2^^1^^1^1^1
+ ;;^UTILITY(U,$J,358.2,3,0)
+ ;;=TYPE OF VISIT^5^^R^^^3^0^UBSC^^8^1^^0
+ ;;^UTILITY(U,$J,358.2,3,2,0)
+ ;;=^358.22I^3^3
+ ;;^UTILITY(U,$J,358.2,3,2,1,0)
+ ;;=1^VISIT (mark one only)^40^1^2^^1
+ ;;^UTILITY(U,$J,358.2,3,2,2,0)
+ ;;=2^CODE^5^1^1^^0
+ ;;^UTILITY(U,$J,358.2,3,2,3,0)
+ ;;=3^x^^2^^1^^1
+ ;;^UTILITY(U,$J,358.2,4,0)
+ ;;=DIAGNOSIS CODES^6^^^^^1^0^UBC^^6^0^^0^^0^3^2
+ ;;^UTILITY(U,$J,358.2,4,2,0)
+ ;;=^358.22I^4^4
+ ;;^UTILITY(U,$J,358.2,4,2,1,0)
+ ;;=2^CODE^6^1^1^^0
+ ;;^UTILITY(U,$J,358.2,4,2,2,0)
+ ;;=5^ ^45^1^2^^1
+ ;;^UTILITY(U,$J,358.2,4,2,3,0)
+ ;;=4^S^^2^^1^^1^2^0
+ ;;^UTILITY(U,$J,358.2,4,2,4,0)
+ ;;=3^P^^2^^1^^1^1^1
+ ;;^UTILITY(U,$J,358.2,5,0)
+ ;;=CPT CODES^7^^^^^1^0^UBC^^1^0^^0^^0^3^2
+ ;;^UTILITY(U,$J,358.2,5,1,0)
+ ;;=^358.21I^3^3
+ ;;^UTILITY(U,$J,358.2,5,1,1,0)
+ ;;=1^3
+ ;;^UTILITY(U,$J,358.2,5,1,2,0)
+ ;;=2^3
+ ;;^UTILITY(U,$J,358.2,5,1,3,0)
+ ;;=3^3
+ ;;^UTILITY(U,$J,358.2,5,2,0)
+ ;;=^358.22I^3^3
+ ;;^UTILITY(U,$J,358.2,5,2,1,0)
+ ;;=1^ ^^2^^1^^1
+ ;;^UTILITY(U,$J,358.2,5,2,2,0)
+ ;;=2^ ^5^1^1^^1
+ ;;^UTILITY(U,$J,358.2,5,2,3,0)
+ ;;=3^ ^50^1^2^^1
+ ;;^UTILITY(U,$J,358.2,6,0)
+ ;;=VISIT TYPE^8^^^^^2^0^C^^8^0^^0^^0^3^2
+ ;;^UTILITY(U,$J,358.2,6,1,0)
+ ;;=^358.21I^1^1
+ ;;^UTILITY(U,$J,358.2,6,1,1,0)
+ ;;=1^2
+ ;;^UTILITY(U,$J,358.2,6,2,0)
+ ;;=^358.22I^4^3
+ ;;^UTILITY(U,$J,358.2,6,2,1,0)
+ ;;=1^ ^28^1^2^^1
+ ;;^UTILITY(U,$J,358.2,6,2,3,0)
+ ;;=3^^^2^^1^^1^^1
+ ;;^UTILITY(U,$J,358.2,6,2,4,0)
+ ;;=2^ ^5^1^1
+ ;;^UTILITY(U,$J,358.2,7,0)
+ ;;=VISIT TYPE^13^^^^^2^0^C^^8^0^^0^^0^3^2
+ ;;^UTILITY(U,$J,358.2,7,1,0)
+ ;;=^358.21I^1^1
+ ;;^UTILITY(U,$J,358.2,7,1,1,0)
+ ;;=1^2
+ ;;^UTILITY(U,$J,358.2,7,2,0)
+ ;;=^358.22I^4^3
+ ;;^UTILITY(U,$J,358.2,7,2,1,0)
+ ;;=1^ ^28^1^2^^1
+ ;;^UTILITY(U,$J,358.2,7,2,3,0)
+ ;;=3^^^2^^1^^1^^1
+ ;;^UTILITY(U,$J,358.2,7,2,4,0)
+ ;;=2^ ^5^1^1
+ ;;^UTILITY(U,$J,358.2,8,0)
+ ;;=CPT CODES^14^^^^^1^0^SC^^1^0^^0^^0^3^2
+ ;;^UTILITY(U,$J,358.2,8,1,0)
+ ;;=^358.21I^1^1
+ ;;^UTILITY(U,$J,358.2,8,1,1,0)
+ ;;=1^2^2
+ ;;^UTILITY(U,$J,358.2,8,2,0)
+ ;;=^358.22I^3^3
+ ;;^UTILITY(U,$J,358.2,8,2,1,0)
+ ;;=3^ ^5^1^1^^0
+ ;;^UTILITY(U,$J,358.2,8,2,2,0)
+ ;;=2^ ^32^1^2^^1
+ ;;^UTILITY(U,$J,358.2,8,2,3,0)
+ ;;=1^ ^^2^^1^^1^^0
+ ;;^UTILITY(U,$J,358.2,9,0)
+ ;;=DIAGNOSES^15^^^^^1^0^BC^^6^0^^0^^0^3^2
+ ;;^UTILITY(U,$J,358.2,9,1,0)
+ ;;=^358.21I^1^1
+ ;;^UTILITY(U,$J,358.2,9,1,1,0)
+ ;;=1^2
+ ;;^UTILITY(U,$J,358.2,9,2,0)
+ ;;=^358.22I^5^5
+ ;;^UTILITY(U,$J,358.2,9,2,1,0)
+ ;;=4^ ^7^1^1^^0
+ ;;^UTILITY(U,$J,358.2,9,2,2,0)
+ ;;=5^ ^40^1^2^^1
+ ;;^UTILITY(U,$J,358.2,9,2,3,0)
+ ;;=1^P^^2^^1^^1^1^1
+ ;;^UTILITY(U,$J,358.2,9,2,4,0)
+ ;;=2^S^^2^^1^^1^2^0
+ ;;^UTILITY(U,$J,358.2,9,2,5,0)
+ ;;=3^A^^2^^1^^1^7^0
+ ;;^UTILITY(U,$J,358.2,10,0)
+ ;;=VISIT TYPE^16^^^^^1^0^C^^8^0^^0^^0^3^2
+ ;;^UTILITY(U,$J,358.2,10,1,0)
+ ;;=^358.21I^2^2
+ ;;^UTILITY(U,$J,358.2,10,1,1,0)
+ ;;=1
+ ;;^UTILITY(U,$J,358.2,10,1,2,0)
+ ;;=2
+ ;;^UTILITY(U,$J,358.2,10,2,0)
+ ;;=^358.22I^4^3
+ ;;^UTILITY(U,$J,358.2,10,2,1,0)
+ ;;=1^ ^28^1^2^^1
+ ;;^UTILITY(U,$J,358.2,10,2,3,0)
+ ;;=3^^^2^^1^^1^^1
+ ;;^UTILITY(U,$J,358.2,10,2,4,0)
+ ;;=2^ ^5^1^1
+ ;;^UTILITY(U,$J,358.2,11,0)
+ ;;=CPT CODES^17^^^^^1^0^BSC^^1^0^^0^^0^3^2
+ ;;^UTILITY(U,$J,358.2,11,2,0)
+ ;;=^358.22I^3^3
+ ;;^UTILITY(U,$J,358.2,11,2,1,0)
+ ;;=4^ ^5^1^1^^0
+ ;;^UTILITY(U,$J,358.2,11,2,2,0)
+ ;;=2^ ^40^1^2^^1
+ ;;^UTILITY(U,$J,358.2,11,2,3,0)
+ ;;=1^ ^^2^^1^^1^^0
+ ;;^UTILITY(U,$J,358.2,12,0)
+ ;;=DIAGNOSIS CODES^20^^^^^1^0^BCS^^6^0^3^0^^0^3^2
+ ;;^UTILITY(U,$J,358.2,12,1,0)
+ ;;=^358.21I^3^3
+ ;;^UTILITY(U,$J,358.2,12,1,1,0)
+ ;;=1^1^1
+ ;;^UTILITY(U,$J,358.2,12,1,2,0)
+ ;;=2^1^44
+ ;;^UTILITY(U,$J,358.2,12,1,3,0)
+ ;;=3^1^79
+ ;;^UTILITY(U,$J,358.2,12,2,0)
+ ;;=^358.22I^4^4
+ ;;^UTILITY(U,$J,358.2,12,2,1,0)
+ ;;=5^ ^6^1^1^^0
+ ;;^UTILITY(U,$J,358.2,12,2,2,0)
+ ;;=4^ ^35^1^2^^1
+ ;;^UTILITY(U,$J,358.2,12,2,3,0)
+ ;;=1^P^^2^^1^^1^1^2
+ ;;^UTILITY(U,$J,358.2,12,2,4,0)
+ ;;=2^S^^2^^1^^1^2^0
+ ;;^UTILITY(U,$J,358.2,13,0)
+ ;;=DIAGNOSIS CODES^21^^R^^^1^0^BSC^^6^0^^0^^0
+ ;;^UTILITY(U,$J,358.2,13,1,0)
+ ;;=^358.21I^1^1
+ ;;^UTILITY(U,$J,358.2,13,1,1,0)
+ ;;=1^3^0
+ ;;^UTILITY(U,$J,358.2,13,2,0)
+ ;;=^358.22I^4^4
+ ;;^UTILITY(U,$J,358.2,13,2,1,0)
+ ;;=1^P^7^2^1^1^0^1^1^1
+ ;;^UTILITY(U,$J,358.2,13,2,2,0)
+ ;;=4^CODE^7^1^1^^0
+ ;;^UTILITY(U,$J,358.2,13,2,3,0)
+ ;;=5^DESCRIPTION^40^1^2^2^1
+ ;;^UTILITY(U,$J,358.2,13,2,4,0)
+ ;;=2^S^^2^^1^^1^2^0
+ ;;^UTILITY(U,$J,358.2,14,0)
+ ;;=CPT CODES^22^^R^^^1^0^BSC^^1^0^2^0^^0^^2
+ ;;^UTILITY(U,$J,358.2,14,2,0)
+ ;;=^358.22I^3^3
+ ;;^UTILITY(U,$J,358.2,14,2,1,0)
+ ;;=1^x^5^2^1^1^0
+ ;;^UTILITY(U,$J,358.2,14,2,2,0)
+ ;;=2^CODE^5^1^1^^0
+ ;;^UTILITY(U,$J,358.2,14,2,3,0)
+ ;;=3^DESCRIPTION^42^1^2^2^1
+ ;;^UTILITY(U,$J,358.2,15,0)
+ ;;=CPT CODES^25^^R^^^1^0^BSC^^1^0^^0^^0^^2
+ ;;^UTILITY(U,$J,358.2,15,1,0)
+ ;;=^358.21I^1^1
+ ;;^UTILITY(U,$J,358.2,15,1,1,0)
+ ;;=1^3
+ ;;^UTILITY(U,$J,358.2,15,2,0)
+ ;;=^358.22I^3^3
+ ;;^UTILITY(U,$J,358.2,15,2,1,0)
+ ;;=1^x^5^2^1^1^0
+ ;;^UTILITY(U,$J,358.2,15,2,2,0)
+ ;;=2^CODE^5^1^1^^0
+ ;;^UTILITY(U,$J,358.2,15,2,3,0)
+ ;;=3^DESCRIPTION^45^1^2^2^1
+ ;;^UTILITY(U,$J,358.2,16,0)
+ ;;=VISIT TYPE^26^^^^^2^0^C^^8^0^^0^^0^3^2
+ ;;^UTILITY(U,$J,358.2,16,1,0)
+ ;;=^358.21I^1^1
+ ;;^UTILITY(U,$J,358.2,16,1,1,0)
+ ;;=1^2
+ ;;^UTILITY(U,$J,358.2,16,2,0)
+ ;;=^358.22I^4^3
+ ;;^UTILITY(U,$J,358.2,16,2,1,0)
+ ;;=1^ ^28^1^2^^1
+ ;;^UTILITY(U,$J,358.2,16,2,3,0)
+ ;;=3^^^2^^1^^1^^1
+ ;;^UTILITY(U,$J,358.2,16,2,4,0)
+ ;;=2^ ^5^1^1
+ ;;^UTILITY(U,$J,358.2,17,0)
+ ;;=DIAGNOSIS CODES^29^^R^^^1^0^BSC^^6^0^^0^^0
+ ;;^UTILITY(U,$J,358.2,17,1,0)
+ ;;=^358.21I^1^1
+ ;;^UTILITY(U,$J,358.2,17,1,1,0)
+ ;;=1^3^0
+ ;;^UTILITY(U,$J,358.2,17,2,0)
+ ;;=^358.22I^4^4
+ ;;^UTILITY(U,$J,358.2,17,2,1,0)
+ ;;=1^P^7^2^1^1^0^1^1^1
+ ;;^UTILITY(U,$J,358.2,17,2,2,0)
+ ;;=4^CODE^7^1^1^^0
+ ;;^UTILITY(U,$J,358.2,17,2,3,0)
+ ;;=5^DESCRIPTION^40^1^2^2^1
+ ;;^UTILITY(U,$J,358.2,17,2,4,0)
+ ;;=2^S^^2^^1^^1^2^0
+ ;;^UTILITY(U,$J,358.2,18,0)
+ ;;=DIAGNOSES^30^^^^^1^0^BC^^6^0^^0^^0^3^2
+ ;;^UTILITY(U,$J,358.2,18,1,0)
+ ;;=^358.21I^1^1
+ ;;^UTILITY(U,$J,358.2,18,1,1,0)
+ ;;=1^2
+ ;;^UTILITY(U,$J,358.2,18,2,0)
+ ;;=^358.22I^5^5
+ ;;^UTILITY(U,$J,358.2,18,2,1,0)
+ ;;=4^ ^7^1^1^^0
+ ;;^UTILITY(U,$J,358.2,18,2,2,0)
+ ;;=5^ ^40^1^2^^1
+ ;;^UTILITY(U,$J,358.2,18,2,3,0)
+ ;;=1^P^^2^^1^^1^1^1
+ ;;^UTILITY(U,$J,358.2,18,2,4,0)
+ ;;=2^S^^2^^1^^1^2^0
+ ;;^UTILITY(U,$J,358.2,18,2,5,0)
+ ;;=3^A^^2^^1^^1^7^0
+ ;;^UTILITY(U,$J,358.2,19,0)
+ ;;=CPT CODES^33^^^^^1^0^UBC^^1^0^2^0^^0^3^2
+ ;;^UTILITY(U,$J,358.2,19,1,0)
+ ;;=^358.21I^3^3
+ ;;^UTILITY(U,$J,358.2,19,1,1,0)
+ ;;=1^2^2
+ ;;^UTILITY(U,$J,358.2,19,1,2,0)
+ ;;=2^2^54
+ ;;^UTILITY(U,$J,358.2,19,1,3,0)
+ ;;=3
+ ;;^UTILITY(U,$J,358.2,19,2,0)
+ ;;=^358.22I^3^3
+ ;;^UTILITY(U,$J,358.2,19,2,1,0)
+ ;;=1^ ^^2^^1^^1
+ ;;^UTILITY(U,$J,358.2,19,2,2,0)
+ ;;=2^ ^5^1^1^^1
+ ;;^UTILITY(U,$J,358.2,19,2,3,0)
+ ;;=3^ ^35^1^2^^1
+ ;;^UTILITY(U,$J,358.2,20,0)
+ ;;=VISIT TYPE^34^^^^^4^0^C^^8^0^^0^^0^3^2
+ ;;^UTILITY(U,$J,358.2,20,1,0)
+ ;;=^358.21I^1^1
+ ;;^UTILITY(U,$J,358.2,20,1,1,0)
+ ;;=1^2
+ ;;^UTILITY(U,$J,358.2,20,2,0)
+ ;;=^358.22I^3^2
+ ;;^UTILITY(U,$J,358.2,20,2,1,0)
+ ;;=1^^29^1^2^^1
+ ;;^UTILITY(U,$J,358.2,20,2,3,0)
+ ;;=3^^^2^^1^^1^^1
+ ;;^UTILITY(U,$J,358.2,21,0)
+ ;;=VISIT TYPE^36^^^^^2^0^C^^8^0^^0^^0^3^2
+ ;;^UTILITY(U,$J,358.2,21,1,0)
+ ;;=^358.21I^1^1
+ ;;^UTILITY(U,$J,358.2,21,1,1,0)
+ ;;=1^2
+ ;;^UTILITY(U,$J,358.2,21,2,0)
+ ;;=^358.22I^4^3
+ ;;^UTILITY(U,$J,358.2,21,2,1,0)
+ ;;=1^ ^28^1^2^^1
+ ;;^UTILITY(U,$J,358.2,21,2,3,0)
+ ;;=3^^^2^^1^^1^^1
+ ;;^UTILITY(U,$J,358.2,21,2,4,0)
+ ;;=2^ ^5^1^1
+ ;;^UTILITY(U,$J,358.2,22,0)
+ ;;=CPT CODES^38^^^^^1^0^SC^^1^1^3^0^^0^3^2
+ ;;^UTILITY(U,$J,358.2,22,1,0)
+ ;;=^358.21I^3^3
+ ;;^UTILITY(U,$J,358.2,22,1,1,0)
+ ;;=1^2^1
+ ;;^UTILITY(U,$J,358.2,22,1,2,0)
+ ;;=2^2^44
+ ;;^UTILITY(U,$J,358.2,22,1,3,0)
+ ;;=3^2^87
+ ;;^UTILITY(U,$J,358.2,22,2,0)
+ ;;=^358.22I^3^3
+ ;;^UTILITY(U,$J,358.2,22,2,1,0)
+ ;;=3^ ^5^1^1^^0
+ ;;^UTILITY(U,$J,358.2,22,2,2,0)
+ ;;=2^ ^32^1^2^^1
+ ;;^UTILITY(U,$J,358.2,22,2,3,0)
+ ;;=1^ ^^2^^1^^1^^0
+ ;;^UTILITY(U,$J,358.2,23,0)
+ ;;=DIAGNOSES^39^^^^^1^0^BC^^6^0^^0^^0^3^2
+ ;;^UTILITY(U,$J,358.2,23,1,0)
+ ;;=^358.21I^1^1
+ ;;^UTILITY(U,$J,358.2,23,1,1,0)
+ ;;=1^2
+ ;;^UTILITY(U,$J,358.2,23,2,0)
+ ;;=^358.22I^5^5
+ ;;^UTILITY(U,$J,358.2,23,2,1,0)
+ ;;=4^ ^7^1^1^^0
+ ;;^UTILITY(U,$J,358.2,23,2,2,0)
+ ;;=5^ ^40^1^2^^1
+ ;;^UTILITY(U,$J,358.2,23,2,3,0)
+ ;;=1^P^^2^^1^^1^1^1
+ ;;^UTILITY(U,$J,358.2,23,2,4,0)
+ ;;=2^S^^2^^1^^1^2^0
+ ;;^UTILITY(U,$J,358.2,23,2,5,0)
+ ;;=3^A^^2^^1^^1^7^0
+ ;;^UTILITY(U,$J,358.2,24,0)
+ ;;=DIAGNOSIS CODES^41^^R^^^3^0^UBSC^^6^1^^0^^0
+ ;;^UTILITY(U,$J,358.2,24,2,0)
+ ;;=^358.22I^4^3
+ ;;^UTILITY(U,$J,358.2,24,2,1,0)
+ ;;=1^CODE^7^1^1^^0
+ ;;^UTILITY(U,$J,358.2,24,2,2,0)
+ ;;=2^DIAGNOSIS^30^1^2^^1
+ ;;^UTILITY(U,$J,358.2,24,2,4,0)
+ ;;=4^S^^2^^1^^1
+ ;;^UTILITY(U,$J,358.2,25,0)
+ ;;=DIAGNOSES^42^^^^^4^0^SC^^6^0^^0^^0^3^2
+ ;;^UTILITY(U,$J,358.2,25,2,0)
+ ;;=^358.22I^4^3
+ ;;^UTILITY(U,$J,358.2,25,2,1,0)
+ ;;=4^CODE^7^1^1^^0
+ ;;^UTILITY(U,$J,358.2,25,2,2,0)
+ ;;=3^DIAGNOSIS^34^1^2^^1
+ ;;^UTILITY(U,$J,358.2,25,2,4,0)
+ ;;=1^P^^2^^1^^1^1^1
+ ;;^UTILITY(U,$J,358.2,26,0)
+ ;;=CPT CODES^44^^^^^1^0^SC^^1^0^^0^^0^3^2

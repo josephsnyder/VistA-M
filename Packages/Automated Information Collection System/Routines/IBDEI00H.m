@@ -1,46 +1,64 @@
-IBDEI00H ; ; 12-AUG-2014
- ;;3.0;IB ENCOUNTER FORM IMP/EXP;;MAY 15, 2014
- Q:'DIFQR(358.1)  F I=1:2 S X=$T(Q+I) Q:X=""  S Y=$E($T(Q+I+1),4,999),X=$E(X,4,999) S:$A(Y)=126 I=I+1,Y=$E(Y,2,999)_$E($T(Q+I+1),5,99) S:$A(Y)=61 Y=$E(Y,2,999) X NO E  S @X=Y
+IBDEI00H ; ; 19-NOV-2014
+ ;;3.0;IB ENCOUNTER FORM IMP/EXP;;OCT 15, 2014
+ Q:'DIFQ(358.3)  F I=1:2 S X=$T(Q+I) Q:X=""  S Y=$E($T(Q+I+1),4,999),X=$E(X,4,999) S:$A(Y)=126 I=I+1,Y=$E(Y,2,999)_$E($T(Q+I+1),5,99) S:$A(Y)=61 Y=$E(Y,2,999) X NO E  S @X=Y
 Q Q
- ;;^UTILITY(U,$J,358.1,263,0)
- ;;=WOMEN'S CLINIC PROCEDURES^54^^20^0^132^55^^^1^PROCEDURES^CR^WOMEN'S CLINIC PROCEDURES^0
- ;;^UTILITY(U,$J,358.1,264,0)
- ;;=1995 VISIT TYPE CODES (V2.1)^54^^6^0^132^13^^^1^TYPE OF VISIT^CR^1995 visit types WITH CODES SHOWN^0
- ;;^UTILITY(U,$J,358.1,265,0)
- ;;=PATIENT INFORMATION^54^^3^1^132^3^^^2^^^Patient information-name/ssn/age^0
- ;;^UTILITY(U,$J,358.1,266,0)
- ;;=VISN DX W CODE BY BUBBLE (V2.1^54^^81^0^132^107^^^1^DIAGNOSIS^CR^VISN NEW DX BLOCK WITH ACTIVE PROBLEMS^0
- ;;^UTILITY(U,$J,358.1,267,0)
- ;;=HEADER^54^^2^52^23^1^^^2
- ;;^UTILITY(U,$J,358.1,268,0)
- ;;=HEADER^55^^1^44^29^1^^^2
- ;;^UTILITY(U,$J,358.1,269,0)
- ;;=PATIENT INFORMATION^55^^4^0^132^3^^^2^^^Patient information-name/ssn/age
- ;;^UTILITY(U,$J,358.1,270,0)
- ;;=PROCEDURES (V2.1)^55^^21^0^133^13^^^1^PROCEDURES^CR^Common CPT-4 procedures^0
- ;;^UTILITY(U,$J,358.1,271,0)
- ;;=ICD-9 DIAGNOSES (V2.1)^55^^35^0^132^50^^^1^DIAGNOSIS^CR^Common ICD-9 diagnoses^0
- ;;^UTILITY(U,$J,358.1,272,0)
- ;;=1995 VISIT TYPE CODES (V2.1)^55^^7^0^132^13^^^1^TYPE OF VISIT^CR^1995 visit types WITH CODES SHOWN^0
- ;;^UTILITY(U,$J,358.1,273,0)
- ;;=HEADER^56^^1^49^23^1^^^2
- ;;^UTILITY(U,$J,358.1,274,0)
- ;;=PATIENT INFORMATION^56^^3^0^132^3^^^2^^^Patient information-name/ssn/age
- ;;^UTILITY(U,$J,358.1,275,0)
- ;;=DIAGNOSIS CODES^56^^48^0^132^212^^^1^DIAGNOSES^RC^Selection list - ICD-9 dx codes^0
- ;;^UTILITY(U,$J,358.1,276,0)
- ;;=1995 VISIT TYPE CODES (V2.1)^56^^7^0^132^11^^^1^TYPE OF VISIT^CR^1995 visit types WITH CODES SHOWN^0
- ;;^UTILITY(U,$J,358.1,277,0)
- ;;=PRIMARY DIAGNOSIS^56^^38^0^132^9^^^1^DIAGNOSIS^CR^Common ICD-9 diagnoses^0
- ;;^UTILITY(U,$J,358.1,278,0)
- ;;=CPT CODES (3 COL)^56^^18^0^132^19^^^1^PLEASE CHECK OFF PROCEDURES PERFORMED THIS VISIT^BCU^Selection list - CPT codes^0
- ;;^UTILITY(U,$J,358.1,279,0)
- ;;=CPT CODES (3 COL)^57^^26^0^132^42^^^1^PLEASE CHECK OFF PROCEDURES PERFORMED THIS VISIT^BCU^Selection list - CPT codes^0
- ;;^UTILITY(U,$J,358.1,280,0)
- ;;=HEADER^57^^1^55^26^1^^^2
- ;;^UTILITY(U,$J,358.1,281,0)
- ;;=PATIENT INFORMATION^57^^3^0^132^3^^^2^^^Patient information-name/ssn/age
- ;;^UTILITY(U,$J,358.1,282,0)
- ;;=TYPE OF VISIT - 1994 CODES^57^^6^0^132^19^^^1^^^Selection list - visit types with their CPT codes^0
- ;;^UTILITY(U,$J,358.1,283,0)
- ;;=DIAGNOSIS CODES^57^^69^0^132^189^^^1^DIAGNOSES^RC^Selection list - ICD-9 dx codes
+ ;;^DIC(358.3,0,"GL")
+ ;;=^IBE(358.3,
+ ;;^DIC("B","IMP/EXP SELECTION",358.3)
+ ;;=
+ ;;^DIC(358.3,"%D",0)
+ ;;=^^4^4^2940217^
+ ;;^DIC(358.3,"%D",1,0)
+ ;;= 
+ ;;^DIC(358.3,"%D",2,0)
+ ;;=This file is nearly identical to file #357.3. It is used by the
+ ;;^DIC(358.3,"%D",3,0)
+ ;;=Import/Export Utility as a temporary staging area for data from that file
+ ;;^DIC(358.3,"%D",4,0)
+ ;;=that is being imported or exported.
+ ;;^DD(358.3,0)
+ ;;=FIELD^^3^15
+ ;;^DD(358.3,0,"DDA")
+ ;;=N
+ ;;^DD(358.3,0,"DT")
+ ;;=2961031
+ ;;^DD(358.3,0,"ID",.03)
+ ;;=S %I=Y,Y=$S('$D(^(0)):"",$D(^IBE(358.2,+$P(^(0),U,3),0))#2:$P(^(0),U,1),1:""),C=$P(^DD(358.2,.01,0),U,2) D Y^DIQ:Y]"" W "   ",Y,@("$E("_DIC_"%I,0),0)") S Y=%I K %I
+ ;;^DD(358.3,0,"ID",.04)
+ ;;=S %I=Y,Y=$S('$D(^(0)):"",$D(^IBE(358.4,+$P(^(0),U,4),0))#2:$P(^(0),U,1),1:""),C=$P(^DD(358.4,.01,0),U,2) D Y^DIQ:Y]"" W "   ",Y,@("$E("_DIC_"%I,0),0)") S Y=%I K %I
+ ;;^DD(358.3,0,"IX","APO",358.3,.03)
+ ;;=
+ ;;^DD(358.3,0,"IX","APO1",358.3,.04)
+ ;;=
+ ;;^DD(358.3,0,"IX","APO2",358.3,.05)
+ ;;=
+ ;;^DD(358.3,0,"IX","B",358.3,.01)
+ ;;=
+ ;;^DD(358.3,0,"IX","C",358.3,.03)
+ ;;=
+ ;;^DD(358.3,0,"IX","D",358.3,.04)
+ ;;=
+ ;;^DD(358.3,0,"NM","IMP/EXP SELECTION")
+ ;;=
+ ;;^DD(358.3,0,"VRPK")
+ ;;=IBD
+ ;;^DD(358.3,.01,0)
+ ;;=SELECTION ID^RF^^0;1^K:$L(X)>30!($L(X)<3)!'(X'?1P.E) X
+ ;;^DD(358.3,.01,1,0)
+ ;;=^.1
+ ;;^DD(358.3,.01,1,1,0)
+ ;;=358.3^B
+ ;;^DD(358.3,.01,1,1,1)
+ ;;=S ^IBE(358.3,"B",$E(X,1,30),DA)=""
+ ;;^DD(358.3,.01,1,1,2)
+ ;;=K ^IBE(358.3,"B",$E(X,1,30),DA)
+ ;;^DD(358.3,.01,3)
+ ;;=Answer must be 3-30 characters in length.
+ ;;^DD(358.3,.01,21,0)
+ ;;=^^2^2^2930309^
+ ;;^DD(358.3,.01,21,1,0)
+ ;;= 
+ ;;^DD(358.3,.01,21,2,0)
+ ;;=The ID passed by the package.
+ ;;^DD(358.3,.01,"DT")
+ ;;=2921119
