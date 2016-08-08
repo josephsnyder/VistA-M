@@ -1,10 +1,6 @@
-DIETED ;SFISC/GFT SCREEN-EDIT AN INPUT TEMPLATE ;15NOV2012
- ;;22.2;MSC Fileman;;Jan 05, 2015;
- ;;Submitted to OSEHRA 5 January 2015 by the VISTA Expertise Network.
- ;;Based on Medsphere Systems Corporation's MSC Fileman 1051.
- ;;Licensed under the terms of the Apache License, Version 2.0.
- ;;GFT;**111,142**
- ;
+DIETED ;SFISC/GFT SCREEN-EDIT AN INPUT TEMPLATE ;22MAY2006
+ ;;22.0;VA FileMan;**111,159**;Mar 30, 1999;Build 1
+ ;Per VHA Directive 2004-038, this routine should not be modified.
  N DIC,DIET,DRK,DIETED,I,J,DDSCHG
  S DIC=.402,DIC(0)="AEQ" D ^DIC Q:Y<1
  S DIET=+Y D E
@@ -15,7 +11,7 @@ K K ^UTILITY("DIETEDIAB",$J),^UTILITY("DIETED",$J)
 EDIT(DIET) ; Edit Template using Screen Editor
  N DRK,DIETED,I,J
 E N DUOUT,DTOUT,DP,DI,D0,DIETROW,DIETEDER,DIETH,DR,F,L,DB
- D:'$D(DISYS) OS^DII X ^DD("OS",DISYS,"EON")
+ X ^%ZOSF("EON")
  I '$D(^DIE(DIET,0)) W !,"NO TEMPLATE SELECTED",! Q
  S DIETED="Input Template """_$P(^(0),U)_""""
  W "..."
@@ -25,7 +21,7 @@ DDW D EDIT^DDW("^TMP(""DIETED"",$J)","M",DIETH,"(File "_DRK_")",DIETROW)
  I $D(DUOUT)!$D(DTOUT) K DR G KL
  D K K I,J
  D PROCESS("^TMP(""DIETED"",$J)")
- X ^DD("OS",DISYS,"EON")
+ X ^%ZOSF("EON")
  S DIETROW=$O(DIETEDER(0)) I DIETROW S DIETH="ERROR!  Re-editing "_DIETED K DIETEDER G DDW
  S DDSCHG=1
 KL K ^TMP("DIETED",$J)

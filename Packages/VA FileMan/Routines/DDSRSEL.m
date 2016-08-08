@@ -1,9 +1,6 @@
-DDSRSEL ;SFISC/MKO-RECORD SELECTION ;7JAN2004
- ;;22.2;MSC Fileman;;Jan 05, 2015;
- ;;Submitted to OSEHRA 5 January 2015 by the VISTA Expertise Network.
- ;;Based on Medsphere Systems Corporation's MSC Fileman 1051.
- ;;Licensed under the terms of the Apache License, Version 2.0.
- ;;GFT;**1003**
+DDSRSEL ;SFISC/MKO-RECORD SELECTION ;08:14 AM  31 Jul 1995
+ ;;22.0;VA FileMan;;Mar 30, 1999;Build 1
+ ;Per VHA Directive 10-93-142, this routine should not be modified.
  ;
 PG ;Called from:
  ;  DDS01 when user presses SELECT
@@ -16,7 +13,7 @@ PG ;Called from:
  ; DDSSEL = 1 (undefined if no record selection page)
  ;
  N P,P1 K DDSSEL
- I $D(DDSSC),$P($G(DDSSC(DDSSC)),U,4) Q  ;GFT
+ I $D(DDSSC),$P(DDSSC(DDSSC),U,4) Q
  ;
  S P="",P1=$P($G(^DIST(.403,+DDS,21)),U)
  I P1]"" D
@@ -32,11 +29,9 @@ PG ;Called from:
 GDA ;Called from DDS
  ;After a record selection page is closed get the DA from
  ;the first field on the page.
- N DDSANS,DDSREC,Y,PG
+ N DDSANS,DDSREC,Y
  S DDSANS=""
-GFT S PG=$P($G(^DIST(.403,+DDS,21)),U) G KILL:'PG N P S P=$O(^(40,"B",PG,0)) D:P  I '$D(Y) G KILL
- .F Y=0:0 S Y=$O(^DIST(.403,+DDS,40,P,40,Y)) Q:'Y  I $G(^(Y,"COMP MUL"))]"" K Y Q
- E  S DDSREC=$$GET^DDSVALF(1,1,PG) ;ON THE OLD KIND OF LOOKUP PAGE, THERE IS 1 FIELD, 1 BLOCK
+ S DDSREC=$$GET^DDSVALF(1,1,$P(^DIST(.403,+DDS,21),U))
  ;
  K DA,DDSDAORG
  S DDSDA=DDSDASV,DDSDL=DDSDLSV
@@ -64,7 +59,7 @@ GFT S PG=$P($G(^DIST(.403,+DDS,21)),U) G KILL:'PG N P S P=$O(^(40,"B",PG,0)) D:P
  . I DDSSC=1 D FRSTPG^DDS0(DDS,.DA,$G(DDSPAGE))
  . D CLRDAT,UNLOCK
  ;
-KILL K DDSSEL,DDSDASV,DDSDASV,DDSDLSV,DDSORGSV
+ K DDSSEL,DDSDASV,DDSDASV,DDSDLSV,DDSORGSV
  Q
  ;
 ASKSAVE() ;

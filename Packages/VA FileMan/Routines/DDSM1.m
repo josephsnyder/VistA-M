@@ -1,9 +1,6 @@
-DDSM1 ;SFISC/MKO-MULTILINE, LOAD AND DELETE ;2015-01-02  5:49 PM
- ;;22.2;MSC Fileman;;Jan 05, 2015;
- ;;Submitted to OSEHRA 5 January 2015 by the VISTA Expertise Network.
- ;;Based on Medsphere Systems Corporation's MSC Fileman 1051.
- ;;Licensed under the terms of the Apache License, Version 2.0.
- ;;GFT;**8,1003**
+DDSM1 ;SFISC/MKO-MULTILINE, LOAD AND DELETE ;9:49 AM  20 Apr 1999
+ ;;22.0;VA FileMan;**8**;Mar 30, 1999;Build 1
+ ;Per VHA Directive 10-93-142, this routine should not be modified.
  ;
 LOAD(DDSIEN) ;Load subentries
 MLOAD ;Entry point from MLOAD^DDSUTL
@@ -26,7 +23,7 @@ MLOAD ;Entry point from MLOAD^DDSUTL
  .. S @DDSREFT@(DDSPG,DDSBK,DDSPDA,"B",DDSDA)=DDSSN
  .. S @DDSREFT@(DDSPG,DDSBK,DDSPDA,DDSSN)=DDSDA
  .. S ^("ADD")=$G(@DDSREFT@("ADD"))+1,^("ADD",^("ADD"))=DDSDA_DIE
- . D EN^DDS11(DDSBK)
+ . D ^DDS11(DDSBK)
  . S DDSCHG=1
  ;
  ;Position the cursor on blank (Select) line
@@ -35,8 +32,8 @@ MLOAD ;Entry point from MLOAD^DDSUTL
  D DMULTN^DDSR(DDSPG,DDSBK,DDSPDA,$P(DDSREP,U,5),1)
  ;
  ;Update DIR0
-DIR0 S DIR0=$P(@DDSREFS@(DDSPG,DDSBK,DDO,"D"),U,1,3)
- S:$P($G(DDSREP),U,3)>1 $P(DIR0,U)=$P(DIR0,U)+($P(DDSREP,U,3)-1*$$HITE^DDSR(DDSBK)) ;DJW/GFT
+ S DIR0=$P(@DDSREFS@(DDSPG,DDSBK,DDO,"D"),U,1,3)
+ S:$P($G(DDSREP),U,3)>1 $P(DIR0,U)=$P(DIR0,U)+$P(DDSREP,U,3)-1
  Q
  ;
 DEL(DDSIEN) ;Delete subentries
@@ -86,7 +83,8 @@ MDEL ;Entry point from MDEL^DDSUTL
  D POSSN^DDSM(999999999999,1)
  ;
  ;Update DIR0
-DIR01 D DIR0
+ S DIR0=$P(@DDSREFS@(DDSPG,DDSBK,DDO,"D"),U,1,3)
+ S:$P($G(DDSREP),U,3)>1 $P(DIR0,U)=$P(DIR0,U)+$P(DDSREP,U,3)-1
  Q
  ;
 MDELONE ;Delete one subentry in the current repeating block
@@ -113,5 +111,7 @@ MDELONE ;Delete one subentry in the current repeating block
  ;
  E  D POSSN^DDSM(999999999999,1)
  ;
-DIR02 D DIR0
+ ;Update DIR0
+ S DIR0=$P(@DDSREFS@(DDSPG,DDSBK,DDO,"D"),U,1,3)
+ S:$P($G(DDSREP),U,3)>1 $P(DIR0,U)=$P(DIR0,U)+$P(DDSREP,U,3)-1
  Q
