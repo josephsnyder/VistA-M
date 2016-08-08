@@ -1,5 +1,5 @@
 NETWORK LOCATION
-64138,43919 ZWR
+64138,53094 ZWR
 ^MAG(2005.2,0)="NETWORK LOCATION^2005.2^5^5"
 ^MAG(2005.2,1,0)="VISTASITESERVICE^http://siteserver.vista.domain.ext/VistaWebSvcs/SiteService.asmx^^^^1^URL^^^1"
 ^MAG(2005.2,2,0)="RG-ZZT1^^^^^0^GRP^^^1"
