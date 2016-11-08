@@ -1758,7 +1758,7 @@ ZWR
 ^XMB(3.8,314,6,0)="^3.812^1^1"
 ^XMB(3.8,314,6,1,0)="BA.TRAN@DOMAIN.EXT"
 ^XMB(3.8,314,6,"B","BA.TRAN@DOMAIN.EXT",1)=""
-^XMB(3.8,315,0)="PSO SPMP NOTIFICATIONS^PR^y^^^^"
+^XMB(3.8,315,0)="PSO SPMP NOTIFICATIONS^PU^y^^^^"
 ^XMB(3.8,315,2,0)="^^1^1^3121220^"
 ^XMB(3.8,315,2,1,0)="This mail group will receive error notifications when the background job responsible for transmitting controlled substance prescriptions to the state fails."
 ^XMB(3.8,315,3)="17"
