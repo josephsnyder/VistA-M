@@ -11,8 +11,8 @@ EN ;This post install routine will remove obsolete *EVENT CAPTURE PROCEDURE, ^EC
  D BMES^XPDUTL("These files were flagged for deletion by EC*2*5 and is now being removed.")
  D MES^XPDUTL("Please be patient while the files are being removed.")
  N DIU
- S DIU(0)="DT"
- F DIU=720,720.2 D EN^DIU2
+ ;S DIU(0)="DT"
+ ;F DIU=720,720.2 D EN^DIU2
  D BMES^XPDUTL("Done!")
  Q
  ;

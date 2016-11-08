@@ -1,10 +1,7 @@
-YTQAPI12 ;ASF/ALB,HIOFO/FT - MHQ IMPORT PROCEDURES ; 3/14/13 4:07pm
- ;;5.01;MENTAL HEALTH;**85,108**;Dec 30, 1994;Build 17
- ;Reference to XMXAPIB API supported by DBIA #2723
- ;Reference to ^XLFDT APIs supported by DBIA #10103
- ;Reference to File 3.9 supported by DBIA #10113
+YTQAPI12 ;ASF/ALB MHQ IMPORT PROCEEDURES ; 4/3/07 11:14am
+ ;;5.01;MENTAL HEALTH;**85**;Dec 30, 1994;Build 48
  Q
-IMPORT(YSATA,YS) ;Entry point for YTQ IMPORT rpc
+IMPORT(YSATA,YS) ;
  K ^TMP($J)
  N YSERR,YSMS,%X,%Y,DA,DIK,N,X,Y,YSCP,YSEND,YSFILE,YSFL,YSFLD,YSGL,YSNEW,YSNVAL,YSOVAL,YSPF
  S YSMS=$G(YS("MESSAGE"))
@@ -59,7 +56,7 @@ POINT ; set relational keys
 FK ;foreign keys
  S N=0 F  S N=$O(^TMP($J,"YSI",YSFILE,N)) Q:N'>0  D
  . S YSNEW=^TMP($J,"YSOLD",YSFILE,N)
- . S YSGL=$$GP(YSFILE,YSFLD),YSCP=$P(YSGL,";",2),YSGL=$P(YSGL,";",1)
+ . S YSGL=$P(^DD(YSFILE,YSFLD,0),U,4),YSCP=$P(YSGL,";",2),YSGL=+YSGL
  . Q:YSCP=""
  . S YSOVAL=$P($G(^YTT(YSFILE,YSNEW,YSGL)),U,YSCP)
  . Q:YSOVAL'?1N.E
@@ -69,7 +66,6 @@ FK ;foreign keys
  . S DA=YSNEW,DIK="^YTT("_YSFILE_",",DIK(1)=YSFLD D EN^DIK
  Q
 MLIST(YSDATA) ;LISTMSGS^XMXAPIB(XMDUZ,XMK,XMFLDS,XMFLAGS,XMAMT,.XMSTART,.XMCRIT,XMTROOT)
- ;entry point for YTQ EXPORTED MAIL rpc
  ;returns list of exported tests in mailbox
  ;input: none
  ;output : msg #^subject^date
@@ -83,7 +79,7 @@ MLIST(YSDATA) ;LISTMSGS^XMXAPIB(XMDUZ,XMK,XMFLDS,XMFLAGS,XMAMT,.XMSTART,.XMCRIT,
  S N=0 F  S N=$O(^TMP("XMLIST",$J,N)) Q:N'>0  D
  . S ^TMP("YSMAIL",$J,N+1)=^TMP("XMLIST",$J,N)_U_$G(^TMP("XMLIST",$J,N,"SUBJ"))_U_$P($G(^TMP("XMLIST",$J,N,"DATE")),U,1)
  Q
-LISTASI(YSDATA,YS) ;entry point for YTQ ASI LISTER rpc
+LISTASI(YSDATA,YS) ;ASI LISTER
  ;REQUIRES: DFN
  ;RETURNS: IEN=DATE OF INTERVIEW^CLASS^SPECIAL^ESIGNED^INTERVIEWER(E)^INTERVIWER(I)
  ;0 RETURNED IF NO ADMINS
@@ -100,15 +96,3 @@ LISTASI(YSDATA,YS) ;entry point for YTQ ASI LISTER rpc
  . S ^TMP("YSDATA",$J,YSN)=^TMP("YSDATA",$J,YSN)_U_$$GET1^DIQ(604,YSIEN_",",.09,"E")_U_$$GET1^DIQ(604,YSIEN_",",.09,"I")
  . S ^TMP("YSDATA",$J,YSN)=^TMP("YSDATA",$J,YSN)_U_$$GET1^DIQ(604,YSIEN_",",.09,"E")_U_$$GET1^DIQ(604,YSIEN_",",.09,"I")
  Q
-GP(YSX,YSY) ;function returns global node and piece
- ;  Input: YSX = file number
- ;         YSY = field number
- ; Output: global node_";"_piece number
- ;         returns "" (null) if error
- S YSX=$G(YSX),YSY=$G(YSY)
- I YSX=""!(YSY="") Q ""
- N YSERROR,YSTARGET
- D FIELD^DID(YSX,YSY,,"GLOBAL SUBSCRIPT LOCATION","YSTARGET","YSERROR")
- I $D(YSERROR) Q ""
- Q YSTARGET("GLOBAL SUBSCRIPT LOCATION")
- ;

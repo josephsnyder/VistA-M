@@ -1,9 +1,9 @@
-DDWT1 ;SFISC/PD KELTZ,MKO-READ AND PROCESS ;2014-12-20  1:51 PM
- ;;22.2;MSC Fileman;;Jan 05, 2015;
+DDWT1 ;SFISC/PD KELTZ,MKO-READ AND PROCESS ;2015-11-25  9:34 AM
+ ;;22.2;VA FileMan;;Jan 05, 2016;Build 42
+ ;;Per VA Directive 6402, this routine should not be modified.
  ;;Submitted to OSEHRA 5 January 2015 by the VISTA Expertise Network.
- ;;Based on Medsphere Systems Corporation's MSC Fileman 1051.
+ ;;Based on Medsphere Systems Corporation's MSC FileMan 1051.
  ;;Licensed under the terms of the Apache License, Version 2.0.
- ;;GFT;**18,1000,1004,1005,1045,1049**
  ;
  D LOAD^DDW1 K DUOUT
  I '$G(DDWRWSET) D BOT^DDW3 I $L(DDWN) D BREAK^DDW5() ;GFT -- GO TO BOTTOM OF TEXT
@@ -52,6 +52,7 @@ IC . I 0  ;$P(DDGLED,DDGLDEL,5)]"" W $P(DDGLED,DDGLDEL,5)_DDWQ   GFT --  DON'T U
  Q
  ;
 RUB N DDWX
+ I DDWN="" S DDWCNT=DDWCNT-1  ;if current line is null and backspace
  S DDWED=1
  I $D(DDWMARK) D CHKDEL^DDW9(.DDWX) Q:DDWX
  ;

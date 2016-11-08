@@ -1,6 +1,5 @@
-MXMLPRS1 ;SAIC/DKM - XML Parser ;2015-05-25  11:40 AM
- ;;2.4;XML PROCESSING UTILITIES;;June 15, 2015;Build 14
- ; @Author Dr. Douglas Martin, SAIC.
+MXMLPRS1 ;SAIC/DKM - XML Parser ;12/04/2002  15:55
+ ;;7.3;TOOLKIT;**58,67**;Apr 25, 1995
  ;=================================================================
  ; Initialize tables
 INIT N X,Y,Z
