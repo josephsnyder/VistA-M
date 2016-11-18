@@ -1,8 +1,5 @@
-YSASLIB ;692/DCL-ASI,HIOFO/FT - LIBRARY FUNCTIONS ;2/21/13  10:38am
- ;;5.01;MENTAL HEALTH;**24,37,108**;Dec 30, 1994;Build 17
- ;Reference to ^DPT supported by IA #10035
- ;Reference to ^%ZISS supported by DBIA #10088
- ;Reference to ^XLFDT APIs supported by DBIA #10103
+YSASLIB ;692/DCL-ASI LIBRARY FUNCTIONS ;1/13/97  09:51
+ ;;5.01;MENTAL HEALTH;**24,37**;Dec 30, 1994
  Q
  ;
 ID(YSAS) ;Identifiers for file 604, pass Y (IEN)
@@ -41,14 +38,14 @@ SSN(X) ;Convert ssn to external format
  ;
 NEW() ;Adding New Entries - return an internal number - EXTRINSIC FUNCTION
  N AUI2X
- F AUI2X=$P(^YSTX(604,0),U,3):1 I '$D(^YSTX(604,AUI2X)) L +^YSTX(604,AUI2X):DILOCKTM Q:$T
+ F AUI2X=$P(^YSTX(604,0),U,3):1 I '$D(^YSTX(604,AUI2X)) L ^YSTX(604,AUI2X):0 Q:$T
  Q AUI2X
  ;
 NEW047(D0) ;Adding new sub-entry and return an internal number - EXTRINSIC
  Q:'$G(D0) ""
  Q:'$P(^YSTX(604,D0,.047,0),"^",3) 1
  N YSASX
- F YSASX=$P(^YSTX(604,D0,.047,0),"^",3):1 I '$D(^YSTX(604,D0,.047,YSASX)) L +^YSTX(604,D0,.047,YSASX):DILOCKTM Q:$T
+ F YSASX=$P(^YSTX(604,D0,.047,0),"^",3):1 I '$D(^YSTX(604,D0,.047,YSASX)) L ^YSTX(604,D0,.047,YSASX):0 Q:$T
  Q YSASX
  ;
 VL() ;
@@ -104,6 +101,8 @@ DISP(YSADUZ,YSASCLS) ;Display ASI requiring signature - pass DUZ and CLASS (ASI 
  .Q
  W !
  Q
+ ;
+ ;
 INTRO ;
  W:$D(IOF) @IOF
  W !?20,"ADDICTION SEVERITY INDEX",!?25,"FIFTH EDITION",!!
@@ -123,7 +122,6 @@ RACE(X) ;Pass file 2 race code and return ASI race code, if possible.
  I X=3 Q 1
  I X=5 Q 5
  Q ""
- ;
 REL(X) ;Pass file 2 religion code and return ASI religion code, if possible.
  Q:$G(X)'>0 ""
  I X=1 Q 3

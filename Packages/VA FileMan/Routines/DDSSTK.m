@@ -1,10 +1,6 @@
-DDSSTK ;SFISC/MKO-STACK CONTEXT, GO TO A NEW PAGE ;19JUNE2007
- ;;22.2;MSC Fileman;;Jan 05, 2015;
- ;;Submitted to OSEHRA 5 January 2015 by the VISTA Expertise Network.
- ;;Based on Medsphere Systems Corporation's MSC Fileman 1051.
- ;;Licensed under the terms of the Apache License, Version 2.0.
- ;;GFT;**1028**
- ;
+DDSSTK ;SFISC/MKO-STACK CONTEXT, GO TO A NEW PAGE ;08:23 AM  1 Nov 1994
+ ;;22.0;VA FileMan;;Mar 30, 1999;Build 1
+ ;Per VHA Directive 10-93-142, this routine should not be modified.
  N DDO
  N DDSBK,DDSDN,DDSFLD,DDSNP,DDSOPB,DDSPG,DDSPTB,DDSREP,DDSTP
  ;
@@ -13,13 +9,13 @@ DDSSTK ;SFISC/MKO-STACK CONTEXT, GO TO A NEW PAGE ;19JUNE2007
  E  I DDSSTACK=+$P(DDSSTACK,"E") D
  . S DDSSTACK=+$O(^DIST(.403,+DDS,40,"B",DDSSTACK,""))
  E  D
-UP . S DDSSTACK=$O(^DIST(.403,+DDS,40,"C",$$UP^DILIBF(DDSSTACK),"")) ;**
+ . S DDSSTACK=$O(^DIST(.403,+DDS,40,"C",$$UPCASE(DDSSTACK),""))
  ;
  I 'DDSSTACK!($D(^DIST(.403,+DDS,40,+$G(DDSSTACK),0))[0) D  Q
  . K DDSSTACK,DDSBR
  ;
  N DDSDAORG,DDSDLORG,DDSFLORG,DDSPG
- N:'$P(^DIST(.403,+DDS,40,+$G(DDSSTACK),0),U,6) DDSSC ;N DDSSC (Page array) if not going to a POPUP PAGE
+ N:'$P(^DIST(.403,+DDS,40,+$G(DDSSTACK),0),U,6) DDSSC
  ;
  S DDSPG=DDSSTACK
  K DDSSTACK,DDSBR
@@ -28,6 +24,10 @@ UP . S DDSSTACK=$O(^DIST(.403,+DDS,40,"C",$$UP^DILIBF(DDSSTACK),"")) ;**
  F DDSI=1:1:DDSDL S DDSDAORG(DDSI)=DA(DDSI)
  K DDSI
  ;
-DDSH S DDSSTK=1,DDSH=1 ;DDSH tells SM+6^DIR0 to refresh the COMMAND LINE
+ S DDSSTK=1
  D PROC^DDS
  Q
+ ;
+UPCASE(X) ;
+ ;Return X in uppercase
+ Q $TR(X,"abcdefghijklmnopqrstuvwxyz","ABCDEFGHIJKLMNOPQRSTUVWXYZ")

@@ -1,9 +1,8 @@
-PSJRXI ; IHS/DSD,JCM,RLW - LOGS PHARMACY INTERVENTIONS ;15 May 98  9:28 AM
- ;;5.0;INPATIENT MEDICATIONS;**3,181,254,267,275,281**;16 DEC 97;Build 113
+PSJRXI ;IHS/DSD/JCM/RLW-LOGS PHARMACY INTERVENTIONS ; 15 May 98 / 9:28 AM
+ ;;5.0;INPATIENT MEDICATIONS;**3,181,254,267,275**;16 DEC 97;Build 157
  ;
- ;Reference to ^APSPQA(32.4 is supported by DBIA #2179
- ;Reference to ^PSDRUG( supported by DBIA #2192
- ;Reference to ^DD("DILOCKTM" supported by DBIA #999
+ ; Reference to ^APSPQA(32.4 is supported by DBIA #2179
+ ; Reference to ^PSDRUG supported by DBIA# 2192
  ;
  ; This routine is used to create entries in the APSP INTERVENTION file.
  ;---------------------------------------------------------------
@@ -73,7 +72,6 @@ EDITX K X,Y
  Q
  ;
 EOJ ;
- I $G(PSJDAL) S PSJDAL("DA")=$G(PSJRXI("DA"))
  K PSJRXI S X=SAVEX,Y=SAVEY
  Q
  ;
@@ -88,16 +86,3 @@ EN1(PSJORDER) ; Entry Point if have internal rx #
  S PSJDRUG=0,PSJDRUG=$O(^PS(53.1,PSJRXI("IRXN"),1,PSJDRUG)) Q:'PSJDRUG  S PSJDRUG("IEN")=$G(@(PSJORDER_","_PSJDRUG),"^")
  D START
 EN1X Q
- ;
-EN3(PSJIVDST,CDRG2) ; Entry Point for Clinical Reminders
- ;PSJIVDST = intervention text
- N PSJIVDSN S PSJIVDSN=0
- ;D LOOK I 'PSJIVDSN Q 1
- S PSJRXREQ=PSJIVDST
- S PSJDD=CDRG2
- D START K PSJIVDSN,CDRG2
-EN3X Q 0
- ;
-LOOK ;Find Internal Number of 32.3 file
- S PSJRXIEN=$$FIND1^DIC(9009032.3,"","X",PSJIVDST,"B")
- Q

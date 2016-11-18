@@ -1,8 +1,6 @@
-DDGLIBH ;SFISC/MKO-SCREEN EDITOR HELP ; 15NOV2012
- ;;22.2;MSC Fileman;;Jan 05, 2015;
- ;;Submitted to OSEHRA 5 January 2015 by the VISTA Expertise Network.
- ;;Based on Medsphere Systems Corporation's MSC Fileman 1051.
- ;;Licensed under the terms of the Apache License, Version 2.0.
+DDGLIBH ;SFISC/MKO-SCREEN EDITOR HELP ;08:00 AM  23 Feb 1995
+ ;;22.0;VA FileMan;;Mar 30, 1999;Build 1
+ ;Per VHA Directive 10-93-142, this routine should not be modified.
  ;
 HLP(DDGLHN1,DDGLHN2,DDGLSUB,DDGLPLN) ;
  ;DDGLHN1  = Entry number in Dialog file of first help screen
@@ -46,7 +44,7 @@ PT ;Prompt for device and print
  S DY=IOTM+1,DX=0 X IOXY
  ;
  X DDGLZOSF("EON"),DDGLZOSF("TRMOFF")
- S X=$G(IOM,80) X DDGLZOSF("RM") ; VEN/SMH changed.
+ S X=$G(IOM,80) X ^%ZOSF("RM")
  W $P(DDGLVID,DDGLDEL,9)
  ;
 DEVICE ;Device prompt
@@ -70,9 +68,8 @@ DEVICE ;Device prompt
  . K ZTSK
  . S IOP="HOME" D ^%ZIS
  ;
- E  I $E(IOST,1,2)="C-" D
+ E  I $E(IOST,1,2)="C-" D  G DEVICE
  . W !,$C(7)_"You cannot print the help screens on a CRT.",!
- . H 2
  ;
  ;Non-queued report
  E  D
@@ -83,7 +80,7 @@ DEVICE ;Device prompt
  ;
  ;Repaint help screen
  X DDGLZOSF("EOFF"),DDGLZOSF("TRMON")
- S X=0 X DDGLZOSF("RM") ; VEN/SMH changed.
+ S X=0 X ^%ZOSF("RM")
  W $P(DDGLVID,DDGLDEL,8)
  D DISP(DDGLSC)
  Q

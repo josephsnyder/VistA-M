@@ -1,4 +1,4 @@
-TIUXRC2 ; COMPILED XREF FOR FILE #8925 ; 05/26/16
+TIUXRC2 ; COMPILED XREF FOR FILE #8925 ; 04/07/16
  ; 
  I X'="" I +$P($G(^TIU(8925,+DA,0)),U,2),+$P($G(^(0)),U,3) K ^TIU(8925,"AV",+$P(^TIU(8925,+DA,0),U,2),+X,+$P(^TIU(8925,+DA,0),U,3),+DA)
  S X=$P($G(DIKZ(0)),U,1)
@@ -57,7 +57,18 @@ CR2 S DIXR=308
  . K X1,X2 M X1=X,X2=X
  . S:$D(DIKIL) (X2,X2(1))=""
  . K ^TIU(8925,"VS",X,DA)
-CR3 S DIXR=323
+CR3 S DIXR=557
+ K X
+ S DIKZ(12)=$G(^TIU(8925,DA,12))
+ S X(1)=$P(DIKZ(12),U,1)
+ S DIKZ(18)=$G(^TIU(8925,DA,18))
+ S X(2)=$P(DIKZ(18),U,1)
+ S X=$G(X(1))
+ I $G(X(1))]"",$G(X(2))]"" D
+ . K X1,X2 M X1=X,X2=X
+ . S:$D(DIKIL) (X2,X2(1),X2(2))=""
+ . K ^TIU(8925,"VBC",$E(X(1),1,14),$E(X(2),1,6),DA)
+CR4 S DIXR=1329
  K X
  S DIKZ(0)=$G(^TIU(8925,DA,0))
  S X(1)=$P(DIKZ(0),U,1)
@@ -86,16 +97,5 @@ CR3 S DIXR=323
  . S DIKCOND=$G(X) K X M X=DIKXARR
  . Q:'DIKCOND
  . D DOC^TIUDDX
-CR4 S DIXR=557
- K X
- S DIKZ(12)=$G(^TIU(8925,DA,12))
- S X(1)=$P(DIKZ(12),U,1)
- S DIKZ(18)=$G(^TIU(8925,DA,18))
- S X(2)=$P(DIKZ(18),U,1)
- S X=$G(X(1))
- I $G(X(1))]"",$G(X(2))]"" D
- . K X1,X2 M X1=X,X2=X
- . S:$D(DIKIL) (X2,X2(1),X2(2))=""
- . K ^TIU(8925,"VBC",$E(X(1),1,14),$E(X(2),1,6),DA)
 CR5 K X
 END Q

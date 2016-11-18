@@ -1,10 +1,6 @@
-DICFIX ;SEA/TOAD,SF/TKW-FileMan: Finder, Search Compound Indexes ;5SEP2014
- ;;22.2;MSC Fileman;;Jan 05, 2015;
- ;;Submitted to OSEHRA 5 January 2015 by the VISTA Expertise Network.
- ;;Based on Medsphere Systems Corporation's MSC Fileman 1051.
- ;;Licensed under the terms of the Apache License, Version 2.0.
- ;;GFT;**4,1039,1050**
- ;
+DICFIX ;SEA/TOAD,SF/TKW-FileMan: Finder, Search Compound Indexes ;5/26/99  14:40
+ ;;22.0;VA FileMan;**4**;Mar 30, 1999;Build 1
+ ;Per VHA Directive 10-93-142, this routine should not be modified.
  ;
 WALK(DIFLAGS,DINDEX,DIDENT,DIFILE,DIEN,DIFIEN,DISCREEN,DILIST,DIC,DIY,DIYX) ;
  ;
@@ -14,11 +10,11 @@ WALK(DIFLAGS,DINDEX,DIDENT,DIFILE,DIEN,DIFIEN,DISCREEN,DILIST,DIC,DIY,DIYX) ;
 PREP ; prepare to loop through subscript
  ;
  N DISUB S DISUB=DINDEX("AT")
- N DIVAL S DIVAL=DINDEX(DISUB) ;THE TRUNCATED VERSION OF A LONG NAME
+ N DIVAL S DIVAL=DINDEX(DISUB)
  N DIPART,DIMORE S DIPART=$G(DINDEX(DISUB,"PART")),DIMORE=+$G(DINDEX(DISUB,"MORE?"))
  N DITRXNO S DITRXNO=DIDENT(-4)
  I $G(DINDEX(DISUB,"USE")),DIVAL'="" D
- . S DIVAL=$O(@DINDEX(DISUB,"ROOT")@(DIVAL),-DINDEX(DISUB,"WAY")) ;BACK UP TO THE PREVIOUS SUBSCRIPT
+ . S DIVAL=$O(@DINDEX(DISUB,"ROOT")@(DIVAL),-DINDEX(DISUB,"WAY"))
  ;
 LOOP ; loop through subscripts
  ;
@@ -26,6 +22,7 @@ LOOP ; loop through subscripts
  . S DIVAL=$O(@DINDEX(DISUB,"ROOT")@(DIVAL),DINDEX(DISUB,"WAY"))
  .
 DATA . ; if we're in the data subscripts, we need to walk further
+ .
  . I DISUB'>DINDEX("#") D  Q
  . . S DISKIP=0
  . . I DIVAL'="",'$D(DINDEX(DISUB,"IXROOT")) D CHK Q:DISKIP
@@ -51,7 +48,7 @@ IEN . ; otherwise, we're in the IEN subscripts & need to process
  . I DINDEX="B" N DIMNEM D
  . . I $D(@DINDEX(DISUB,"ROOT")@(DIVAL))#2 Q:'^(DIVAL)
  . . E  Q:'$O(@DINDEX(DISUB,"ROOT")@(DIVAL,""))
- . . S DIMNEM="" ;WE HAVE FOUND A MNEMONIC.  DOES THIS VARIABLE AFFECT T1+14^DICU11?
+ . . S DIMNEM="" Q
  . D TRY
  . Q
 CLEAN ; clean up after loop, exit
@@ -60,7 +57,7 @@ CLEAN ; clean up after loop, exit
  Q
  ;
 CHK ; See whether we have a match or are at the end of the subscripts.
- I DISUB>1,"VP"[DINDEX(DISUB,"TYPE"),DIFLAGS'["Q" D  Q  ;variable-pointer
+ I DISUB>1,"VP"[DINDEX(DISUB,"TYPE"),DIFLAGS'["Q" D  Q
  . N DIFL,DIFLD,DIV
  . S DIFL=DINDEX(DISUB,"FILE"),DIFLD=DINDEX(DISUB,"FIELD"),DIV=DIVAL
  . I DINDEX(DISUB,"TYPE")="V",$G(DISCREEN("V",DISUB))]"" D  Q:DISKIP
@@ -82,14 +79,13 @@ CHK ; See whether we have a match or are at the end of the subscripts.
  . Q
  D MATCH I DIDONE,'$G(DINDEX("DONE")),DIMORE,DIFLAGS'["X" D
  . S DIDONE=0 D FINDMORE^DICLIX0(DISUB,.DIVAL,DIPART,.DINDEX,.DIMORE) I DIVAL="" S DIDONE=1 Q
- . D MATCH Q  ;Pretty redundant!!
+ . D MATCH Q
  Q
  ;
 MATCH ; No more subscripts or partial matches, or past our TO value?
  Q:DIVAL=""  I DIFLAGS["l",DINDEX(DISUB,DITRXNO)="" Q
- I DIFLAGS["X",DIVAL'=DINDEX(DISUB,DITRXNO),DIVAL'=$G(DINDEX(DISUB,0,DITRXNO)) S DIDONE=1 Q  ;FOR FILE 101, DIVAL IS THE LONG NAME, DINDEX(1,1) IS THE TRUNCATED VERSION, BUT DINDEX(1,0,1) IS LONG
+ I DIFLAGS["X",DIVAL'=DINDEX(DISUB,DITRXNO) S DIDONE=1 Q
  I $P(DIVAL,$G(DIPART))'="" S DIDONE=1 Q
-NUM ;I +$P($G(DIPART),"E")=$G(DIPART),+$P(DIVAL,"E")=DIVAL,DIVAL'=DIPART S DIDONE=1 Q  ;***'100' SHOULD NOT MATCH '1000' -- MCPHELAN.  BUT VA DISAGREES.
  I $G(DINDEX(DISUB,+DITRXNO,"c"))]"" D  Q:DIDONE!(DISKIP)
  . D NXTNAM^DICFIX1(.DIVAL,DIPART,.DINDEX,.DISKIP,.DIDONE) Q
  Q

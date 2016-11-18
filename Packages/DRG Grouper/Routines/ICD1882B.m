@@ -146,9 +146,9 @@ DELFILES ;
  ;
  ;kill ^ICDLD82 after installation
 CLEANUP ;
- ;D $system.Process.GlobalKillDisabled(0)
- ;K ^ICDLD82
- ;D $system.Process.GlobalKillDisabled(1)
+ D $system.Process.GlobalKillDisabled(0)
+ K ^ICDLD82
+ D $system.Process.GlobalKillDisabled(1)
  Q
  ;
 DTTIME() ;

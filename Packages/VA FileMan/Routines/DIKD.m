@@ -1,10 +1,6 @@
-DIKD ;SFISC/MKO-DELETE A CROSS REFERENCE ;11JUN2010
- ;;22.2;MSC Fileman;;Jan 05, 2015;
- ;;Submitted to OSEHRA 5 January 2015 by the VISTA Expertise Network.
- ;;Based on Medsphere Systems Corporation's MSC Fileman 1051.
- ;;Licensed under the terms of the Apache License, Version 2.0.
- ;;GFT;**12,68,95,1039**
- ;
+DIKD ;SFISC/MKO-DELETE A CROSS REFERENCE ;9:14 AM  19 Dec 2001
+ ;;22.0;VA FileMan;**12,68,95**;Mar 30, 1999;Build 1
+ ;Per VHA Directive 10-93-142, this routine should not be modified.
  ;
 DELIX(DIFIL,DIFLD,DIXR,DIFLG,DIKDOUT,DIKDMSG) ;Delete traditional xref
 DELIXX ;Come here from DELIX^DDMOD
@@ -21,7 +17,7 @@ DELIXX ;Come here from DELIX^DDMOD
  D:DIFLG["K" KILL^DIKD1(DIFIL,DIFLD,DIXR,$E("W",DIFLG["W")_DIF_"c")
  ;
  ;Audit, delete xref, recompile
- D AUDIT ;:$G(^DD(+DIFINFO(0),0,"DDA"))["Y" 
+ D:$G(^DD(+DIFINFO(0),0,"DDA"))["Y" AUDIT
  D DELDEF(DIFIL,DIFLD,DIXR,DIFLG)
  D DIEZ(DIFIL,DIFLD,DIFLG,$G(DIKDOUT))
  D DIKZ(+DIFINFO(0),DIFLG,$G(DIKDOUT))

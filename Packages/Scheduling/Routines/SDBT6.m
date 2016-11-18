@@ -1,6 +1,6 @@
-SDBT6 ; ;10/11/16
+SDBT6 ; ;05/04/16
  ;;
-1 N X,X1,X2 S DIXR=440 D X1(U) K X2 M X2=X D X1("F") K X1 M X1=X
+1 N X,X1,X2 S DIXR=1353 D X1(U) K X2 M X2=X D X1("F") K X1 M X1=X
  I $G(X(1))]"",$G(X(2))]"" D
  . K ^SC("AG",X(1),X(2),DA)
  K X M X=X2 I $G(X(1))]"",$G(X(2))]"" D
