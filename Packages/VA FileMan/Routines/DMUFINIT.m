@@ -1,12 +1,10 @@
-DMUFINIT ;VEN/SMH-FILEMAN UNIT TEST INIT ;2015-01-05  7:53 AM
- ;;22.2;MSC Fileman;;Jan 05, 2015;
- ;;Submitted to OSEHRA 5 January 2015 by the VISTA Expertise Network.
- ;;Based on Medsphere Systems Corporation's MSC Fileman 1051.
- ;;Licensed under the terms of the Apache License, Version 2.0.
+DMUFINIT ; ; 10-JAN-2013 ; 1/27/13 3:48pm
+ ;;22.2;VA FILEMAN;;Mar 28, 2013
+ ;Per VHA Directive 2004-038, this routine should not be modified.
  ;
  K DIF,DIFQ,DIFQR,DIFQN,DIK,DDF,DDT,DTO,D0,DLAYGO,DIC,DIDUZ,DIR,DA,DIFROM,DFR,DTN,DIX,DZ,DIRUT,DTOUT,DUOUT
  S DIOVRD=1,U="^",DIFQ=0,DIFROM="0.1" W !,"This version (#0.1) of 'DMUFINIT' was created on 10-JAN-2013"
- W !?9,"(at FILEMAN.MUMPS.ORG, by VA FILEMAN 22.2)",!
+ W !?9,"(at V22P2.FILEMAN.MUMPS.ORG, by VA FILEMAN 22.2T1)",!
  I $D(^DD("VERSION")),^("VERSION")'<22.2 G GO
  ;W !,"FIRST, I'LL FRESHEN UP YOUR VA FILEMAN...." D N^DINIT
  ; I ^DD("VERSION")<22.2 W !,"but I need version 22.2 of the VA FileMan!" G Q ;VEN/SMH

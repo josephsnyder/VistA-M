@@ -1,14 +1,12 @@
 DMUDIQ00 ;VEN/LGC - UNIT TESTING FM DIQ ; 3/6/13 11:44am
- ;;22.2;MSC Fileman;;Jan 05, 2015;
- ;;Submitted to OSEHRA 5 January 2015 by the VISTA Expertise Network.
- ;;Based on Medsphere Systems Corporation's MSC Fileman 1051.
- ;;Licensed under the terms of the Apache License, Version 2.0.
+ ;;22.2;VA FILEMAN;;Mar 28, 2013;1/7/2013
+ ;Per VHA Directive 2004-038, this routine should not be modified.
  ;
  ;
  S IO=$PRINCIPAL
  N DIQUIET S DIQUIET=1
  D DT^DICRW
- D EN^XTMUNIT($T(+0),1)
+ D EN^%ut($T(+0),1)
  QUIT
  ;
  ;
@@ -17,7 +15,7 @@ TGET1DIQ ; @TEST - $$GET1^DIQ Single Data Retriever
  ; VA FM PRG MAN 22.0 March 1999, Revised May 2011 3.5.42
  ; Test using with DIKK EDIT form entry in FORM file which
  ;   is distributed with Fileman
- ; Test Method: 
+ ; Test Method:
  ;  1. Set file number to .403, record to .3101
  ;     NOTE: Selecting FM file delivered with FM
  ;  2. Pull "GL" nodes from the DD for this file and its subfiles for
@@ -30,20 +28,20 @@ TGET1DIQ ; @TEST - $$GET1^DIQ Single Data Retriever
  S FNMBR=.403,RECORD=.3101
  N ERR S ERR=0
  N FARRAY
- ; Build an array of all the GL nodes (file and subfile) 
+ ; Build an array of all the GL nodes (file and subfile)
  D PULLDD(FNMBR,.FARRAY)
  ; Now run through each file and subfile to compare entiries
  ;  for this record.  Do by finding node with data and using
  ;  GL to pull each piece of the node, then compare with a
- ;  $$GET1 call with the "I" flag.  If even one difference 
+ ;  $$GET1 call with the "I" flag.  If even one difference
  ;  is found, the test ends in failure.
  N SUBF S SUBF=0
  F  S SUBF=$O(FARRAY(SUBF)) Q:'SUBF  D TGET1(FNMBR,RECORD,SUBF)
  S Y=ERR
- D CHKEQ^XTMUNIT(Y,0,"GET1^DIQ Single Data Retriever failed.")
+ D CHKEQ^%ut(Y,0,"GET1^DIQ Single Data Retriever failed.")
  Q
  ; Enter with a file or subfile number, the record in the file
- ;  to use for evaluation, and the subfile to evaluate.  
+ ;  to use for evaluation, and the subfile to evaluate.
  ; Note that if we are evaluating the top file, the subfile
  ;  arrives empty and is set to be the same as the file number
  ;  immediately upon entering the subroutine.
@@ -71,7 +69,7 @@ TGET1(FNMBR,RECORD,SUBF) ;
  . I +$P(@NODE,"^",2)=+SUBF D
  .. D TGET1B(RECORD,NODE,SUBF,FNMBR,SNODE,QLBN)
  Q
- ; Run through all matching global nodes.  Compare the 
+ ; Run through all matching global nodes.  Compare the
  ;  pieces of data for each as described by the GL
  ;  and compare to the $$GET1 call for the represented
  ;  field
@@ -84,7 +82,7 @@ TGET1B(RECORD,NODE,SUBF,FNMBR,SNODE,QLBN) ;
  ;
  F  S NODE=$Q(@NODE) Q:NODE'[SNODE  Q:'$QS(NODE,CNT)  D
  . Q:SSCNT<$QL(NODE)
- . S DSS=$QS(NODE,$QL(NODE)) ; Note terminal or Data SubScript 
+ . S DSS=$QS(NODE,$QL(NODE)) ; Note terminal or Data SubScript
  . S IENS=$$BLDIENS(QLBN,NODE) ; Build an appropriate IENS
  . N PIECE S PIECE=0
  . F  S PIECE=$O(POO(SUBF,"GL",DSS,PIECE)) Q:PIECE=""  D
@@ -102,7 +100,7 @@ TDDIQ ; @TEST - D^DIQ Conversion of Internal to External date
  ; Takes internal date in Y and coverts to the external form
  ; DIQ     D^DIQ: Display
  ; VA FM PRG MAN 22.0 March 1999, Revised May 2011 2.3.40
- ; Test Method: 
+ ; Test Method:
  ;  1. Build an array of random dates
  ;  2. Convert each to the external format with D^DIQ call
  ;  3. Convert each back to the FM date with the ^%DT call
@@ -117,7 +115,7 @@ TDDIQ ; @TEST - D^DIQ Conversion of Internal to External date
  . I Y'=@NODE D
  .. S ERR=1
  S Y=ERR
- D CHKEQ^XTMUNIT(Y,0,"D^DIQ Date Conversion Internal to External failed.")
+ D CHKEQ^%ut(Y,0,"D^DIQ Date Conversion Internal to External failed.")
  Q
  ;
  ;
@@ -144,7 +142,7 @@ TDTDIQ ; @TEST - DT^DIQ Convert and Display Date
  . I Y'=@NODE D
  ..  S ERR=1
  S Y=ERR
- D CHKEQ^XTMUNIT(Y,0,"DT^DIQ Date Convert and Display failed.")
+ D CHKEQ^%ut(Y,0,"DT^DIQ Date Convert and Display failed.")
  Q
  ;
  ;
@@ -156,7 +154,7 @@ TENDIQ ; @TEST - EN^DIQ Display a Range of Data Elements
  ;   Use the EN^DIQ call to retrieve all data from the first
  ;   entry in the LANGUAGE [.85] file as distributed in
  ;   FM 22.2 at X1DATA
- ; Test Method: 
+ ; Test Method:
  ;  1. Set file number to .85
  ;     NOTE: Selecting FM file delivered with FM
  ;  2. Pull "GL" nodes from the DD for this file and
@@ -166,7 +164,7 @@ TENDIQ ; @TEST - EN^DIQ Display a Range of Data Elements
  ;     to multiple " marks and added spaces in the return
  ;     text, these are removed.
  ;  4. Pull the node and piece directly from the global as
- ;     indicated by the DD.  
+ ;     indicated by the DD.
  ;     Note: " and spaces removed (see 3 above)
  ;  5. Search the text retrieved with the EN^DIQ call for
  ;     the field name being evaluated.  If found, check
@@ -177,11 +175,11 @@ TENDIQ ; @TEST - EN^DIQ Display a Range of Data Elements
  ;           call sometimes shortens the field name
  ;           (perhaps for text compression?) and 2) needing
  ;           to remove " and space characters, then
- ;           3) seaching for a match as a 'contained in' 
+ ;           3) seaching for a match as a 'contained in'
  ;           process mitigates the strength of the testing.
- ;           I was unable to think around these issues and 
+ ;           I was unable to think around these issues and
  ;           would gladly accept correction/advice - poo
- ;           
+ ;
  N FNMBR,ERR,RECORD S FNMBR=.85,RECORD=1,ERR=0
  D PULLDD(FNMBR,.POO)
  N XXDIC S XXDIC=^DIC(FNMBR,0,"GL")
@@ -214,7 +212,7 @@ TENDIQ ; @TEST - EN^DIQ Display a Range of Data Elements
  .  S ANS1=$TR(FNAME_$G(ANS1),""""),ANS1=$TR(ANS1," ")
  .  S:ALLPPP'[ANS1 ERR=1
  S Y=ERR
- D CHKEQ^XTMUNIT(Y,0,"EN^DIQ Display Range of Data Elements failed.")
+ D CHKEQ^%ut(Y,0,"EN^DIQ Display Range of Data Elements failed.")
  Q
 TMPFN(FLDNUM,POO) N GLNODE S GLNODE=$NA(POO(0)),GLNODE=$Q(@GLNODE)
 TMPFN1 S:GLNODE="" (NODE,PIECE)="" Q:GLNODE=""  S NODE=$QS(GLNODE,3),PIECE=$QS(GLNODE,4) Q:$QS(GLNODE,5)=FLDNUM  S GLNODE=$Q(@GLNODE) G TMPFN1
@@ -228,7 +226,7 @@ TGETS ; @TEST - GETS^DIQ Data Retriever
  ; Testing Process
  ;   Use the GETS^DIQ call to retrieve all data from a given
  ;   file entry and compare to the nodes as described in the GL
- ; Test Method: 
+ ; Test Method:
  ;  1. Set file number to .85, record to 1
  ;     NOTE: Selecting FM file delivered with FM
  ;  2. Perform GETS^DIQ
@@ -257,7 +255,7 @@ TGETS ; @TEST - GETS^DIQ Data Retriever
  . S GLBLA=$NA(@GLBLA)
  . S:ANS1'=@GLBLA ERR=1
  S Y=ERR
- D CHKEQ^XTMUNIT(Y,0,"GETS^DIQ Data Retriever failed.")
+ D CHKEQ^%ut(Y,0,"GETS^DIQ Data Retriever failed.")
  Q
  ;
  ;
@@ -266,7 +264,7 @@ TYDIQ ; @TEST - Y^DIQ Convert Internal Form of any Data Element to External Form
  ;   (Equivalent DS is $$EXTERNAL^DILFD)
  ; DIQ     Y^DIQ: Display
  ; VA FM PRG MAN 22.0 March 1999, Revised May 2011 2.3.43
- ; Test Method: 
+ ; Test Method:
  ;  1. Run through data saved in this routine (X1DATA) for testing
  ;     NOTE: Selecting FM files delivered with FM
  ;  2. Parse into the variables needed for the Y^DIQ call
@@ -284,7 +282,7 @@ TYDIQ ; @TEST - Y^DIQ Convert Internal Form of any Data Element to External Form
  . D Y^DIQ
  . I Y'[RSLT S ERR=0
  S Y=ERR
- D CHKEQ^XTMUNIT(Y,0,"Y^DIQ Data Element Conversion Internal to External failed.")
+ D CHKEQ^%ut(Y,0,"Y^DIQ Data Element Conversion Internal to External failed.")
  Q
  ;
  ;
@@ -294,13 +292,13 @@ TENDIQ1 ; @TEST - EN^DIQ1 Retrieve Data from a File for a Particular Entry
  ; DIQ1     EN^DIQ1: Data Retrieval
  ; VA FM PRG MAN 22.0 March 1999, Revised May 2011 2.3.44
  ;   (Equivalent DS are $$GETS^DIQ and $$GET1^DIQ
- ; Test Method: 
+ ; Test Method:
  ;  1. Set file number to .85, record to 1
  ;     NOTE: Selecting FM file delivered with FM
  ;  2. Get file global from DIC
  ;  3. Pull "GL" nodes from the DD for this file and run through
  ;     each field number defined in DD
- ;  4. Check the results of the EN^DIQ1 call stored in the 
+ ;  4. Check the results of the EN^DIQ1 call stored in the
  ;     ^UTILITY global against the data pulled directly from
  ;     the global node and piece defined in DD
  ;  5. Failure defined as any incidence of failure to match
@@ -309,7 +307,7 @@ TENDIQ1 ; @TEST - EN^DIQ1 Retrieve Data from a File for a Particular Entry
  N ERR S ERR=0
  D TENDIQ1A(FNMBR,RECORD)
  S Y=ERR
- D CHKEQ^XTMUNIT(Y,0,"EN^DIQ1 Data from File for Particular Entry failed.")
+ D CHKEQ^%ut(Y,0,"EN^DIQ1 Data from File for Particular Entry failed.")
  Q
  ;
 TENDIQ1A(FNMBR,RECORD) N ANS1,ANS2,DA,DDNODE,DIC,DIQ,DR,FIELD,GLOBAL,NODE,PIECE,POO,SDNODE
